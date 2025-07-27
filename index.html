@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercice Hiragana - Multi-phrases</title>
+  <style>
+    body { font-family: sans-serif; background: #f2f2f2; padding: 20px; text-align: center; }
+    .instruction { font-size: 1.2em; margin-bottom: 10px; }
+    .grid-container { display: grid; gap: 5px; justify-content: center; margin-bottom: 5px; width: fit-content; margin-left: auto; margin-right: auto; }
+    .romaji-box { height: 20px; font-size: 14px; line-height: 20px; text-align: center; width: 40px; }
+    .box { width: 40px; height: 40px; border: 2px solid #333; font-size: 24px; line-height: 40px; background-color: white; text-align: center; }
+    .box.correct { background-color: #c8f7c5; }
+    .box.incorrect { background-color: #f9c0c0; }
+    #buttons { margin-top: 10px; }
+    .buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+  #buttons button { margin: 10px; font-size: 22px; padding: 12px 24px; }
+    #buttons button:disabled { background-color: #d0e6ff; color: #555; }
+    .feedback { font-weight: bold; font-size: 1.2em; margin-top: 15px; }
+  
+    .buttons button {
+      font-size: 24px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      background-color: #eeeeee;
+      border: 2px solid #aaa;
+    }
+    
+    .buttons button:hover {
+      background-color: #d8eaff;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+  <div class="instruction" id="instruction"></div>
+  <div class="grid-container" id="romaji-container"></div>
+  <div class="grid-container" id="phrase-container"></div>
+  <div id="buttons"></div>
+  <div class="buttons">
+    <button id="checkButton" onclick="checkAnswer()" disabled>Vérifier</button>
+    <button onclick="clearBoxes()">RAZ</button>
+    <button onclick="undoLast()">←</button>
+    <button id="hintButton" onmousedown="showHint()" onmouseup="hideHint()" ontouchstart="showHint()" ontouchend="hideHint()">💡</button>
+    <button onclick="nextPhrase()">Phrase suivante</button>
+  </div>
+  <div class="feedback" id="feedback"></div>
+  <div class="feedback">Aides utilisées : <span id="hintCount">0</span></div>
+
+  <script>
+    const phrases = [
+      {
+        correctPhrase: ['そ','こ','は','が','っ','こ','う','で','す'],
+        romajiMap: {'そ':'so','こ':'ko','は':'wa','が':'ga','っ':'','こ':'ko','う':'u','で':'de','す':'su'},
+        romajiLine: "Soko wa gakkou desu",
+        frenchLine: "Là, c’est une école."
+      },
+      {
+        correctPhrase: ['こ','れ','は','ね','こ','で','す'],
+        romajiMap: {'こ':'ko','れ':'re','は':'wa','ね':'ne','で':'de','す':'su'},
+        romajiLine: "Kore wa neko desu",
+        frenchLine: "Ceci est un chat."
+      },
+      {
+        correctPhrase: ['あ','そ','こ','に','か','わ','い','い','い','ぬ','が','い','ま','す'],
+        romajiMap: {'あ':'a','そ':'so','こ':'ko','に':'ni','か':'ka','わ':'wa','い':'i','ぬ':'nu','が':'ga','ま':'ma','す':'su'},
+        romajiLine: "Asoko ni kawaii inu ga imasu",
+        frenchLine: "Il y a un joli chien là-bas."
+      }
+    ];
+
+    let currentIndex = 0;
+    let boxes = [], romajiBoxes = [], clickHistory = [], hintCount = 0, hintActive = false, lastHintedBox = null;
+
+    const phraseContainer = document.getElementById('phrase-container');
+    const romajiContainer = document.getElementById('romaji-container');
+    const buttonsContainer = document.getElementById('buttons');
+    const instruction = document.getElementById('instruction');
+    const feedback = document.getElementById('feedback');
+    const hintCountSpan = document.getElementById('hintCount');
+    const checkButton = document.getElementById('checkButton');
+    const clickAudio = new Audio("data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAD//f39/f39/f39/f39");
+
+    function init() { loadPhrase(currentIndex); }
+    function loadPhrase(index) {
+      const phrase = phrases[index];
+      boxes = []; romajiBoxes = []; clickHistory = [];
+      hintCount = 0; hintCountSpan.textContent = hintCount; feedback.textContent = '';
+      checkButton.disabled = true;
+      instruction.innerHTML = `<p><em>${phrase.romajiLine}</em></p><p><strong>${phrase.frenchLine}</strong></p>`;
+      phraseContainer.style.gridTemplateColumns = `repeat(${phrase.correctPhrase.length}, 40px)`;
+      romajiContainer.style.gridTemplateColumns = `repeat(${phrase.correctPhrase.length}, 40px)`;
+      phraseContainer.innerHTML = ''; romajiContainer.innerHTML = ''; buttonsContainer.innerHTML = '';
+
+      for (let i = 0; i < phrase.correctPhrase.length; i++) {
+        const rBox = document.createElement('div'); rBox.className = 'romaji-box'; rBox.textContent = ''; romajiContainer.appendChild(rBox); romajiBoxes.push(rBox);
+        const box = document.createElement('div'); box.className = 'box'; box.textContent = ''; phraseContainer.appendChild(box); boxes.push(box);
+      }
+
+      const hiraganaOptions = phrase.correctPhrase.slice().sort(() => Math.random() - 0.5);
+      hiraganaOptions.forEach(char => {
+        const btn = document.createElement('button');
+        btn.textContent = char;
+        btn.onclick = () => { clickAudio.play(); insertCharacter(char, btn); };
+        buttonsContainer.appendChild(btn);
+      });
+    }
+
+    function insertCharacter(char, button) {
+      const emptyBox = boxes.find(b => b.textContent === '');
+      if (emptyBox) {
+        emptyBox.textContent = char;
+        button.disabled = true;
+        clickHistory.push({box: emptyBox, button});
+        updateCheckButtonState();
+      }
+    }
+
+    function updateCheckButtonState() {
+      checkButton.disabled = !boxes.every(b => b.textContent !== '');
+    }
+
+    function checkAnswer() {
+      const phrase = phrases[currentIndex];
+      boxes.forEach((box, i) => {
+        box.classList.remove('correct', 'incorrect');
+        if (box.textContent === phrase.correctPhrase[i]) {
+          box.classList.add('correct');
+          romajiBoxes[i].textContent = phrase.romajiMap[box.textContent] || '';
+        } else {
+          box.classList.add('incorrect');
+          romajiBoxes[i].textContent = '';
+        }
+      });
+      const result = boxes.map(b => b.textContent).join('') === phrase.correctPhrase.join('');
+      feedback.textContent = result ? '✅ Bravo !' : '❌ Essaie encore';
+    }
+
+    function clearBoxes() {
+      boxes.forEach((box, i) => {
+        box.textContent = '';
+        box.classList.remove('correct', 'incorrect');
+        romajiBoxes[i].textContent = '';
+      });
+      document.querySelectorAll('#buttons button').forEach(b => b.disabled = false);
+      clickHistory = []; feedback.textContent = ''; updateCheckButtonState();
+    }
+
+    function undoLast() {
+      const last = clickHistory.pop();
+      if (last) {
+        const idx = boxes.indexOf(last.box);
+        last.box.textContent = '';
+        romajiBoxes[idx].textContent = '';
+        last.box.classList.remove('correct', 'incorrect');
+        last.button.disabled = false;
+        updateCheckButtonState();
+      }
+    }
+
+    function showHint() {
+      const phrase = phrases[currentIndex];
+      const i = boxes.findIndex(b => b.textContent === '');
+      if (i !== -1) {
+        lastHintedBox = boxes[i];
+        lastHintedBox.textContent = phrase.correctPhrase[i];
+        lastHintedBox.style.opacity = '0.5';
+        hintCount++;
+        hintCountSpan.textContent = hintCount;
+        hintActive = true;
+      }
+    }
+
+    function hideHint() {
+      if (hintActive && lastHintedBox) {
+        lastHintedBox.textContent = '';
+        lastHintedBox.style.opacity = '1';
+        lastHintedBox = null;
+        hintActive = false;
+      }
+    }
+
+    function nextPhrase() {
+      currentIndex = (currentIndex + 1) % phrases.length;
+      loadPhrase(currentIndex);
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>
