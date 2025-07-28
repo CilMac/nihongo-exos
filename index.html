@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice Hiragana (JSON)</title>
+  <style>
+    body { font-family: sans-serif; background: #f2f2f2; padding: 20px; text-align: center; }
+    .instruction { font-size: 1.2em; margin-bottom: 10px; }
+    .grid-container { display: grid; gap: 5px; justify-content: center; margin-bottom: 5px; width: fit-content; margin-left: auto; margin-right: auto; }
+    .romaji-box { height: 20px; font-size: 14px; line-height: 20px; text-align: center; width: 40px; }
+    .box { width: 40px; height: 40px; border: 2px solid #333; font-size: 24px; line-height: 40px; background-color: white; text-align: center; }
+    .box.correct { background-color: #c8f7c5; }
+    .box.incorrect { background-color: #f9c0c0; }
+    #buttons { margin-top: 10px; }
+    #buttons button { margin: 5px; font-size: 20px; padding: 5px 10px; }
+    #buttons button:disabled { background-color: #d0e6ff; color: #555; }
+    .buttons { margin-top: 30px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .buttons button { font-size: 24px; padding: 12px 24px; border-radius: 10px; background-color: #eeeeee; border: 2px solid #aaa; }
+    .buttons button:hover { background-color: #d8eaff; cursor: pointer; }
+    .feedback { font-weight: bold; font-size: 1.2em; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="instruction" id="instruction"><p>Chargement…</p></div>
+  <div class="grid-container" id="romaji-container"></div>
+  <div class="grid-container" id="phrase-container"></div>
+  <div id="buttons"></div>
+  <div class="buttons">
+    <button id="checkButton" onclick="checkAnswer()" disabled>Vérifier</button>
+    <button onclick="clearBoxes()">RAZ</button>
+    <button onclick="undoLast()">←</button>
+    <button id="hintButton" onmousedown="showHint()" onmouseup="hideHint()" ontouchstart="showHint()" ontouchend="hideHint()">💡</button>
+    <button onclick="nextPhrase()">Phrase suivante</button>
+  </div>
+  <div class="feedback" id="feedback"></div>
+  <div class="feedback" id="jpPhrase" style="color: red;"></div>
+  <div class="feedback">Aides utilisées : <span id="hintCount">0</span></div>
+
+  <script>
+    let phrases = [], currentIndex = 0, boxes = [], romajiBoxes = [], clickHistory = [], hintCount = 0;
+    let hintActive = false, lastHintedBox = null;
+
+    const phraseContainer = document.getElementById('phrase-container');
+    const romajiContainer = document.getElementById('romaji-container');
+    const buttonsContainer = document.getElementById('buttons');
+    const instruction = document.getElementById('instruction');
+    const feedback = document.getElementById('feedback');
+    const hintCountSpan = document.getElementById('hintCount');
+    const checkButton = document.getElementById('checkButton');
+    const clickAudio = new Audio("data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAD//f39/f39");
+
+    const charToRomaji = {
+      'あ':'a','い':'i','う':'u','え':'e','お':'o','か':'ka','き':'ki','く':'ku','け':'ke','こ':'ko',
+      'が':'ga','ぎ':'gi','ぐ':'gu','げ':'ge','ご':'go','さ':'sa','し':'shi','す':'su','せ':'se','そ':'so',
+      'ざ':'za','じ':'ji','ず':'zu','ぜ':'ze','ぞ':'zo','た':'ta','ち':'chi','つ':'tsu','て':'te','と':'to',
+      'だ':'da','で':'de','ど':'do','な':'na','に':'ni','ぬ':'nu','ね':'ne','の':'no','は':'ha','ひ':'hi',
+      'ふ':'fu','へ':'he','ほ':'ho','ば':'ba','び':'bi','ぶ':'bu','べ':'be','ぼ':'bo','ま':'ma','み':'mi',
+      'む':'mu','め':'me','も':'mo','や':'ya','ゆ':'yu','よ':'yo','ら':'ra','り':'ri','る':'ru','れ':'re',
+      'ろ':'ro','わ':'wa','を':'o','ん':'n','っ':'','ゃ':'ya','ゅ':'yu','ょ':'yo','ー':'', '〜':'',
+      'フ':'fu','ラ':'ra','ン':'n','ス':'su','ジ':'ji','ョ':'yo','ト':'to','カ':'ka','ド':'do'
+    };
+
+    function hiraganaToRomajiCluster(cluster) {
+      return cluster.split('').map(c => charToRomaji[c] || '').join('');
+    }
+
+    function loadPhrase(index) {
+      const phrase = phrases[index];
+      const rawChars = phrase.kana.trim().split(' ');
+      const romajiList = rawChars.map(hiraganaToRomajiCluster);
+      boxes = []; romajiBoxes = []; clickHistory = [];
+      hintCount = 0; hintCountSpan.textContent = hintCount; feedback.textContent = ''; document.getElementById("jpPhrase").textContent = '';
+      checkButton.disabled = true;
+      instruction.innerHTML = `<p><em>${phrase.romaji}</em></p><p><strong>${phrase.fr}</strong></p>`;
+
+      phraseContainer.style.gridTemplateColumns = `repeat(${rawChars.length}, 40px)`;
+      romajiContainer.style.gridTemplateColumns = `repeat(${rawChars.length}, 40px)`;
+      phraseContainer.innerHTML = ''; romajiContainer.innerHTML = ''; buttonsContainer.innerHTML = '';
+
+      rawChars.forEach((_, i) => {
+        const rBox = document.createElement('div');
+        rBox.className = 'romaji-box';
+        romajiContainer.appendChild(rBox);
+        romajiBoxes.push(rBox);
+        const box = document.createElement('div');
+        box.className = 'box';
+        phraseContainer.appendChild(box);
+        boxes.push(box);
+      });
+
+      const shuffled = rawChars.slice().sort(() => Math.random() - 0.5);
+      shuffled.forEach(char => {
+        const btn = document.createElement('button');
+        btn.textContent = char;
+        btn.onclick = () => { clickAudio.play(); insertCharacter(char, btn); };
+        buttonsContainer.appendChild(btn);
+      });
+
+      boxes.correct = rawChars;
+      boxes.romajiList = romajiList;
+    }
+
+    function insertCharacter(char, button) {
+      const emptyBox = boxes.find(b => b.textContent === '');
+      if (emptyBox) {
+        emptyBox.textContent = char;
+        button.disabled = true;
+        clickHistory.push({box: emptyBox, button});
+        updateCheckButtonState();
+      }
+    }
+
+    function updateCheckButtonState() {
+      checkButton.disabled = !boxes.every(b => b.textContent !== '');
+    }
+
+    function checkAnswer() {
+      boxes.forEach((box, i) => {
+        box.classList.remove('correct', 'incorrect');
+        if (box.textContent === boxes.correct[i]) {
+          box.classList.add('correct');
+          romajiBoxes[i].textContent = boxes.romajiList[i] || '';
+        } else {
+          box.classList.add('incorrect');
+          romajiBoxes[i].textContent = '';
+        }
+      });
+      const result = boxes.map(b => b.textContent).join('') === boxes.correct.join('');
+      feedback.textContent = result ? '✅ Bravo !' : '❌ Essaie encore';
+  document.getElementById('jpPhrase').textContent = result ? phrases[currentIndex].jp : '';
+    }
+
+    function clearBoxes() {
+      boxes.forEach((box, i) => {
+        box.textContent = '';
+        box.classList.remove('correct', 'incorrect');
+        romajiBoxes[i].textContent = '';
+      });
+      document.querySelectorAll('#buttons button').forEach(b => b.disabled = false);
+      clickHistory = []; feedback.textContent = ''; document.getElementById("jpPhrase").textContent = ''; document.getElementById("jpPhrase").textContent = ''; updateCheckButtonState();
+    }
+
+    function undoLast() {
+      const last = clickHistory.pop();
+      if (last) {
+        const idx = boxes.indexOf(last.box);
+        last.box.textContent = '';
+        romajiBoxes[idx].textContent = '';
+        last.box.classList.remove('correct', 'incorrect');
+        last.button.disabled = false;
+        updateCheckButtonState();
+      }
+    }
+
+    function showHint() {
+      const i = boxes.findIndex(b => b.textContent === '');
+      if (i !== -1) {
+        lastHintedBox = boxes[i];
+        lastHintedBox.textContent = boxes.correct[i];
+        lastHintedBox.style.opacity = '0.5';
+        hintCount++;
+        hintCountSpan.textContent = hintCount;
+        hintActive = true;
+      }
+    }
+
+    function hideHint() {
+      if (hintActive && lastHintedBox) {
+        lastHintedBox.textContent = '';
+        lastHintedBox.style.opacity = '1';
+        lastHintedBox = null;
+        hintActive = false;
+      }
+    }
+
+    function nextPhrase() {
+      currentIndex = (currentIndex + 1) % phrases.length;
+      loadPhrase(currentIndex);
+    }
+
+    fetch("phrases_100.json")
+      .then(res => res.json())
+      .then(json => { phrases = json; loadPhrase(currentIndex); })
+      .catch(e => { instruction.innerHTML = "<p>Erreur de chargement des données.</p>"; console.error(e); });
+  </script>
+</body>
+</html>
