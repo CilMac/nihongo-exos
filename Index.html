@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <!-- Mise à jour du titre de la page pour refléter l'exercice avec un drapeau japonais -->
+  <title>Exercice Hiragana 🇯🇵</title>
+  <style>
+    body { font-family: sans-serif; background: #f2f2f2; padding: 20px; text-align: center; }
+    .instruction { font-size: 1.2em; margin-bottom: 10px; }
+    .grid-container { display: grid; gap: 5px; justify-content: center; margin-bottom: 5px; width: fit-content; margin-left: auto; margin-right: auto; }
+    .romaji-box { height: 20px; font-size: 14px; line-height: 20px; text-align: center; width: 40px; }
+    .box { width: 40px; height: 40px; border: 2px solid #333; font-size: 24px; line-height: 40px; background-color: white; text-align: center; }
+    .box.correct { background-color: #c8f7c5; }
+    .box.incorrect { background-color: #f9c0c0; }
+    #buttons { margin-top: 10px; }
+    #buttons button { margin: 5px; font-size: 20px; padding: 5px 10px; }
+    #buttons button:disabled { background-color: #d0e6ff; color: #555; }
+    .buttons { margin-top: 30px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .buttons button { font-size: 24px; padding: 12px 24px; border-radius: 10px; background-color: #eeeeee; border: 2px solid #aaa; }
+    .buttons button:hover { background-color: #d8eaff; cursor: pointer; }
+    .feedback { font-weight: bold; font-size: 1.2em; margin-top: 15px; }
+    /* Style pour le titre principal de la page */
+    h1#appTitle {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    /* Indicateur discret de position de la phrase */
+    .phrase-counter {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+    }
+    /* Styling for the instruction lines: romaji (normal), Japanese (red) and hidden by default, and French (dark blue) */
+    .romaji-line {
+      font-style: normal;
+      font-weight: normal;
+    }
+    .jp-line {
+      color: red;
+      font-weight: normal;
+      display: none; /* hidden until the user provides a correct answer */
+    }
+    .fr-line {
+      color: #00008B;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  <!-- Titre principal affiché en haut de la page -->
+  <h1 id="appTitle">Exercice Hiragana 🇯🇵</h1>
+  <div class="instruction" id="instruction"><p>Erreur de chargement des données.</p></div>
+  <!-- Removed the standalone jpPhrase element because the Japanese text will now be
+       displayed inside the instruction block itself when appropriate. -->
+  <!-- <div class="feedback" id="jpPhrase" style="color: red;"></div> -->
+  <div class="grid-container" id="romaji-container"></div>
+  <div class="grid-container" id="phrase-container"></div>
+  <div id="buttons"></div>
+  <div class="buttons">
+    <button id="checkButton" onclick="checkAnswer()" disabled="disabled">Vérifier</button>
+    <button onclick="clearBoxes()">RAZ</button>
+    <button onclick="undoLast()">←</button>
+    <button id="hintButton" onmousedown="showHint()" onmouseup="hideHint()" ontouchstart="showHint()" ontouchend="hideHint()">💡</button>
+    <!-- Bouton pour naviguer vers la phrase précédente (flèche uniquement) -->
+    <button onclick="prevPhrase()">⬅️</button>
+    <!-- Bouton pour naviguer vers la phrase suivante (flèche uniquement) -->
+    <button onclick="nextPhrase()">➡️</button>
+    <!-- Bouton pour tirer une phrase au hasard, uniquement le dé -->
+    <button onclick="randomPhrase()">🎲</button>
+  </div>
+  <div class="feedback" id="feedback"></div>
+
+  <!-- Indicateur discret affichant la position actuelle de la phrase -->
+  <div id="phraseCounter" class="phrase-counter"></div>
+  
+  <div class="feedback">Aides utilisées : <span id="hintCount">0</span></div>
+
+  <script>
+    let phrases = [], currentIndex = 0, boxes = [], romajiBoxes = [], clickHistory = [], hintCount = 0;
+    let hintActive = false, lastHintedBox = null;
+
+    const phraseContainer = document.getElementById('phrase-container');
+    const romajiContainer = document.getElementById('romaji-container');
+    const buttonsContainer = document.getElementById('buttons');
+    const instruction = document.getElementById('instruction');
+    const feedback = document.getElementById('feedback');
+    const hintCountSpan = document.getElementById('hintCount');
+    const checkButton = document.getElementById('checkButton');
+    const clickAudio = new Audio("data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAD//f39/f39");
+    // Élément d'indicateur de numéro de phrase
+    const phraseCounter = document.getElementById('phraseCounter');
+
+    const charToRomaji = {
+      'あ':'a','い':'i','う':'u','え':'e','お':'o','か':'ka','き':'ki','く':'ku','け':'ke','こ':'ko',
+      'が':'ga','ぎ':'gi','ぐ':'gu','げ':'ge','ご':'go','さ':'sa','し':'shi','す':'su','せ':'se','そ':'so',
+      'ざ':'za','じ':'ji','ず':'zu','ぜ':'ze','ぞ':'zo','た':'ta','ち':'chi','つ':'tsu','て':'te','と':'to',
+      'だ':'da','で':'de','ど':'do','な':'na','に':'ni','ぬ':'nu','ね':'ne','の':'no','は':'ha','ひ':'hi',
+      'ふ':'fu','へ':'he','ほ':'ho','ば':'ba','び':'bi','ぶ':'bu','べ':'be','ぼ':'bo','ま':'ma','み':'mi',
+      'む':'mu','め':'me','も':'mo','や':'ya','ゆ':'yu','よ':'yo','ら':'ra','り':'ri','る':'ru','れ':'re',
+      'ろ':'ro','わ':'wa','を':'o','ん':'n','っ':'','ゃ':'ya','ゅ':'yu','ょ':'yo','ー':'', '〜':'',
+      'フ':'fu','ラ':'ra','ン':'n','ス':'su','ジ':'ji','ョ':'yo','ト':'to','カ':'ka','ド':'do'
+    };
+
+    function hiraganaToRomajiCluster(cluster) {
+      return cluster.split('').map(c => charToRomaji[c] || '').join('');
+    }
+
+    function loadPhrase(index) {
+      const phrase = phrases[index];
+      const rawChars = phrase.kana.trim().split(' ');
+      const romajiList = rawChars.map(hiraganaToRomajiCluster);
+      boxes = []; romajiBoxes = []; clickHistory = [];
+      hintCount = 0;
+      hintCountSpan.textContent = hintCount;
+      feedback.textContent = '';
+      // Hide any previously displayed Japanese phrase at the start of a new phrase.
+      const jpReset = document.getElementById('jpPhrase');
+      if (jpReset) {
+        jpReset.textContent = '';
+        jpReset.style.display = 'none';
+      }
+      checkButton.disabled = true;
+      // Construct the instruction block with romaji, a placeholder for the Japanese phrase,
+      // and the French translation. The Japanese line remains hidden until the answer
+      // is validated as correct.
+      instruction.innerHTML =
+        `<p class="romaji-line">${phrase.romaji}</p>` +
+        `<p id="jpPhrase" class="jp-line"></p>` +
+        `<p class="fr-line">${phrase.fr}</p>`;
+
+      // Mettre à jour l'indicateur de position de la phrase
+      if (phraseCounter) {
+        phraseCounter.textContent = `Phrase ${index + 1} / ${phrases.length}`;
+      }
+
+      phraseContainer.style.gridTemplateColumns = `repeat(${rawChars.length}, 40px)`;
+      romajiContainer.style.gridTemplateColumns = `repeat(${rawChars.length}, 40px)`;
+      phraseContainer.innerHTML = ''; romajiContainer.innerHTML = ''; buttonsContainer.innerHTML = '';
+
+      rawChars.forEach((_, i) => {
+        const rBox = document.createElement('div');
+        rBox.className = 'romaji-box';
+        romajiContainer.appendChild(rBox);
+        romajiBoxes.push(rBox);
+        const box = document.createElement('div');
+        box.className = 'box';
+        phraseContainer.appendChild(box);
+        boxes.push(box);
+      });
+
+      const shuffled = rawChars.slice().sort(() => Math.random() - 0.5);
+      shuffled.forEach(char => {
+        const btn = document.createElement('button');
+        btn.textContent = char;
+        btn.onclick = () => { clickAudio.play(); insertCharacter(char, btn); };
+        buttonsContainer.appendChild(btn);
+      });
+
+      boxes.correct = rawChars;
+      boxes.romajiList = romajiList;
+    }
+
+    function insertCharacter(char, button) {
+      const emptyBox = boxes.find(b => b.textContent === '');
+      if (emptyBox) {
+        emptyBox.textContent = char;
+        button.disabled = true;
+        clickHistory.push({box: emptyBox, button});
+        updateCheckButtonState();
+      }
+    }
+
+    function updateCheckButtonState() {
+      checkButton.disabled = !boxes.every(b => b.textContent !== '');
+    }
+
+    function checkAnswer() {
+      boxes.forEach((box, i) => {
+        box.classList.remove('correct', 'incorrect');
+        if (box.textContent === boxes.correct[i]) {
+          box.classList.add('correct');
+          romajiBoxes[i].textContent = boxes.romajiList[i] || '';
+        } else {
+          box.classList.add('incorrect');
+          romajiBoxes[i].textContent = '';
+        }
+      });
+      const result = boxes.map(b => b.textContent).join('') === boxes.correct.join('');
+      feedback.textContent = result ? '✅ Bravo !' : '❌ Essaie encore';
+      // Display the Japanese phrase only if the answer is correct.
+      const jpElement = document.getElementById('jpPhrase');
+      if (result) {
+        jpElement.textContent = phrases[currentIndex].jp;
+        jpElement.style.display = 'block';
+      } else {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    function clearBoxes() {
+      boxes.forEach((box, i) => {
+        box.textContent = '';
+        box.classList.remove('correct', 'incorrect');
+        romajiBoxes[i].textContent = '';
+      });
+      document.querySelectorAll('#buttons button').forEach(b => b.disabled = false);
+      clickHistory = [];
+      feedback.textContent = '';
+      // Hide the Japanese phrase when clearing the boxes.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+      updateCheckButtonState();
+    }
+
+    function undoLast() {
+      const last = clickHistory.pop();
+      if (last) {
+        const idx = boxes.indexOf(last.box);
+        last.box.textContent = '';
+        romajiBoxes[idx].textContent = '';
+        last.box.classList.remove('correct', 'incorrect');
+        last.button.disabled = false;
+        updateCheckButtonState();
+      }
+      // Hide the Japanese phrase whenever the user interacts with the undo button.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    function showHint() {
+      // Hide the Japanese phrase when requesting a hint.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+      const i = boxes.findIndex(b => b.textContent === '');
+      if (i !== -1) {
+        lastHintedBox = boxes[i];
+        lastHintedBox.textContent = boxes.correct[i];
+        lastHintedBox.style.opacity = '0.5';
+        hintCount++;
+        hintCountSpan.textContent = hintCount;
+        hintActive = true;
+      }
+    }
+
+    function hideHint() {
+      if (hintActive && lastHintedBox) {
+        lastHintedBox.textContent = '';
+        lastHintedBox.style.opacity = '1';
+        lastHintedBox = null;
+        hintActive = false;
+      }
+      // Hide the Japanese phrase when the hint is released.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    function nextPhrase() {
+      currentIndex = (currentIndex + 1) % phrases.length;
+      loadPhrase(currentIndex);
+      // Hide the Japanese phrase when moving to the next phrase.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    // Naviguer vers la phrase précédente
+    function prevPhrase() {
+      currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
+      loadPhrase(currentIndex);
+      // Cacher la phrase japonaise lors du passage à la phrase précédente
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    // Choisir une phrase aléatoire
+    function randomPhrase() {
+      if (!phrases || phrases.length === 0) return;
+      let randIndex = Math.floor(Math.random() * phrases.length);
+      // éviter de répéter la même phrase immédiatement si possible
+      if (phrases.length > 1 && randIndex === currentIndex) {
+        randIndex = (randIndex + 1) % phrases.length;
+      }
+      currentIndex = randIndex;
+      loadPhrase(currentIndex);
+      // Cacher la phrase japonaise puisqu'une nouvelle phrase est tirée
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    fetch("phrases_100.json")
+      .then(res => res.json())
+      .then(json => { phrases = json; loadPhrase(currentIndex); })
+      .catch(e => { instruction.innerHTML = "<p>Erreur de chargement des données.</p>"; console.error(e); });
+  </script>
+
+
+</body></html>
