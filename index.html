@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta charset="utf-8"/>
+<!-- Mise à jour du titre de la page pour refléter l'exercice avec un drapeau japonais -->
+<title>Hiragana </title>
+<style>
+    body { font-family: sans-serif; background: #f2f2f2; padding: 20px; text-align: center; }
+    .instruction { font-size: 1.2em; margin-bottom: 10px; }
+    .grid-container { display: grid; gap: 5px; justify-content: center; margin-bottom: 5px; width: fit-content; margin-left: auto; margin-right: auto; }
+    .romaji-box { height: 20px; font-size: 14px; line-height: 20px; text-align: center; width: 40px; }
+    .box { width: 40px; height: 40px; border: 2px solid #333; font-size: 24px; line-height: 40px; background-color: white; text-align: center; }
+    .box.correct { background-color: #c8f7c5; }
+    .box.incorrect { background-color: #f9c0c0; }
+    #buttons { margin-top: 10px; }
+    #buttons button { margin: 5px; font-size: 20px; padding: 5px 10px; }
+    #buttons button:disabled { background-color: #d0e6ff; color: #555; }
+    .buttons { margin-top: 30px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .buttons button { font-size: 24px; padding: 12px 24px; border-radius: 10px; background-color: #eeeeee; border: 2px solid #aaa; }
+    .buttons button:hover { background-color: #d8eaff; cursor: pointer; }
+    .feedback { font-weight: bold; font-size: 1.2em; margin-top: 15px; }
+    /* Style pour le titre principal de la page */
+    h1#appTitle {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    #appTitle {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .title-main {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .title-signature {
+      font-size: 0.9em;
+      color: #666;
+      font-family: serif;
+      opacity: 0.8;
+      margin-top: 4px; 
+    }
+
+    /* Indicateur discret de position de la phrase */
+    .phrase-counter {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+    }
+    /* Styling for the instruction lines: romaji (normal), Japanese (red) and hidden by default, and French (dark blue) */
+    .romaji-line {
+      font-style: normal;
+      font-weight: normal;
+    }
+    .jp-line {
+      color: red;
+      font-weight: normal;
+      display: none; /* hidden until the user provides a correct answer */
+    }
+    .fr-line {
+      color: #00008B;
+      font-weight: normal;
+    }
+  
+    .highlight-preview {
+      background-color: #fff5c2 !important;
+      box-shadow: 0 0 8px #f0c040;
+      transform: scale(1.05);
+      transition: transform 0.1s ease;
+    }
+    
+    .action-button {
+      font-size: 1.2em;
+      padding: 0.4em 1em;
+      margin: 0.2em;
+      border-radius: 8px;
+      border: 2px solid #888;
+      background-color: #f0f0f0;
+      transition: background-color 0.2s ease;
+    }
+    .action-button:hover {
+      background-color: #e0e0e0 !important;
+    }
+    .help-button {
+      background-color: #d5f5d5 !important;
+    }
+    .help-button:disabled {
+      background-color: #cccccc !important;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .buttons-row {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    @media (min-width: 600px) {
+      .buttons-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+@media (max-width: 768px) {
+  #appTitle {
+    gap: 8px !important;
+  }
+  #appTitle .title-main {
+    font-size: 1.5em !important;
+  }
+  .grid-container {
+    transform: scale(0.95);
+  }
+  .buttons-row {
+    flex-direction: column !important;
+  }
+  .button-group {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  button {
+    font-size: 1em !important;
+  }
+}
+
+</style>
+</head>
+<body>
+<!-- Titre principal affiché en haut de la page -->
+<div id="appTitle" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+<!-- Menu あ/ア -->
+<div style="position: relative; display: inline-block;">
+<button style="font-size:1.2em;">🖋️ Kana ▼ </button>
+<div id="tableauxMenu" style="display: none; position: absolute; background-color: white; min-width: 120px;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; border: 1px solid #ccc; border-radius: 6px;">
+<button onclick="window.open('nhk_hiragana.png', '_blank');" style="width:100%;  font-size:1em;  padding: 8px; ; padding-left: 12px; text-align: left" title="Afficher le tableau des hiragana">あ Hiragana</button>
+<button onclick="window.open('nhk_katakana.png', '_blank');" style="width:100%;  font-size:1em;  padding: 8px; ; padding-left: 12px; text-align: left" title="Afficher le tableau des katakana">ア Katakana</button>
+</div>
+</div>
+<script>
+    const dropdown = document.currentScript.previousElementSibling;
+    const menu = dropdown.querySelector('#tableauxMenu');
+    dropdown.querySelector('button').onclick = () => {
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    };
+    window.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target)) {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
+<!-- Titre principal -->
+<div class="title-main">Hiragana</div>
+<!-- Menu AIDE à droite -->
+<div style="position: relative; display: inline-block;">
+<button style="font-size:1.2em;"> 📘 Aide ▼</button>
+<div id="aideMenu" style="display: none; position: absolute; background-color: white; min-width: 140px;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; border: 1px solid #ccc; border-radius: 6px;">
+<!-- Première option : ouvrir la fiche d'utilisation (ancienne icône 📋) -->
+<button onclick="document.getElementById('usagePopup').style.display='block';" style="width:100%;  font-size:1em;  padding: 8px; ;  text-align: left; padding-left: 12px; text-align: left" title="Afficher la fiche d'utilisation de l'exercice">📋 Tuto</button>
+<!-- Autre option d'aide : lien vers le PDF NHK -->
+<button onclick="window.open('nhk_le_japonais.pdf', '_blank');" style="width:100%;  font-size:1em;  padding: 8px; ;  text-align: left; padding-left: 12px; text-align: left" title="Ouvrir le PDF NHK やさしい日本語">🇯🇵 日本語 </button>
+</div>
+</div>
+<script>
+    const aideDropdown = document.currentScript.previousElementSibling;
+    const aideMenu = aideDropdown.querySelector('#aideMenu');
+    aideDropdown.querySelector('button').onclick = () => {
+      aideMenu.style.display = aideMenu.style.display === 'block' ? 'none' : 'block';
+    };
+    window.addEventListener('click', function(e) {
+      if (!aideDropdown.contains(e.target)) {
+        aideMenu.style.display = 'none';
+      }
+    });
+  </script>
+</div>
+<div class="instruction" id="instruction"><p>Erreur de chargement des données.</p></div>
+<!-- Removed the standalone jpPhrase element because the Japanese text will now be
+       displayed inside the instruction block itself when appropriate. -->
+<!-- <div class="feedback" id="jpPhrase" style="color: red;"></div> -->
+<div class="grid-container" id="romaji-container"></div>
+<div class="grid-container" id="phrase-container"></div>
+<div id="buttons"></div>
+<div class="buttons-row">
+<div class="button-group">
+<!--
+        Bouton « reprendre » : n'est affiché que lorsqu'une réponse erronée
+        est détectée lors de la vérification. Il se place juste à gauche
+        du bouton Vérifier et affiche uniquement une icône « 😩 ». Au clic,
+        il efface toutes les cases incorrectes et restaure les boutons de
+        kana correspondants, mimant l'action d'annuler ces entrées.
+      -->
+<button class="action-button help-button" id="resumeButton" onclick="resumeIncorrect()" style="display: none;" title="Réinitialiser uniquement les erreurs">😩</button>
+<button class="action-button help-button" disabled="disabled" id="checkButton" onclick="checkAnswer()">Vérifier</button>
+<button class="action-button" id="resetButton" onclick="clearBoxes()" title="Réinitialiser la saisie"><span style="color:red">RAZ</span></button>
+<button class="action-button" id="backspaceButton" onclick="undoLast()" title="Annuler la dernière lettre">←</button>
+<button class="action-button help-button" id="hintButton" onmousedown="showHint()" onmouseup="hideHint()" ontouchend="hideHint()" ontouchstart="showHint()" title="Afficher un indice temporaire">💡</button>
+<button class="action-button help-button" id="solutionButton" onmousedown="showSolutionPreview()" onmouseup="restorePreviousState()" ontouchend="restorePreviousState()" ontouchstart="showSolutionPreview()" title="Afficher temporairement la solution">👁️</button>
+</div>
+<div class="button-group">
+<button class="action-button" id="prevButton" onclick="prevPhrase()" title="Phrase précédente">⬅️</button>
+<button class="action-button" id="nextButton" onclick="nextPhrase()" title="Phrase suivante">➡️</button>
+<button class="action-button" id="randomButton" onclick="randomPhrase()" title="Phrase aléatoire">🎲</button>
+</div>
+</div>
+<div class="feedback" id="feedback"></div>
+<!-- Indicateur discret affichant la position actuelle de la phrase -->
+<div class="phrase-counter" id="phraseCounter"></div>
+<div class="feedback" style="font-style: italic; font-weight: normal;">Aides utilisées ici : <span id="hintCount">0</span><br/>
+    Solutions consultées; total : <span id="solutionCount">0</span><br/>
+     - dont ici - : <span id="localSolutionCount">0</span></div>
+<script>
+    let phrases = [], currentIndex = 0, boxes = [], romajiBoxes = [], clickHistory = [], hintCount = 0;
+    let hintActive = false, lastHintedBox = null;
+
+    const phraseContainer = document.getElementById('phrase-container');
+    const romajiContainer = document.getElementById('romaji-container');
+    const buttonsContainer = document.getElementById('buttons');
+    const instruction = document.getElementById('instruction');
+    const feedback = document.getElementById('feedback');
+    const hintCountSpan = document.getElementById('hintCount');
+    const checkButton = document.getElementById('checkButton');
+    const clickAudio = new Audio("data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAD//f39/f39");
+const victoryAudio = new Audio("victory.mp3");
+    // Élément d'indicateur de numéro de phrase
+    const phraseCounter = document.getElementById('phraseCounter');
+
+    const charToRomaji = {
+      'あ':'a','い':'i','う':'u','え':'e','お':'o','か':'ka','き':'ki','く':'ku','け':'ke','こ':'ko',
+      'が':'ga','ぎ':'gi','ぐ':'gu','げ':'ge','ご':'go','さ':'sa','し':'shi','す':'su','せ':'se','そ':'so',
+      'ざ':'za','じ':'ji','ず':'zu','ぜ':'ze','ぞ':'zo','た':'ta','ち':'chi','つ':'tsu','て':'te','と':'to',
+      'だ':'da','で':'de','ど':'do','な':'na','に':'ni','ぬ':'nu','ね':'ne','の':'no','は':'ha','ひ':'hi',
+      'ふ':'fu','へ':'he','ほ':'ho','ば':'ba','び':'bi','ぶ':'bu','べ':'be','ぼ':'bo','ま':'ma','み':'mi',
+      'む':'mu','め':'me','も':'mo','や':'ya','ゆ':'yu','よ':'yo','ら':'ra','り':'ri','る':'ru','れ':'re',
+      'ろ':'ro','わ':'wa','を':'o','ん':'n','っ':'','ゃ':'ya','ゅ':'yu','ょ':'yo','ー':'', '〜':'',
+      'フ':'fu','ラ':'ra','ン':'n','ス':'su','ジ':'ji','ョ':'yo','ト':'to','カ':'ka','ド':'do'
+    };
+
+    function hiraganaToRomajiCluster(cluster) {
+      return cluster.split('').map(c => charToRomaji[c] || '').join('');
+    }
+
+    function loadPhrase(index) {
+  const backBtn = document.getElementById("backspaceButton");
+  if (backBtn) backBtn.disabled = false;
+  const hintBtn = document.getElementById("hintButton");
+  const solBtn = document.getElementById("solutionButton");
+  if (hintBtn) hintBtn.disabled = false;
+  if (solBtn) solBtn.disabled = false;
+  document.getElementById("hintButton").disabled = false;
+  document.getElementById("solutionButton").disabled = false;
+      const localSpan = document.getElementById('localSolutionCount');
+      if (localSpan) localSpan.textContent = '0';
+      const phrase = phrases[index];
+      const rawChars = phrase.kana.trim().split(' ');
+      const romajiList = rawChars.map(hiraganaToRomajiCluster);
+      boxes = []; romajiBoxes = []; clickHistory = [];
+      hintCount = 0;
+      hintCountSpan.textContent = hintCount;
+      feedback.textContent = '';
+      // Hide any previously displayed Japanese phrase at the start of a new phrase.
+      const jpReset = document.getElementById('jpPhrase');
+      if (jpReset) {
+        jpReset.textContent = '';
+        jpReset.style.display = 'none';
+      }
+      checkButton.disabled = true;
+      // Cacher le bouton "reprendre" au chargement d'une nouvelle phrase
+      const resumeBtnInit = document.getElementById('resumeButton');
+      if (resumeBtnInit) {
+        resumeBtnInit.style.display = 'none';
+      }
+      // Construct the instruction block with romaji, a placeholder for the Japanese phrase,
+      // and the French translation. The Japanese line remains hidden until the answer
+      // is validated as correct.
+      instruction.innerHTML =
+        `<p class="romaji-line">${phrase.romaji}</p>` +
+        `<p id="jpPhrase" class="jp-line"></p>` +
+        `<p class="fr-line">${phrase.fr}</p>`;
+
+      // Mettre à jour l'indicateur de position de la phrase
+      if (phraseCounter) {
+        phraseCounter.textContent = `Phrase ${index + 1} / ${phrases.length}`;
+      }
+
+      phraseContainer.style.gridTemplateColumns = `repeat(${rawChars.length}, 40px)`;
+      romajiContainer.style.gridTemplateColumns = `repeat(${rawChars.length}, 40px)`;
+      phraseContainer.innerHTML = ''; romajiContainer.innerHTML = ''; buttonsContainer.innerHTML = '';
+
+      rawChars.forEach((_, i) => {
+        const rBox = document.createElement('div');
+        rBox.className = 'romaji-box';
+        romajiContainer.appendChild(rBox);
+        romajiBoxes.push(rBox);
+        const box = document.createElement('div');
+        box.className = 'box';
+        phraseContainer.appendChild(box);
+        boxes.push(box);
+      });
+
+      const shuffled = rawChars.slice().sort(() => Math.random() - 0.5);
+      shuffled.forEach(char => {
+        const btn = document.createElement('button');
+        btn.textContent = char;
+        btn.onclick = () => { clickAudio.play(); insertCharacter(char, btn); };
+        buttonsContainer.appendChild(btn);
+      });
+
+      boxes.correct = rawChars;
+      boxes.romajiList = romajiList;
+    }
+
+    function insertCharacter(char, button) {
+      const emptyBox = boxes.find(b => b.textContent === '');
+      if (emptyBox) {
+        emptyBox.textContent = char;
+        button.disabled = true;
+        clickHistory.push({box: emptyBox, button});
+        updateCheckButtonState();
+      }
+    }
+
+    function updateCheckButtonState() {
+      checkButton.disabled = !boxes.every(b => b.textContent !== '');
+    }
+
+    function checkAnswer() {
+  const backBtn = document.getElementById("backspaceButton");
+  const hintBtn = document.getElementById("hintButton");
+  const solBtn = document.getElementById("solutionButton");
+      boxes.forEach((box, i) => {
+        box.classList.remove('correct', 'incorrect');
+        if (box.textContent === boxes.correct[i]) {
+          box.classList.add('correct');
+          romajiBoxes[i].textContent = boxes.romajiList[i] || '';
+        } else {
+          box.classList.add('incorrect');
+          romajiBoxes[i].textContent = '';
+        }
+      });
+      const result = boxes.map(b => b.textContent).join('') === boxes.correct.join('');
+      
+      if (result) {
+        const hintUsed = parseInt(document.getElementById('hintCount').textContent || '0');
+        const solUsed = parseInt(document.getElementById('localSolutionCount').textContent || '0');
+        if (hintUsed === 0 && solUsed === 0) {
+          feedback.textContent = '✅ Bravo, sans aide ! 👍';
+          victoryAudio.play();
+        } else {
+          feedback.textContent = 'Mouais, trouvé avec de l\'aide...👎';
+        }
+      } else {
+        feedback.textContent = '❌ Essaie encore';
+      }
+    
+      // Gérer l'affichage du bouton "reprendre" selon le résultat et la présence d'erreurs.
+      const resumeBtn = document.getElementById('resumeButton');
+      if (!result && boxes.some(b => b.classList.contains('incorrect'))) {
+        // Afficher le bouton uniquement si des cases sont incorrectes.
+        if (resumeBtn) {
+          resumeBtn.style.display = 'inline-block';
+        }
+      } else {
+        if (resumeBtn) {
+          resumeBtn.style.display = 'none';
+        }
+      }
+
+      // Afficher la phrase japonaise seulement si tout est correct
+      const jpElement = document.getElementById('jpPhrase');
+      if (result) {
+        jpElement.textContent = phrases[currentIndex].jp;
+        jpElement.style.display = 'block';
+        if (hintBtn) hintBtn.disabled = true;
+        if (solBtn) solBtn.disabled = true;
+        if (backBtn) backBtn.disabled = true;
+      } else {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+        if (hintBtn) hintBtn.disabled = false;
+        if (solBtn) solBtn.disabled = false;
+        if (backBtn) backBtn.disabled = false;
+      }
+    }
+
+    function clearBoxes() {
+  const backBtn = document.getElementById("backspaceButton");
+  if (backBtn) backBtn.disabled = false;
+  const hintBtn = document.getElementById("hintButton");
+  const solBtn = document.getElementById("solutionButton");
+  if (hintBtn) hintBtn.disabled = false;
+  if (solBtn) solBtn.disabled = false;
+  document.getElementById("hintButton").disabled = false;
+  document.getElementById("solutionButton").disabled = false;
+      boxes.forEach((box, i) => {
+        box.textContent = '';
+        box.classList.remove('correct', 'incorrect');
+        romajiBoxes[i].textContent = '';
+      });
+      document.querySelectorAll('#buttons button').forEach(b => b.disabled = false);
+      clickHistory = [];
+      feedback.textContent = '';
+      // Hide the Japanese phrase when clearing the boxes.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+      updateCheckButtonState();
+
+      // Masquer le bouton "reprendre" lorsque l'on réinitialise tout
+      const resumeBtn = document.getElementById('resumeButton');
+      if (resumeBtn) {
+        resumeBtn.style.display = 'none';
+      }
+    }
+
+    function undoLast() {
+      const last = clickHistory.pop();
+      if (last) {
+        const idx = boxes.indexOf(last.box);
+        last.box.textContent = '';
+        romajiBoxes[idx].textContent = '';
+        last.box.classList.remove('correct', 'incorrect');
+        last.button.disabled = false;
+        updateCheckButtonState();
+      }
+      // Hide the Japanese phrase whenever the user interacts with the undo button.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    /**
+     * Efface toutes les lettres positionnées dans des cases incorrectes et
+     * réactive les boutons correspondants. Cette fonction est appelée
+     * lorsqu'on clique sur le bouton "reprendre" (😩). Elle parcourt
+     * l'historique des clics pour identifier les entrées qui se trouvent
+     * dans des cases marquées comme incorrectes (classe CSS « incorrect »),
+     * puis rétablit l'état initial de ces cases et des boutons de kana.
+     */
+    function resumeIncorrect() {
+      // Parcourir l'historique en sens inverse pour supprimer les entrées
+      // sans perturber les indices restants.
+      for (let i = clickHistory.length - 1; i >= 0; i--) {
+        const entry = clickHistory[i];
+        const box = entry.box;
+        if (box.classList.contains('incorrect')) {
+          // Réinitialiser la case et le romaji correspondant
+          const idx = boxes.indexOf(box);
+          box.textContent = '';
+          if (idx !== -1) {
+            romajiBoxes[idx].textContent = '';
+          }
+          // Retirer les classes d'état
+          box.classList.remove('correct', 'incorrect');
+          // Réactiver le bouton de kana
+          if (entry.button) {
+            entry.button.disabled = false;
+          }
+          // Retirer cette entrée de l'historique
+          clickHistory.splice(i, 1);
+        }
+      }
+      // Cacher la phrase japonaise et le bouton "reprendre"
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+      // Mettre à jour l'état du bouton Vérifier
+      updateCheckButtonState();
+      // Masquer le bouton reprendre après utilisation
+      const resumeBtn = document.getElementById('resumeButton');
+      if (resumeBtn) {
+        resumeBtn.style.display = 'none';
+      }
+    }
+
+    function showHint() {
+      // Hide the Japanese phrase when requesting a hint.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+      const i = boxes.findIndex(b => b.textContent === '');
+      if (i !== -1) {
+        lastHintedBox = boxes[i];
+        lastHintedBox.textContent = boxes.correct[i];
+        lastHintedBox.style.opacity = '0.5';
+        hintCount++;
+        hintCountSpan.textContent = hintCount;
+        hintActive = true;
+      }
+    }
+
+    function hideHint() {
+      if (hintActive && lastHintedBox) {
+        lastHintedBox.textContent = '';
+        lastHintedBox.style.opacity = '1';
+        lastHintedBox = null;
+        hintActive = false;
+      }
+      // Hide the Japanese phrase when the hint is released.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    function nextPhrase() {
+      currentIndex = (currentIndex + 1) % phrases.length;
+      loadPhrase(currentIndex);
+      // Hide the Japanese phrase when moving to the next phrase.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    // Naviguer vers la phrase précédente
+    function prevPhrase() {
+      currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
+      loadPhrase(currentIndex);
+      // Cacher la phrase japonaise lors du passage à la phrase précédente
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    // Choisir une phrase aléatoire
+    function randomPhrase() {
+      if (!phrases || phrases.length === 0) return;
+      let randIndex = Math.floor(Math.random() * phrases.length);
+      // éviter de répéter la même phrase immédiatement si possible
+      if (phrases.length > 1 && randIndex === currentIndex) {
+        randIndex = (randIndex + 1) % phrases.length;
+      }
+      currentIndex = randIndex;
+      loadPhrase(currentIndex);
+      // Cacher la phrase japonaise puisqu'une nouvelle phrase est tirée
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    fetch("phrases_100.json")
+      .then(res => res.json())
+      .then(json => { phrases = json; loadPhrase(currentIndex); })
+      .catch(e => { instruction.innerHTML = "<p>Erreur de chargement des données.</p>"; console.error(e); });
+  
+    let savedState = [];
+    let totalSolutionCount = 0;
+
+    function showSolutionPreview() {
+      const totalSpan = document.getElementById('solutionCount');
+      const localSpan = document.getElementById('localSolutionCount');
+
+      totalSolutionCount++;
+      if (totalSpan) totalSpan.textContent = totalSolutionCount;
+      if (localSpan) localSpan.textContent = parseInt(localSpan.textContent || '0') + 1;
+
+      if (totalSolutionCount === 5) {
+        alert("👁️ Tu aimes un peu trop tricher, non ? 😄");
+      }
+
+      savedState = boxes.map((box, i) => ({
+        text: box.textContent,
+        classList: [...box.classList],
+        romaji: romajiBoxes[i].textContent
+      }));
+
+      boxes.forEach((box, i) => {
+        box.textContent = boxes.correct[i];
+        box.classList.remove('incorrect');
+        box.classList.add('correct', 'highlight-preview');
+        romajiBoxes[i].textContent = boxes.romajiList[i];
+      });
+    }
+
+    function restorePreviousState() {
+      savedState.forEach((state, i) => {
+        boxes[i].textContent = state.text;
+        boxes[i].className = 'box';
+        state.classList.forEach(cls => boxes[i].classList.add(cls));
+        boxes[i].classList.remove('highlight-preview');
+        romajiBoxes[i].textContent = state.romaji;
+      });
+    }
+
+</script>
+<div id="macronInfo" style="display:none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%);
+    background-color: #fff; border: 2px solid #666; padding: 1em; border-radius: 10px;
+    max-width: 90%; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 9999;">
+<p style="font-size: 1em; text-align:left;">
+    Dans certains mots (comme ici) contenant "ou", comme <strong>gakkou</strong>, la transcription correcte selon le système Hepburn est <strong>gakkō</strong> (avec un ō long).
+    <br/><br/>Mais ici, nous utilisons <strong>gakkou</strong> car cela correspond mieux à la structure en hiragana :<br/> が (ga) + っ (petit tsu) + こ (ko) + う (u).
+    <br/><br/>Cela facilite l’apprentissage de l’écriture en japonais - et c'est incontournable pour cet exercice ;-)
+  </p>
+</div>
+<script>
+function maybeAddInfoButton() {
+  const romajiEl = document.querySelector('.romaji-line');
+  if (!romajiEl) return;
+  const existingBtn = document.getElementById('infoButton');
+  if (existingBtn) existingBtn.remove();
+
+  if (romajiEl.textContent.includes("ou")) {
+    const infoBtn = document.createElement("button");
+    infoBtn.textContent = "ℹ️";
+    infoBtn.title = "Pourquoi 'gakkou' et pas 'gakkō' ?";
+    infoBtn.id = "infoButton";
+    infoBtn.style.marginLeft = "10px";
+    infoBtn.style.fontSize = "0.9em";
+    infoBtn.style.cursor = "pointer";
+    infoBtn.onclick = () => {
+      document.getElementById("macronInfo").style.display = "block";
+    };
+    romajiEl.appendChild(infoBtn);
+  }
+}
+
+// Intercepter loadPhrase pour y insérer l’appel à maybeAddInfoButton
+const originalLoadPhrase = loadPhrase;
+loadPhrase = function(index) {
+  originalLoadPhrase(index);
+  setTimeout(maybeAddInfoButton, 30);
+}
+
+// La fiche d'utilisation est désormais accessible via le menu Aide.
+// On ne crée plus de bouton séparé dans le titre.
+
+// Ajouter la boîte popup à la fin du body
+const usageDiv = document.createElement('div');
+usageDiv.id = 'usagePopup';
+usageDiv.style.display = 'none';
+usageDiv.style.position = 'fixed';
+usageDiv.style.top = '10%';
+usageDiv.style.left = '50%';
+usageDiv.style.transform = 'translateX(-50%)';
+usageDiv.style.backgroundColor = '#fff';
+usageDiv.style.border = '2px solid #666';
+usageDiv.style.padding = '1em';
+usageDiv.style.borderRadius = '10px';
+usageDiv.style.maxWidth = '90%';
+usageDiv.style.maxHeight = '80%';
+usageDiv.style.overflowY = 'auto';
+usageDiv.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)';
+usageDiv.style.zIndex = '9999';
+usageDiv.innerHTML = `<div style="text-align:center;">
+  <h2 style="margin-top:0; text-align:center;">Fiche d'utilisation</h2>
+  <p style="font-style:italic; font-size:1em; text-align:center;">par CilMac – juillet 2025</p>
+  <div style="text-align:left;">
+    <h3>🎯 Objectif</h3>
+    <p>S'entraîner à reconstituer des phrases japonaises simples en <strong>hiragana</strong>, à partir de leur <em>romaji</em> et de leur traduction française.</p>
+
+    <h3>🧩 Fonctionnement de base</h3>
+    <ol>
+      <li>Une phrase en <strong>romaji</strong> + traduction française est affichée.</li>
+      <li>Des boutons mélangés proposent les <strong>hiragana</strong> à cliquer dans l'ordre.</li>
+      <li>Quand toutes les cases sont remplies, le bouton <strong>Vérifier</strong> s’active.</li>
+      <li>Si c'est juste → tout passe en vert. Sinon → erreurs en rouge.</li>
+    </ol>
+
+    <h3>✨ Fonctions utiles</h3>
+    <ul>
+      <li><strong>😩 Reprendre</strong> : efface uniquement les cases incorrectes.</li>
+      <li><strong>💡 Indice</strong> : propose un caractère correct temporaire.</li>
+      <li><strong>👁️ Solution</strong> : affiche temporairement la réponse complète.</li>
+      <li><strong>← Annuler</strong> : retire la dernière lettre saisie.</li>
+      <li><strong>RAZ</strong> : recommence la phrase en cours.</li>
+	<li><strong>Rafraîchir</strong> la page Web : nouvelle session, repart à zéro.</li>
+    </ul>
+
+    <h3>📂 Données</h3>
+    <p>Les phrases viennent du fichier <code>phrases_100.json</code> (hiragana + romaji + français).</p>
+
+    <h3>ℹ️ Astuce</h3>
+    <p>Parfois <code>gakkou</code> est affiché au lieu de <code>gakkō</code> : c’est pour mieux coller aux hiragana.</p>
+
+    <h3></li>
+    </ul>
+  </div>
+</div>
+<button onclick="document.getElementById('usagePopup').style.display='none';" style="margin-top: 10px; padding: 6px 12px;">Fermer</button>`;
+document.body.appendChild(usageDiv);
+</script><div id="usagePopup" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%); background-color: rgb(255, 255, 255); border: 2px solid rgb(102, 102, 102); padding: 1em; border-radius: 10px; max-width: 90%; max-height: 80%; overflow-y: auto; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px; z-index: 9999;"><div style="text-align:center;">
+<h2 style="margin-top:0; text-align:center;">Fiche d'utilisation</h2>
+<p style="font-style:italic; font-size:1em; text-align:center;">par CilMac – juillet 2025</p>
+<div style="text-align:left;">
+<h3>🎯 Objectif</h3>
+<p>S'entraîner à reconstituer des phrases japonaises simples en <strong>hiragana</strong>, à partir de leur <em>romaji</em> et de leur traduction française.</p>
+<h3>🧩 Fonctionnement de base</h3>
+<ol>
+<li>Une phrase en <strong>romaji</strong> + traduction française est affichée.</li>
+<li>Des boutons mélangés proposent les <strong>hiragana</strong> à cliquer dans l'ordre.</li>
+<li>Quand toutes les cases sont remplies, le bouton <strong>Vérifier</strong> s’active.</li>
+<li>Si c'est juste → tout passe en vert. Sinon → erreurs en rouge.</li>
+</ol>
+<h3>✨ Fonctions utiles</h3>
+<ul>
+<li><strong>😩 Reprendre</strong> : efface uniquement les cases incorrectes.</li>
+<li><strong>💡 Indice</strong> : propose un caractère correct temporaire.</li>
+<li><strong>👁️ Solution</strong> : affiche temporairement la réponse complète.</li>
+<li><strong>← Annuler</strong> : retire la dernière lettre saisie.</li>
+<li><strong>RAZ</strong> : recommence la phrase en cours.</li>
+<li><strong>Rafraîchir</strong> la page Web : nouvelle session, repart à zéro.</li>
+</ul>
+<h3>📂 Données</h3>
+<p>Les phrases viennent du fichier <code>phrases_100.json</code> (hiragana + romaji + français).</p>
+<h3>ℹ️ Astuce</h3>
+<p>Parfois <code>gakkou</code> est affiché au lieu de <code>gakkō</code> : c’est pour mieux coller aux hiragana.</p>
+<h3>
+</h3></div>
+</div>
+<button onclick="document.getElementById('usagePopup').style.display='none';" style="margin-top: 10px; padding: 6px 12px;">Fermer</button></div>
+<!-- Fenêtre popup avec l’image Hiragana -->
+<div id="hiraganaPopup" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%);
+    background-color: #fff; border: 2px solid #666; padding: 1em; border-radius: 10px;
+    max-width: 95%; max-height: 80vh; overflow-y: auto; -webkit-overflow-scrolling: touch; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 9999; text-align: center;">
+<h2>Tableau Hiragana</h2>
+<img alt="Tableau Hiragana" src="Hiragana_fichiers/nhk_hiragana.png" style="max-width: 100%; height: auto; touch-action: pinch-zoom;"/>
+<br/>
+<button onclick="document.getElementById('hiraganaPopup').style.display='none';" style="margin-top:10px; padding:6px 12px;">Fermer</button>
+</div>
+<!-- Fenêtre popup Katakana -->
+<div id="katakanaPopup" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%);
+    background-color: #fff; border: 2px solid #666; padding: 1em; border-radius: 10px;
+    max-width: 95%; max-height: 80vh; overflow-y: auto; -webkit-overflow-scrolling: touch; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 9999; text-align: center;">
+<h2>Tableau Katakana</h2>
+<img alt="Tableau Katakana" src="Hiragana_fichiers/nhk_katakana.png" style="max-width: 100%; height: auto; touch-action: pinch-zoom;"/>
+<br/>
+<button onclick="document.getElementById('katakanaPopup').style.display='none';" style="margin-top:10px; padding:6px 12px;">Fermer</button>
+</div>
+</body></html>
