@@ -1,0 +1,1129 @@
+[
+  {
+    "type": "hiragana",
+    "kana": "あ",
+    "romaji": "a",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%82%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "い",
+    "romaji": "i",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%84%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "う",
+    "romaji": "u",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%86%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "え",
+    "romaji": "e",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%88%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "お",
+    "romaji": "o",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%8A%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "か",
+    "romaji": "ka",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%8B%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "き",
+    "romaji": "ki",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%8D%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "く",
+    "romaji": "ku",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%8F%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "け",
+    "romaji": "ke",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%91%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "こ",
+    "romaji": "ko",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%93%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "さ",
+    "romaji": "sa",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%95%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "し",
+    "romaji": "shi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%97%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "す",
+    "romaji": "su",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%99%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "せ",
+    "romaji": "se",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%9B%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "そ",
+    "romaji": "so",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%9D%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "た",
+    "romaji": "ta",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%9F%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "ち",
+    "romaji": "chi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%A1%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "つ",
+    "romaji": "tsu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%A4%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "て",
+    "romaji": "te",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%A6%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "と",
+    "romaji": "to",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%A8%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "な",
+    "romaji": "na",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%AA%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "に",
+    "romaji": "ni",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%AB%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぬ",
+    "romaji": "nu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%AC%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "ね",
+    "romaji": "ne",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%AD%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "の",
+    "romaji": "no",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%AE%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "は",
+    "romaji": "ha",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%AF%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ひ",
+    "romaji": "hi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%B2%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "ふ",
+    "romaji": "fu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%B5%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "へ",
+    "romaji": "he",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%B8%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "ほ",
+    "romaji": "ho",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%BB%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "ま",
+    "romaji": "ma",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%BE%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "み",
+    "romaji": "mi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%BF%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "む",
+    "romaji": "mu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%80%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "め",
+    "romaji": "me",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%81%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "も",
+    "romaji": "mo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%82%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "や",
+    "romaji": "ya",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%84%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ゆ",
+    "romaji": "yu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%86%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "よ",
+    "romaji": "yo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%88%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "ら",
+    "romaji": "ra",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%89%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "り",
+    "romaji": "ri",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%8A%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "る",
+    "romaji": "ru",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%8B%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "れ",
+    "romaji": "re",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%8C%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "ろ",
+    "romaji": "ro",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%8D%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "hiragana",
+    "kana": "わ",
+    "romaji": "wa",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%8F%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "を",
+    "romaji": "o",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%92%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ん",
+    "romaji": "n",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%93%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "katakana",
+    "kana": "ア",
+    "romaji": "a",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%A2%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "イ",
+    "romaji": "i",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%A4%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ウ",
+    "romaji": "u",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%A6%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "エ",
+    "romaji": "e",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%A8%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "オ",
+    "romaji": "o",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%AA%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "カ",
+    "romaji": "ka",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%AB%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "キ",
+    "romaji": "ki",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%AD%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ク",
+    "romaji": "ku",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%AF%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "katakana",
+    "kana": "ケ",
+    "romaji": "ke",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B1%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "コ",
+    "romaji": "ko",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B3%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "サ",
+    "romaji": "sa",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B5%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "シ",
+    "romaji": "shi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B7%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ス",
+    "romaji": "su",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B9%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "セ",
+    "romaji": "se",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%BB%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ソ",
+    "romaji": "so",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%BD%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "タ",
+    "romaji": "ta",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%BF%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "チ",
+    "romaji": "chi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%81%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ツ",
+    "romaji": "tsu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%84%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "テ",
+    "romaji": "te",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%86%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ト",
+    "romaji": "to",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%88%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ナ",
+    "romaji": "na",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%8A%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ニ",
+    "romaji": "ni",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%8B%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ヌ",
+    "romaji": "nu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%8C%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ネ",
+    "romaji": "ne",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%8D%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "katakana",
+    "kana": "ノ",
+    "romaji": "no",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%8E%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "katakana",
+    "kana": "ハ",
+    "romaji": "ha",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%8F%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ヒ",
+    "romaji": "hi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%92%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "フ",
+    "romaji": "fu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%95%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "katakana",
+    "kana": "ヘ",
+    "romaji": "he",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%98%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "katakana",
+    "kana": "ホ",
+    "romaji": "ho",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%9B%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "katakana",
+    "kana": "マ",
+    "romaji": "ma",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%9E%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ミ",
+    "romaji": "mi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%9F%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ム",
+    "romaji": "mu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A0%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "メ",
+    "romaji": "me",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A1%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "モ",
+    "romaji": "mo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A2%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ヤ",
+    "romaji": "ya",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A4%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ユ",
+    "romaji": "yu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A6%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ヨ",
+    "romaji": "yo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A8%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ラ",
+    "romaji": "ra",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A9%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "リ",
+    "romaji": "ri",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%AA%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ル",
+    "romaji": "ru",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%AB%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "レ",
+    "romaji": "re",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%AC%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "katakana",
+    "kana": "ロ",
+    "romaji": "ro",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%AD%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ワ",
+    "romaji": "wa",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%AF%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ヲ",
+    "romaji": "o",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%B2%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ン",
+    "romaji": "n",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%B3%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "が",
+    "romaji": "ga",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%8B%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぎ",
+    "romaji": "gi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%8D%20stroke%20order%20animation.gif",
+    "strokes": 6
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぐ",
+    "romaji": "gu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%8F%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "げ",
+    "romaji": "ge",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%91%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "hiragana",
+    "kana": "ご",
+    "romaji": "go",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%93%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "ざ",
+    "romaji": "za",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%95%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "hiragana",
+    "kana": "じ",
+    "romaji": "ji",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%97%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ず",
+    "romaji": "zu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%99%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぜ",
+    "romaji": "ze",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%9B%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぞ",
+    "romaji": "zo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%9D%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "だ",
+    "romaji": "da",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%9F%20stroke%20order%20animation.gif",
+    "strokes": 6
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぢ",
+    "romaji": "ji",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%A1%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "hiragana",
+    "kana": "づ",
+    "romaji": "zu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%A4%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "で",
+    "romaji": "de",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%A6%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ど",
+    "romaji": "do",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%A8%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "ば",
+    "romaji": "ba",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%AF%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "hiragana",
+    "kana": "び",
+    "romaji": "bi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%B2%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぶ",
+    "romaji": "bu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%B5%20stroke%20order%20animation.gif",
+    "strokes": 6
+  },
+  {
+    "type": "hiragana",
+    "kana": "べ",
+    "romaji": "be",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%B8%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぼ",
+    "romaji": "bo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%BB%20stroke%20order%20animation.gif",
+    "strokes": 6
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぱ",
+    "romaji": "pa",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%AF%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぴ",
+    "romaji": "pi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%B2%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぷ",
+    "romaji": "pu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%B5%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぺ",
+    "romaji": "pe",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%B8%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぽ",
+    "romaji": "po",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%BB%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "ガ",
+    "romaji": "ga",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%AB%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "katakana",
+    "kana": "ギ",
+    "romaji": "gi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%AD%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "グ",
+    "romaji": "gu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%AF%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ゲ",
+    "romaji": "ge",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B1%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "ゴ",
+    "romaji": "go",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B3%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "katakana",
+    "kana": "ザ",
+    "romaji": "za",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B5%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "ジ",
+    "romaji": "ji",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B7%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "ズ",
+    "romaji": "zu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%B9%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "katakana",
+    "kana": "ゼ",
+    "romaji": "ze",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%BB%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "ゾ",
+    "romaji": "zo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%BD%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "katakana",
+    "kana": "ダ",
+    "romaji": "da",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%BF%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "ヂ",
+    "romaji": "ji",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%81%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "ヅ",
+    "romaji": "zu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%84%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "デ",
+    "romaji": "de",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%86%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "katakana",
+    "kana": "ド",
+    "romaji": "do",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%88%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "katakana",
+    "kana": "バ",
+    "romaji": "ba",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%8F%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "katakana",
+    "kana": "ビ",
+    "romaji": "bi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%92%20stroke%20order%20animation.gif",
+    "strokes": 4
+  },
+  {
+    "type": "katakana",
+    "kana": "ブ",
+    "romaji": "bu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%95%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ベ",
+    "romaji": "be",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%98%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ボ",
+    "romaji": "bo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%9B%20stroke%20order%20animation.gif",
+    "strokes": 6
+  },
+  {
+    "type": "katakana",
+    "kana": "パ",
+    "romaji": "pa",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%8F%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ピ",
+    "romaji": "pi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%92%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "プ",
+    "romaji": "pu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%95%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ペ",
+    "romaji": "pe",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%98%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ポ",
+    "romaji": "po",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%9B%20stroke%20order%20animation.gif",
+    "strokes": 5
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぁ",
+    "romaji": "xa",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%82%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぃ",
+    "romaji": "xi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%84%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぅ",
+    "romaji": "xu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%86%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぇ",
+    "romaji": "xe",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%88%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "ぉ",
+    "romaji": "xo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%8A%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ゃ",
+    "romaji": "xya",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%84%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "hiragana",
+    "kana": "ゅ",
+    "romaji": "xyu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%86%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "ょ",
+    "romaji": "xyo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%82%88%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "hiragana",
+    "kana": "っ",
+    "romaji": "xtsu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana%20%E3%81%A4%20stroke%20order%20animation.gif",
+    "strokes": 1
+  },
+  {
+    "type": "katakana",
+    "kana": "ァ",
+    "romaji": "xa",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%A2%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ィ",
+    "romaji": "xi",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%A4%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ゥ",
+    "romaji": "xu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%A6%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ェ",
+    "romaji": "xe",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%A8%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ォ",
+    "romaji": "xo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%82%AA%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ャ",
+    "romaji": "xya",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A4%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ュ",
+    "romaji": "xyu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A6%20stroke%20order%20animation.gif",
+    "strokes": 2
+  },
+  {
+    "type": "katakana",
+    "kana": "ョ",
+    "romaji": "xyo",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%A8%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ッ",
+    "romaji": "xtsu",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%84%20stroke%20order%20animation.gif",
+    "strokes": 3
+  },
+  {
+    "type": "katakana",
+    "kana": "ヮ",
+    "romaji": "xwa",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katakana%20%E3%83%AF%20stroke%20order%20animation.gif",
+    "strokes": 2
+  }
+]
