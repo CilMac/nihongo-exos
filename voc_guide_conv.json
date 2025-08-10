@@ -1,0 +1,6122 @@
+[
+  {
+    "No": 1,
+    "Francais": "à côté",
+    "Japonais": "横",
+    "Kana": "よこ",
+    "Romaji": "yoko",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 2,
+    "Francais": "dedans / dehors",
+    "Japonais": "中 / 外",
+    "Kana": "なか / そと",
+    "Romaji": "naka / soto",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 3,
+    "Francais": "dessus / dessous",
+    "Japonais": "上 / 下",
+    "Kana": "うえ / した",
+    "Romaji": "ue / shita",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 4,
+    "Francais": "devant / derrière",
+    "Japonais": "前 / 後ろ",
+    "Kana": "まえ / うしろ",
+    "Romaji": "mae / ushiro",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 5,
+    "Francais": "droite / gauche",
+    "Japonais": "右 / 左",
+    "Kana": "みぎ / ひだり",
+    "Romaji": "migi / hidari",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 6,
+    "Francais": "en face",
+    "Japonais": "向こう",
+    "Kana": "むこう",
+    "Romaji": "mukô",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 7,
+    "Francais": "entrée / sortie",
+    "Japonais": "入口 / 出口",
+    "Kana": "いりぐち / でぐち",
+    "Romaji": "iriguchi / deguchi",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 8,
+    "Francais": "est / ouest",
+    "Japonais": "東 / 西",
+    "Kana": "ひがし / にし",
+    "Romaji": "higashi / nishi",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 9,
+    "Francais": "nord / sud",
+    "Japonais": "北 / 南",
+    "Kana": "きた / みなみ",
+    "Romaji": "kita / minami",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 10,
+    "Francais": "à … heure(s) ᐧᐧᐧ",
+    "Japonais": "時 に",
+    "Kana": "じ に",
+    "Romaji": "ji ni",
+    "Categorie": "temps"
+  },
+  {
+    "No": 11,
+    "Francais": "après-midi",
+    "Japonais": "午後",
+    "Kana": "ごご",
+    "Romaji": "gogo",
+    "Categorie": "temps"
+  },
+  {
+    "No": 12,
+    "Francais": "aujourd’hui",
+    "Japonais": "今日",
+    "Kana": "きょう",
+    "Romaji": "kyô",
+    "Categorie": "temps"
+  },
+  {
+    "No": 13,
+    "Francais": "ce soir",
+    "Japonais": "今晩",
+    "Kana": "こmばん",
+    "Romaji": "komban",
+    "Categorie": "temps"
+  },
+  {
+    "No": 14,
+    "Francais": "cette semaine",
+    "Japonais": "今週",
+    "Kana": "こんしゅう",
+    "Romaji": "konshû",
+    "Categorie": "temps"
+  },
+  {
+    "No": 15,
+    "Francais": "demain / hier",
+    "Japonais": "明日 / 昨日",
+    "Kana": "あした / きのう",
+    "Romaji": "ash(i)ta / kinô",
+    "Categorie": "temps"
+  },
+  {
+    "No": 16,
+    "Francais": "la semaine prochaine",
+    "Japonais": "来週",
+    "Kana": "らいしゅう",
+    "Romaji": "raïshû",
+    "Categorie": "temps"
+  },
+  {
+    "No": 17,
+    "Francais": "matin / soir",
+    "Japonais": "朝 / 夜",
+    "Kana": "あさ / よる",
+    "Romaji": "asa / yoru",
+    "Categorie": "temps"
+  },
+  {
+    "No": 18,
+    "Francais": "matinée",
+    "Japonais": "午前",
+    "Kana": "ごぜん",
+    "Romaji": "gozen",
+    "Categorie": "temps"
+  },
+  {
+    "No": 19,
+    "Francais": "nom de famille",
+    "Japonais": "氏名",
+    "Kana": "しめい",
+    "Romaji": "shimeï",
+    "Categorie": "temps"
+  },
+  {
+    "No": 20,
+    "Francais": "prénom",
+    "Japonais": "名前",
+    "Kana": "なまえ",
+    "Romaji": "namae",
+    "Categorie": "temps"
+  },
+  {
+    "No": 21,
+    "Francais": "date de naissance",
+    "Japonais": "生年月日",
+    "Kana": "せいねんがっぴ",
+    "Romaji": "seïnengappi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 22,
+    "Francais": "nationalité",
+    "Japonais": "国籍",
+    "Kana": "こくせき",
+    "Romaji": "kokuseki",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 23,
+    "Francais": "numéro de passeport",
+    "Japonais": "パスポート 番号",
+    "Kana": "パスポウト バンゴウ",
+    "Romaji": "pasupôto bangô",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 24,
+    "Francais": "adresse",
+    "Japonais": "住所",
+    "Kana": "じゅうしょ",
+    "Romaji": "jûsho",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 25,
+    "Francais": "adresse au Japon",
+    "Japonais": "滞在中 の 住所",
+    "Kana": "たいざいちゅう の じゅうしょ",
+    "Romaji": "taïzaïchû no jûsho",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 26,
+    "Francais": "durée du déjour",
+    "Japonais": "滞在 日数",
+    "Kana": "たいざい にっすう",
+    "Romaji": "taïzaï nissû",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 27,
+    "Francais": "raison du séjour",
+    "Japonais": "滞在 理由",
+    "Kana": "たいざい りゆう",
+    "Romaji": "taïzaï riyû",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 28,
+    "Francais": "études",
+    "Japonais": "修学",
+    "Kana": "しゅうがく",
+    "Romaji": "shûgaku",
+    "Categorie": "travail"
+  },
+  {
+    "No": 29,
+    "Francais": "profession",
+    "Japonais": "仕事",
+    "Kana": "しごと",
+    "Romaji": "shigoto",
+    "Categorie": "travail"
+  },
+  {
+    "No": 30,
+    "Francais": "tourisme",
+    "Japonais": "観光",
+    "Kana": "かんこう",
+    "Romaji": "kankô",
+    "Categorie": "voyage"
+  },
+  {
+    "No": 31,
+    "Francais": "visite à la famille",
+    "Japonais": "親族 訪問",
+    "Kana": "しんぞく ほうもん",
+    "Romaji": "shinzoku hômon",
+    "Categorie": "famille"
+  },
+  {
+    "No": 32,
+    "Francais": "dollar",
+    "Japonais": "ドル",
+    "Kana": "ドル",
+    "Romaji": "doru",
+    "Categorie": "argent"
+  },
+  {
+    "No": 33,
+    "Francais": "euro",
+    "Japonais": "ユーロ",
+    "Kana": "ユウロ",
+    "Romaji": "yûro",
+    "Categorie": "argent"
+  },
+  {
+    "No": 34,
+    "Francais": "franc (suisse)",
+    "Japonais": "フラン",
+    "Kana": "フラン",
+    "Romaji": "furan",
+    "Categorie": "argent"
+  },
+  {
+    "No": 35,
+    "Francais": "taux",
+    "Japonais": "レート",
+    "Kana": "レイト",
+    "Romaji": "rêto",
+    "Categorie": "argent"
+  },
+  {
+    "No": 36,
+    "Francais": "yen",
+    "Japonais": "円",
+    "Kana": "えん",
+    "Romaji": "en",
+    "Categorie": "argent"
+  },
+  {
+    "No": 37,
+    "Francais": "ENTRÉE",
+    "Japonais": "入口",
+    "Kana": "いりぐち",
+    "Romaji": "iriguchi",
+    "Categorie": "transport"
+  },
+  {
+    "No": 38,
+    "Francais": "SORTIE",
+    "Japonais": "出口",
+    "Kana": "でぐち",
+    "Romaji": "deguchi",
+    "Categorie": "transport"
+  },
+  {
+    "No": 39,
+    "Francais": "guichet(avec un employé)",
+    "Japonais": "窓口",
+    "Kana": "まどぐち",
+    "Romaji": "madoguchi",
+    "Categorie": "transport"
+  },
+  {
+    "No": 40,
+    "Francais": "1 personne １",
+    "Japonais": "人",
+    "Kana": "ひとり",
+    "Romaji": "h(i)tori",
+    "Categorie": "transport"
+  },
+  {
+    "No": 41,
+    "Francais": "2 personnes ２",
+    "Japonais": "人",
+    "Kana": "ふたり",
+    "Romaji": "f(u)tari",
+    "Categorie": "transport"
+  },
+  {
+    "No": 42,
+    "Francais": "3 personnes, etc… ３",
+    "Japonais": "人",
+    "Kana": "さん にん",
+    "Romaji": "san nin",
+    "Categorie": "transport"
+  },
+  {
+    "No": 43,
+    "Francais": "aéroport",
+    "Japonais": "空港",
+    "Kana": "くうこう",
+    "Romaji": "kûkô",
+    "Categorie": "transport"
+  },
+  {
+    "No": 44,
+    "Francais": "enregistrement",
+    "Japonais": "チェック イン",
+    "Kana": "cヘック イン",
+    "Romaji": "chekku in",
+    "Categorie": "transport"
+  },
+  {
+    "No": 45,
+    "Francais": "départ",
+    "Japonais": "出発",
+    "Kana": "しゅっぱつ",
+    "Romaji": "shuppatsu",
+    "Categorie": "transport"
+  },
+  {
+    "No": 46,
+    "Francais": "porte n°+ chiffre chiffre +",
+    "Japonais": "番 ゲート",
+    "Kana": "チッfレ +バンゲエト",
+    "Romaji": "chiffre +bangeeto",
+    "Categorie": "transport"
+  },
+  {
+    "No": 47,
+    "Francais": "retrait des bagages",
+    "Japonais": "荷物 引き取り所",
+    "Kana": "にもつ ひきとりじょ",
+    "Romaji": "nimotsu hikitorijo",
+    "Categorie": "transport"
+  },
+  {
+    "No": 48,
+    "Francais": "aller simple",
+    "Japonais": "片道",
+    "Kana": "かたみち",
+    "Romaji": "katamichi",
+    "Categorie": "transport"
+  },
+  {
+    "No": 49,
+    "Francais": "changement",
+    "Japonais": "乗り換え",
+    "Kana": "のりかえ",
+    "Romaji": "norikae",
+    "Categorie": "transport"
+  },
+  {
+    "No": 50,
+    "Francais": "complet",
+    "Japonais": "満員",
+    "Kana": "まにん",
+    "Romaji": "manin",
+    "Categorie": "transport"
+  },
+  {
+    "No": 51,
+    "Francais": "consigne automatique",
+    "Japonais": "コイン ロッカー",
+    "Kana": "コイン ロッカ",
+    "Romaji": "koïn rokka",
+    "Categorie": "transport"
+  },
+  {
+    "No": 52,
+    "Francais": "express",
+    "Japonais": "特急",
+    "Kana": "とっきゅう",
+    "Romaji": "tokkyû",
+    "Categorie": "transport"
+  },
+  {
+    "No": 53,
+    "Francais": "gare de départ des bus",
+    "Japonais": "バス 乗り場",
+    "Kana": "バス ノリバ",
+    "Romaji": "basu noriba",
+    "Categorie": "transport"
+  },
+  {
+    "No": 54,
+    "Francais": "gare/station de métro",
+    "Japonais": "駅",
+    "Kana": "えき",
+    "Romaji": "eki",
+    "Categorie": "transport"
+  },
+  {
+    "No": 55,
+    "Francais": "omnibus",
+    "Japonais": "各駅停車",
+    "Kana": "かくえきていしゃ",
+    "Romaji": "kakuekiteïsha",
+    "Categorie": "transport"
+  },
+  {
+    "No": 56,
+    "Francais": "place prioritaire",
+    "Japonais": "優先席",
+    "Kana": "ゆうせんせき",
+    "Romaji": "yûsenseki",
+    "Categorie": "transport"
+  },
+  {
+    "No": 57,
+    "Francais": "places libres",
+    "Japonais": "自由席",
+    "Kana": "じゆうせき",
+    "Romaji": "jiyûseki",
+    "Categorie": "transport"
+  },
+  {
+    "No": 58,
+    "Francais": "première classe",
+    "Japonais": "グリーン車",
+    "Kana": "グリインシャ",
+    "Romaji": "gurînsha",
+    "Categorie": "transport"
+  },
+  {
+    "No": 59,
+    "Francais": "rapide",
+    "Japonais": "急行",
+    "Kana": "きゅうこう",
+    "Romaji": "kyûkô",
+    "Categorie": "transport"
+  },
+  {
+    "No": 60,
+    "Francais": "sièges réservés",
+    "Japonais": "指定席",
+    "Kana": "していせき",
+    "Romaji": "shiteïseki",
+    "Categorie": "transport"
+  },
+  {
+    "No": 61,
+    "Francais": "terminus",
+    "Japonais": "終点",
+    "Kana": "しゅうてん",
+    "Romaji": "shûten",
+    "Categorie": "transport"
+  },
+  {
+    "No": 62,
+    "Francais": "voie n°+ chiffre chiffre +",
+    "Japonais": "番線",
+    "Kana": "ちっfれ +ばんせん",
+    "Romaji": "chiffre +bansen",
+    "Categorie": "transport"
+  },
+  {
+    "No": 63,
+    "Francais": "port",
+    "Japonais": "港",
+    "Kana": "みなと",
+    "Romaji": "minato",
+    "Categorie": "transport"
+  },
+  {
+    "No": 64,
+    "Francais": "bateau",
+    "Japonais": "船",
+    "Kana": "ふね",
+    "Romaji": "fune",
+    "Categorie": "transport"
+  },
+  {
+    "No": 65,
+    "Francais": "ferry",
+    "Japonais": "フェリー",
+    "Kana": "フェリイ",
+    "Romaji": "ferî",
+    "Categorie": "transport"
+  },
+  {
+    "No": 66,
+    "Francais": "pont (du bateau)",
+    "Japonais": "デッキ",
+    "Kana": "デッキ",
+    "Romaji": "dekki",
+    "Categorie": "transport"
+  },
+  {
+    "No": 67,
+    "Francais": "arrêter (s’~)",
+    "Japonais": "止めます",
+    "Kana": "とめます",
+    "Romaji": "tomemas(u)",
+    "Categorie": "transport"
+  },
+  {
+    "No": 68,
+    "Francais": "croisement",
+    "Japonais": "交差点",
+    "Kana": "こうさてん",
+    "Romaji": "kôsaten",
+    "Categorie": "transport"
+  },
+  {
+    "No": 69,
+    "Francais": "reçu",
+    "Japonais": "領収書",
+    "Kana": "りょうしゅうしょ",
+    "Romaji": "ryôshûsho",
+    "Categorie": "transport"
+  },
+  {
+    "No": 70,
+    "Francais": "station de taxis",
+    "Japonais": "タクシー 乗り場",
+    "Kana": "タクシイ ノリバ",
+    "Romaji": "takushî noriba",
+    "Categorie": "transport"
+  },
+  {
+    "No": 71,
+    "Francais": "location de voiture",
+    "Japonais": "レンタ カー",
+    "Kana": "レンタ カア",
+    "Romaji": "renta kâ",
+    "Categorie": "transport"
+  },
+  {
+    "No": 72,
+    "Francais": "permis de conduire",
+    "Japonais": "運転 免許",
+    "Kana": "うんてん めんきょ",
+    "Romaji": "unten menkyo",
+    "Categorie": "transport"
+  },
+  {
+    "No": 73,
+    "Francais": "permis international",
+    "Japonais": "国際 免許",
+    "Kana": "こくさい めんきょ",
+    "Romaji": "kokusaï menkyo",
+    "Categorie": "transport"
+  },
+  {
+    "No": 74,
+    "Francais": "accident",
+    "Japonais": "交通 事故",
+    "Kana": "こうつう じこ",
+    "Romaji": "kôtsû jiko",
+    "Categorie": "transport"
+  },
+  {
+    "No": 75,
+    "Francais": "autoroute",
+    "Japonais": "高速（道路）",
+    "Kana": "こうそく どうろ",
+    "Romaji": "kôsoku (dôro)",
+    "Categorie": "transport"
+  },
+  {
+    "No": 76,
+    "Francais": "essence",
+    "Japonais": "ガン リン",
+    "Kana": "ガソリン",
+    "Romaji": "gasorin",
+    "Categorie": "transport"
+  },
+  {
+    "No": 77,
+    "Francais": "parking",
+    "Japonais": "駐車場 / パーキング",
+    "Kana": "チュウシャジョウ / パアキング",
+    "Romaji": "chûshajô / pâkingu",
+    "Categorie": "transport"
+  },
+  {
+    "No": 78,
+    "Francais": "péage",
+    "Japonais": "料金所",
+    "Kana": "りょうきんじょ",
+    "Romaji": "ryôkinjo",
+    "Categorie": "transport"
+  },
+  {
+    "No": 79,
+    "Francais": "sens unique",
+    "Japonais": "一方 通行",
+    "Kana": "いっぽう つうこう",
+    "Romaji": "ippô tsûkô",
+    "Categorie": "transport"
+  },
+  {
+    "No": 80,
+    "Francais": "stationnement interdit",
+    "Japonais": "駐車 禁止",
+    "Kana": "ちゅうしゃ きんし",
+    "Romaji": "chûsha kinshi",
+    "Categorie": "transport"
+  },
+  {
+    "No": 81,
+    "Francais": "station-service",
+    "Japonais": "がン リン スタンド",
+    "Kana": "ガソリン スタンド",
+    "Romaji": "gasorin s(u)tando",
+    "Categorie": "transport"
+  },
+  {
+    "No": 82,
+    "Francais": "stop",
+    "Japonais": "通行 止め",
+    "Kana": "つうこう どめ",
+    "Romaji": "tsûkô dome",
+    "Categorie": "transport"
+  },
+  {
+    "No": 83,
+    "Francais": "présent/futur ‑",
+    "Japonais": "ます‑",
+    "Kana": "ます ですです",
+    "Romaji": "mas(u) ですdes(u)",
+    "Categorie": "div"
+  },
+  {
+    "No": 84,
+    "Francais": "présent/futur négatif ‑",
+    "Japonais": "ません‑",
+    "Kana": "ません で は ありませんで わ ありません",
+    "Romaji": "masèn で は ありませんde wa arimasen",
+    "Categorie": "div"
+  },
+  {
+    "No": 85,
+    "Francais": "passé",
+    "Japonais": "‑ました / でした",
+    "Kana": "‑ました / でした",
+    "Romaji": "‑mash(i)ta / desh(i)ta",
+    "Categorie": "div"
+  },
+  {
+    "No": 86,
+    "Francais": "passé négatif",
+    "Japonais": "‑ません でした / では ありません でした",
+    "Kana": "‑ません でした / では ありません でした",
+    "Romaji": "‑masèn desh(i)ta / de wa arimasen deshita",
+    "Categorie": "div"
+  },
+  {
+    "No": 87,
+    "Francais": "Antilles",
+    "Japonais": "小 アンティル 列島",
+    "Kana": "ショウ アンtイル レットウ",
+    "Romaji": "shô antiru rettô",
+    "Categorie": "pays"
+  },
+  {
+    "No": 88,
+    "Francais": "Belgique",
+    "Japonais": "ベルギー",
+    "Kana": "ベルギ",
+    "Romaji": "berugi",
+    "Categorie": "pays"
+  },
+  {
+    "No": 89,
+    "Francais": "Cameroun",
+    "Japonais": "カメルーン",
+    "Kana": "カメルウン",
+    "Romaji": "kamerûn",
+    "Categorie": "pays"
+  },
+  {
+    "No": 90,
+    "Francais": "Canada",
+    "Japonais": "カナダ",
+    "Kana": "カナダ",
+    "Romaji": "kanada",
+    "Categorie": "pays"
+  },
+  {
+    "No": 91,
+    "Francais": "Congo (République du ~)",
+    "Japonais": "コンゴ (共和国)",
+    "Kana": "コンゴ キョウワコク",
+    "Romaji": "kongo (kyôwakoku)",
+    "Categorie": "pays"
+  },
+  {
+    "No": 92,
+    "Francais": "Côte d’Ivoire",
+    "Japonais": "コート ジボアール",
+    "Kana": "コウト ジボアアル",
+    "Romaji": "kôto jiboâru",
+    "Categorie": "pays"
+  },
+  {
+    "No": 93,
+    "Francais": "Gabon",
+    "Japonais": "ガボン",
+    "Kana": "ガボン",
+    "Romaji": "gabon",
+    "Categorie": "pays"
+  },
+  {
+    "No": 94,
+    "Francais": "Guinée",
+    "Japonais": "ギニア",
+    "Kana": "ギニア",
+    "Romaji": "ginia",
+    "Categorie": "pays"
+  },
+  {
+    "No": 95,
+    "Francais": "Madagascar",
+    "Japonais": "マダガスカル",
+    "Kana": "マダガスカル",
+    "Romaji": "madagasukaru",
+    "Categorie": "pays"
+  },
+  {
+    "No": 96,
+    "Francais": "Mali",
+    "Japonais": "マリ",
+    "Kana": "マリ",
+    "Romaji": "mari",
+    "Categorie": "pays"
+  },
+  {
+    "No": 97,
+    "Francais": "Niger",
+    "Japonais": "ニジェール",
+    "Kana": "ニjエイル",
+    "Romaji": "nijêru",
+    "Categorie": "pays"
+  },
+  {
+    "No": 98,
+    "Francais": "Nouvelle-Calédonie",
+    "Japonais": "ニュー カレドニア",
+    "Kana": "ニュウ カレドニア",
+    "Romaji": "nyû karedonia",
+    "Categorie": "pays"
+  },
+  {
+    "No": 99,
+    "Francais": "Réunion (La ~)",
+    "Japonais": "レユニオン列島",
+    "Kana": "レユニオン レットウ",
+    "Romaji": "reyunion rettô",
+    "Categorie": "pays"
+  },
+  {
+    "No": 100,
+    "Francais": "Sénégal",
+    "Japonais": "セネガル",
+    "Kana": "セネガル",
+    "Romaji": "senegaru",
+    "Categorie": "pays"
+  },
+  {
+    "No": 101,
+    "Francais": "Suisse",
+    "Japonais": "スイス",
+    "Kana": "スイス",
+    "Romaji": "suisu",
+    "Categorie": "pays"
+  },
+  {
+    "No": 102,
+    "Francais": "Tahiti",
+    "Japonais": "タヒチ",
+    "Kana": "タヒチ",
+    "Romaji": "tahichi",
+    "Categorie": "pays"
+  },
+  {
+    "No": 103,
+    "Francais": "Tchad",
+    "Japonais": "チャド",
+    "Kana": "チャッド",
+    "Romaji": "chaddo",
+    "Categorie": "pays"
+  },
+  {
+    "No": 104,
+    "Francais": "Togo",
+    "Japonais": "トゴ",
+    "Kana": "トゴ",
+    "Romaji": "togo",
+    "Categorie": "pays"
+  },
+  {
+    "No": 105,
+    "Francais": "… 1 an ᐧᐧᐧ 1",
+    "Japonais": "歳",
+    "Kana": "いっさい",
+    "Romaji": "issaï",
+    "Categorie": "temps"
+  },
+  {
+    "No": 106,
+    "Francais": "… 8 ans ᐧᐧᐧ 8",
+    "Japonais": "歳",
+    "Kana": "はっさい",
+    "Romaji": "hassaï",
+    "Categorie": "temps"
+  },
+  {
+    "No": 107,
+    "Francais": "20 ans 20",
+    "Japonais": "歳",
+    "Kana": "はたち",
+    "Romaji": "hatachi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 108,
+    "Francais": "30 (40,..) ans 30 (40,ᐧᐧᐧ)",
+    "Japonais": "歳",
+    "Kana": "さん じゅs よん じゅs さい",
+    "Romaji": "san jus (yon jus) saï",
+    "Categorie": "temps"
+  },
+  {
+    "No": 109,
+    "Francais": "ma famille",
+    "Japonais": "家族",
+    "Kana": "かぞく",
+    "Romaji": "kazoku",
+    "Categorie": "famille"
+  },
+  {
+    "No": 110,
+    "Francais": "votre famille",
+    "Japonais": "ご 家族",
+    "Kana": "ご かぞく",
+    "Romaji": "go kazoku",
+    "Categorie": "famille"
+  },
+  {
+    "No": 111,
+    "Francais": "mes parents",
+    "Japonais": "両親",
+    "Kana": "りょうしん",
+    "Romaji": "ryôshin",
+    "Categorie": "famille"
+  },
+  {
+    "No": 112,
+    "Francais": "vos parents",
+    "Japonais": "ご 両親",
+    "Kana": "ご りょうしん",
+    "Romaji": "go ryôshin",
+    "Categorie": "famille"
+  },
+  {
+    "No": 113,
+    "Francais": "ma mère / mon père",
+    "Japonais": "母 / 父",
+    "Kana": "はは / ちち",
+    "Romaji": "haha / chichi",
+    "Categorie": "famille"
+  },
+  {
+    "No": 114,
+    "Francais": "votre mère / votre père",
+    "Japonais": "お母さん / お父さん",
+    "Kana": "おかあさん / おとうさん",
+    "Romaji": "okaasan / otôsan",
+    "Categorie": "famille"
+  },
+  {
+    "No": 115,
+    "Francais": "mon fils / ma fille",
+    "Japonais": "息子 / 娘",
+    "Kana": "むすこ / むすめ",
+    "Romaji": "musuko / musume",
+    "Categorie": "famille"
+  },
+  {
+    "No": 116,
+    "Francais": "votre fils/votre fille",
+    "Japonais": "息子さん /娘さん",
+    "Kana": "むすこさん/むすめさん",
+    "Romaji": "musukosan/musumesan",
+    "Categorie": "famille"
+  },
+  {
+    "No": 117,
+    "Francais": "mes frères et sœurs",
+    "Japonais": "兄弟",
+    "Kana": "きょうだい",
+    "Romaji": "kyôdaï",
+    "Categorie": "famille"
+  },
+  {
+    "No": 118,
+    "Francais": "vos frères et sœurs",
+    "Japonais": "ご 兄弟",
+    "Kana": "ご きょうだい",
+    "Romaji": "go kyôdaï",
+    "Categorie": "famille"
+  },
+  {
+    "No": 119,
+    "Francais": "ma sœur aînée/mon frère aîné",
+    "Japonais": "姉 / 兄",
+    "Kana": "あね / あに",
+    "Romaji": "ane / ani",
+    "Categorie": "famille"
+  },
+  {
+    "No": 120,
+    "Francais": "votre sœur aînée/votre frère aîné",
+    "Japonais": "お姉さん / お兄さん",
+    "Kana": "おねえさん / おにいさん",
+    "Romaji": "oneesan / oniisan",
+    "Categorie": "famille"
+  },
+  {
+    "No": 121,
+    "Francais": "ma sœur cadette/mon frère cadet",
+    "Japonais": "妹 / 弟",
+    "Kana": "いもうと / おとうと",
+    "Romaji": "imôto / otôto",
+    "Categorie": "famille"
+  },
+  {
+    "No": 122,
+    "Francais": "votre sœur cadette / votre frère cadet",
+    "Japonais": "妹さん /弟さん",
+    "Kana": "いもうとさん/おとうとさん",
+    "Romaji": "imôtosan/otôtosan",
+    "Categorie": "famille"
+  },
+  {
+    "No": 123,
+    "Francais": "mon neveu / ma nièce",
+    "Japonais": "甥 / 姪",
+    "Kana": "おい / めい",
+    "Romaji": "oi / meï",
+    "Categorie": "famille"
+  },
+  {
+    "No": 124,
+    "Francais": "votre neveu / votre nièce",
+    "Japonais": "甥御さん / 姪御さん",
+    "Kana": "おいごさん / めいごさん",
+    "Romaji": "oigosan / meïgosan",
+    "Categorie": "famille"
+  },
+  {
+    "No": 125,
+    "Francais": "mon oncle / ma tante",
+    "Japonais": "叔父 / 叔母",
+    "Kana": "おじ / おば",
+    "Romaji": "oji / oba",
+    "Categorie": "famille"
+  },
+  {
+    "No": 126,
+    "Francais": "votre oncle / votre tante",
+    "Japonais": "叔父さん / 叔母さん",
+    "Kana": "おじさん / おばさん",
+    "Romaji": "ojisan / obasan",
+    "Categorie": "famille"
+  },
+  {
+    "No": 127,
+    "Francais": "mon grand-père/ma grand-mère",
+    "Japonais": "祖父 / 祖母",
+    "Kana": "そふ / そぼ",
+    "Romaji": "sofu / sobo",
+    "Categorie": "famille"
+  },
+  {
+    "No": 128,
+    "Francais": "votre grand-père/votre grand-mère",
+    "Japonais": "お祖父さん /お祖母さん",
+    "Kana": "おじいさん/おばあさん",
+    "Romaji": "ojiisan/obaasan",
+    "Categorie": "famille"
+  },
+  {
+    "No": 129,
+    "Francais": "mon petit-enfant",
+    "Japonais": "孫",
+    "Kana": "まご",
+    "Romaji": "mago",
+    "Categorie": "famille"
+  },
+  {
+    "No": 130,
+    "Francais": "votre petit-enfant",
+    "Japonais": "お孫さん",
+    "Kana": "おまごさん",
+    "Romaji": "omagosan",
+    "Categorie": "famille"
+  },
+  {
+    "No": 131,
+    "Francais": "mon mari / ma femme",
+    "Japonais": "主人 / 家内",
+    "Kana": "しゅじん / かない",
+    "Romaji": "shujin / kanaï",
+    "Categorie": "famille"
+  },
+  {
+    "No": 132,
+    "Francais": "votre mari / votre femme",
+    "Japonais": "ご 主人 / 奥さん",
+    "Kana": "ご しゅじん / おくさん",
+    "Romaji": "go shujin / okusan",
+    "Categorie": "famille"
+  },
+  {
+    "No": 133,
+    "Francais": "bureau",
+    "Japonais": "事務所",
+    "Kana": "じむしょ",
+    "Romaji": "jimusho",
+    "Categorie": "travail"
+  },
+  {
+    "No": 134,
+    "Francais": "école",
+    "Japonais": "学校",
+    "Kana": "がっこう",
+    "Romaji": "gakkô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 135,
+    "Francais": "entreprise",
+    "Japonais": "企業",
+    "Kana": "きぎょう",
+    "Romaji": "kigyô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 136,
+    "Francais": "magasin",
+    "Japonais": "店",
+    "Kana": "みせ",
+    "Romaji": "mise",
+    "Categorie": "travail"
+  },
+  {
+    "No": 137,
+    "Francais": "société",
+    "Japonais": "会社",
+    "Kana": "かいしゃ",
+    "Romaji": "kaïsha",
+    "Categorie": "travail"
+  },
+  {
+    "No": 138,
+    "Francais": "université",
+    "Japonais": "大学",
+    "Kana": "だいがく",
+    "Romaji": "daïgaku",
+    "Categorie": "travail"
+  },
+  {
+    "No": 139,
+    "Francais": "usine",
+    "Japonais": "工場",
+    "Kana": "こうじょう / こうば",
+    "Romaji": "kôjô / kôba",
+    "Categorie": "travail"
+  },
+  {
+    "No": 140,
+    "Francais": "acteur / actrice",
+    "Japonais": "俳優 / 女優",
+    "Kana": "はいゆう / じょゆう",
+    "Romaji": "haïyû / joyû",
+    "Categorie": "travail"
+  },
+  {
+    "No": 141,
+    "Francais": "architecte",
+    "Japonais": "建築家",
+    "Kana": "けんちくか",
+    "Romaji": "kenchikuka",
+    "Categorie": "travail"
+  },
+  {
+    "No": 142,
+    "Francais": "artisan",
+    "Japonais": "アーティスト â",
+    "Kana": "tイスト",
+    "Romaji": "tisuto",
+    "Categorie": "travail"
+  },
+  {
+    "No": 143,
+    "Francais": "artiste",
+    "Japonais": "芸術家",
+    "Kana": "げいじゅつか",
+    "Romaji": "geïjutsuka",
+    "Categorie": "travail"
+  },
+  {
+    "No": 144,
+    "Francais": "avocat",
+    "Japonais": "弁護士",
+    "Kana": "べんごし",
+    "Romaji": "bengoshi",
+    "Categorie": "travail"
+  },
+  {
+    "No": 145,
+    "Francais": "auto-entrepreneur",
+    "Japonais": "自営業",
+    "Kana": "じえいぎょう",
+    "Romaji": "jieïgyô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 146,
+    "Francais": "chanteur",
+    "Japonais": "歌手",
+    "Kana": "かしゅ",
+    "Romaji": "kashu",
+    "Categorie": "travail"
+  },
+  {
+    "No": 147,
+    "Francais": "chef cuisinier",
+    "Japonais": "シェフ",
+    "Kana": "sヘフ",
+    "Romaji": "shefu",
+    "Categorie": "travail"
+  },
+  {
+    "No": 148,
+    "Francais": "écrivain",
+    "Japonais": "作家",
+    "Kana": "さっか",
+    "Romaji": "sakka",
+    "Categorie": "travail"
+  },
+  {
+    "No": 149,
+    "Francais": "employé de banque",
+    "Japonais": "銀行員",
+    "Kana": "ぎんこういん",
+    "Romaji": "ginkôin",
+    "Categorie": "travail"
+  },
+  {
+    "No": 150,
+    "Francais": "employé de bureau",
+    "Japonais": "サラリーマン",
+    "Kana": "サラリイマン",
+    "Romaji": "sararîman",
+    "Categorie": "travail"
+  },
+  {
+    "No": 151,
+    "Francais": "fonctionnaire",
+    "Japonais": "公務員",
+    "Kana": "こうむいん",
+    "Romaji": "kômuin",
+    "Categorie": "travail"
+  },
+  {
+    "No": 152,
+    "Francais": "infirmier / infirmière",
+    "Japonais": "看護士 / 看護婦",
+    "Kana": "かんごし / かんごふ",
+    "Romaji": "kangoshi / kangofu",
+    "Categorie": "travail"
+  },
+  {
+    "No": 153,
+    "Francais": "ingénieur",
+    "Japonais": "エンジニア",
+    "Kana": "エンjエニア",
+    "Romaji": "enjenia",
+    "Categorie": "travail"
+  },
+  {
+    "No": 154,
+    "Francais": "journaliste",
+    "Japonais": "ジャーナリスト",
+    "Kana": "ジャアナリスト",
+    "Romaji": "jânarisuto",
+    "Categorie": "travail"
+  },
+  {
+    "No": 155,
+    "Francais": "médecin",
+    "Japonais": "医者",
+    "Kana": "いしゃ",
+    "Romaji": "isha",
+    "Categorie": "travail"
+  },
+  {
+    "No": 156,
+    "Francais": "musicien",
+    "Japonais": "音楽家",
+    "Kana": "おんがくか",
+    "Romaji": "ongakuka",
+    "Categorie": "travail"
+  },
+  {
+    "No": 157,
+    "Francais": "peintre",
+    "Japonais": "画家",
+    "Kana": "がか",
+    "Romaji": "gaka",
+    "Categorie": "travail"
+  },
+  {
+    "No": 158,
+    "Francais": "beaux-arts",
+    "Japonais": "美術",
+    "Kana": "びじゅつ",
+    "Romaji": "bijutsu",
+    "Categorie": "études"
+  },
+  {
+    "No": 159,
+    "Francais": "commerce",
+    "Japonais": "貿易",
+    "Kana": "ぼうえき",
+    "Romaji": "bôeki",
+    "Categorie": "études"
+  },
+  {
+    "No": 160,
+    "Francais": "géographie",
+    "Japonais": "地理",
+    "Kana": "ちり",
+    "Romaji": "chiri",
+    "Categorie": "études"
+  },
+  {
+    "No": 161,
+    "Francais": "histoire",
+    "Japonais": "歴史",
+    "Kana": "れきし",
+    "Romaji": "rekishi",
+    "Categorie": "études"
+  },
+  {
+    "No": 162,
+    "Francais": "japonais",
+    "Japonais": "日本語",
+    "Kana": "にほんご",
+    "Romaji": "nihongo",
+    "Categorie": "études"
+  },
+  {
+    "No": 163,
+    "Francais": "langues étrangères",
+    "Japonais": "外国語",
+    "Kana": "がいこくご",
+    "Romaji": "gaïkokugo",
+    "Categorie": "études"
+  },
+  {
+    "No": 164,
+    "Francais": "littérature",
+    "Japonais": "文学",
+    "Kana": "ぶんがく",
+    "Romaji": "bungaku",
+    "Categorie": "études"
+  },
+  {
+    "No": 165,
+    "Francais": "médecine",
+    "Japonais": "医学",
+    "Kana": "いがく",
+    "Romaji": "igaku",
+    "Categorie": "études"
+  },
+  {
+    "No": 166,
+    "Francais": "philosophie",
+    "Japonais": "哲学",
+    "Kana": "てつがく",
+    "Romaji": "tetsugaku",
+    "Categorie": "études"
+  },
+  {
+    "No": 167,
+    "Francais": "psychologie",
+    "Japonais": "心理学",
+    "Kana": "しんりがく",
+    "Romaji": "shinrigaku",
+    "Categorie": "études"
+  },
+  {
+    "No": 168,
+    "Francais": "relations internationales",
+    "Japonais": "国際 関係",
+    "Kana": "こくさい かんけい",
+    "Romaji": "kokusaï kankeï",
+    "Categorie": "études"
+  },
+  {
+    "No": 169,
+    "Francais": "sciences",
+    "Japonais": "科学",
+    "Kana": "かがく",
+    "Romaji": "kagaku",
+    "Categorie": "études"
+  },
+  {
+    "No": 170,
+    "Francais": "sociologie",
+    "Japonais": "社会学",
+    "Kana": "しゃかいがく",
+    "Romaji": "shakaïgaku",
+    "Categorie": "études"
+  },
+  {
+    "No": 171,
+    "Francais": "christianisme",
+    "Japonais": "キリスト教",
+    "Kana": "キリストキョウ",
+    "Romaji": "kiris(u)tokyô",
+    "Categorie": "religion"
+  },
+  {
+    "No": 172,
+    "Francais": "catholique",
+    "Japonais": "カトリック",
+    "Kana": "カトリック",
+    "Romaji": "katorikku",
+    "Categorie": "religion"
+  },
+  {
+    "No": 173,
+    "Francais": "protestant",
+    "Japonais": "プロテスタント",
+    "Kana": "プロテスタント",
+    "Romaji": "purotes(u)tanto",
+    "Categorie": "religion"
+  },
+  {
+    "No": 174,
+    "Francais": "islam",
+    "Japonais": "イスラム教",
+    "Kana": "イスラムキョウ",
+    "Romaji": "isuramukyô",
+    "Categorie": "religion"
+  },
+  {
+    "No": 175,
+    "Francais": "musulman",
+    "Japonais": "イスラム教徒",
+    "Kana": "イスラムキョウト",
+    "Romaji": "isuramukyôto",
+    "Categorie": "religion"
+  },
+  {
+    "No": 176,
+    "Francais": "judaïsme",
+    "Japonais": "ユダヤ教",
+    "Kana": "ユダヤキョウ",
+    "Romaji": "yudayakyô",
+    "Categorie": "religion"
+  },
+  {
+    "No": 177,
+    "Francais": "juif",
+    "Japonais": "ユダヤ教徒",
+    "Kana": "ユダヤキョウト",
+    "Romaji": "yudayakyôto",
+    "Categorie": "religion"
+  },
+  {
+    "No": 178,
+    "Francais": "monastère bouddhique",
+    "Japonais": "お 寺",
+    "Kana": "お てら",
+    "Romaji": "o tera",
+    "Categorie": "religion"
+  },
+  {
+    "No": 179,
+    "Francais": "sanctuaire shintô",
+    "Japonais": "神社",
+    "Kana": "じんじゃ",
+    "Romaji": "jinja",
+    "Categorie": "religion"
+  },
+  {
+    "No": 180,
+    "Francais": "fêtes du Nouvel An",
+    "Japonais": "お 正月",
+    "Kana": "お しょうがつ",
+    "Romaji": "o shôgatsu",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 181,
+    "Francais": "fête des poupées(3 mars) (filles)",
+    "Japonais": "ひな 祭り",
+    "Kana": "ひな まつり",
+    "Romaji": "hina matsuri",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 182,
+    "Francais": "contemplation des cerisiers (mars-avril)",
+    "Japonais": "花見",
+    "Kana": "はなみ",
+    "Romaji": "hanami",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 183,
+    "Francais": "fête des carpes(5 mai) (garçons)",
+    "Japonais": "鯉 のぼり",
+    "Kana": "こい のぼり",
+    "Romaji": "koi nobori",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 184,
+    "Francais": "feux d’artifice (juin)",
+    "Japonais": "花火 大会",
+    "Kana": "はなび たいかい",
+    "Romaji": "hanabi taïkaï",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 185,
+    "Francais": "fête des morts (15 août)",
+    "Japonais": "お 盆",
+    "Kana": "お ぼん",
+    "Romaji": "o bon",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 186,
+    "Francais": "fête de l’été",
+    "Japonais": "七夕",
+    "Kana": "たなばた",
+    "Romaji": "tanabata",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 187,
+    "Francais": "fête shintô",
+    "Japonais": "祭り",
+    "Kana": "まつり",
+    "Romaji": "matsuri",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 188,
+    "Francais": "kimono",
+    "Japonais": "着物",
+    "Kana": "きもの",
+    "Romaji": "kimono",
+    "Categorie": "habillement"
+  },
+  {
+    "No": 189,
+    "Francais": "yukata (kimono léger pour l’été)",
+    "Japonais": "浴衣",
+    "Kana": "ゆかた",
+    "Romaji": "yukata",
+    "Categorie": "habillement"
+  },
+  {
+    "No": 190,
+    "Francais": "Il fait bon.",
+    "Japonais": "暖かい です",
+    "Kana": "あたたかい です",
+    "Romaji": "atatakaï des(u)",
+    "Categorie": "météo"
+  },
+  {
+    "No": 191,
+    "Francais": "Il fait chaud.",
+    "Japonais": "暑い です",
+    "Kana": "あつい です",
+    "Romaji": "atsui des(u)",
+    "Categorie": "météo"
+  },
+  {
+    "No": 192,
+    "Francais": "Il fait frais.",
+    "Japonais": "涼しい です",
+    "Kana": "すずしい です",
+    "Romaji": "suzushii des(u)",
+    "Categorie": "météo"
+  },
+  {
+    "No": 193,
+    "Francais": "Il fait froid.",
+    "Japonais": "寒い です",
+    "Kana": "さむい です",
+    "Romaji": "samui des(u)",
+    "Categorie": "météo"
+  },
+  {
+    "No": 194,
+    "Francais": "beau temps",
+    "Japonais": "晴れ",
+    "Kana": "はれ",
+    "Romaji": "hare",
+    "Categorie": "météo"
+  },
+  {
+    "No": 195,
+    "Francais": "nuage",
+    "Japonais": "雲",
+    "Kana": "くも",
+    "Romaji": "kumo",
+    "Categorie": "météo"
+  },
+  {
+    "No": 196,
+    "Francais": "pluie / grosse pluie",
+    "Japonais": "雨 / 大 雨",
+    "Kana": "あめ / おおあめ",
+    "Romaji": "ame / ooame",
+    "Categorie": "météo"
+  },
+  {
+    "No": 197,
+    "Francais": "prévisions météo",
+    "Japonais": "天気 予報",
+    "Kana": "てんき よほう",
+    "Romaji": "tenki yohô",
+    "Categorie": "météo"
+  },
+  {
+    "No": 198,
+    "Francais": "température",
+    "Japonais": "温度",
+    "Kana": "おんど",
+    "Romaji": "ondo",
+    "Categorie": "météo"
+  },
+  {
+    "No": 199,
+    "Francais": "vent",
+    "Japonais": "風",
+    "Kana": "かぜ",
+    "Romaji": "kaze",
+    "Categorie": "météo"
+  },
+  {
+    "No": 200,
+    "Francais": "C’est agréable !",
+    "Japonais": "楽しい です。",
+    "Kana": "たのしい です",
+    "Romaji": "tanoshii des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 201,
+    "Francais": "C’est beau !",
+    "Japonais": "きれい です。",
+    "Kana": "きれい です",
+    "Romaji": "kireï des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 202,
+    "Francais": "C’est bien !",
+    "Japonais": "いい です。",
+    "Kana": "いい です",
+    "Romaji": "ii des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 203,
+    "Francais": "C’est dommage !",
+    "Japonais": "残念 です。",
+    "Kana": "ざんねん です",
+    "Romaji": "zannen des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 204,
+    "Francais": "C’est incroyable !",
+    "Japonais": "すごい です。",
+    "Kana": "すごい です",
+    "Romaji": "sugoï des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 205,
+    "Francais": "C’est joli !",
+    "Japonais": "すてき です。",
+    "Kana": "すてき です",
+    "Romaji": "suteki des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 206,
+    "Francais": "C’est merveilleux !",
+    "Japonais": "すばらしい です。",
+    "Kana": "すばらしい です",
+    "Romaji": "subarashii des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 207,
+    "Francais": "C’est rigolo !",
+    "Japonais": "おかしい です。",
+    "Kana": "おかしい です",
+    "Romaji": "okashii des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 208,
+    "Francais": "C’est terrible !",
+    "Japonais": "大変 です 。",
+    "Kana": "たいへん です",
+    "Romaji": "taïhen des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 209,
+    "Francais": "C’est très intéressant.",
+    "Japonais": "とても 面白い です。",
+    "Kana": "とても おもしろい です",
+    "Romaji": "totemo omoshiroï des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 210,
+    "Francais": "J’adore [ça].",
+    "Japonais": "大好き です。",
+    "Kana": "だいすき です",
+    "Romaji": "daïsuki des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 211,
+    "Francais": "J’aime [ça].",
+    "Japonais": "好き です。",
+    "Kana": "すき です",
+    "Romaji": "suki des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 212,
+    "Francais": "Je déteste [ça].",
+    "Japonais": "嫌い です。",
+    "Kana": "きらい です",
+    "Romaji": "kiraï des(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 213,
+    "Francais": "Je me réjouis.",
+    "Japonais": "楽しみ に して います。",
+    "Kana": "たのしみ に して います",
+    "Romaji": "tanoshimi ni shite imas(u)",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 214,
+    "Francais": "Je suis embêté(e).",
+    "Japonais": "困りました。",
+    "Kana": "こまりました",
+    "Romaji": "komarimash(i)ta",
+    "Categorie": "ressenti"
+  },
+  {
+    "No": 215,
+    "Francais": "allergie",
+    "Japonais": "アレルギー",
+    "Kana": "アレルギイ",
+    "Romaji": "arerugî",
+    "Categorie": "santé"
+  },
+  {
+    "No": 216,
+    "Francais": "ambulance",
+    "Japonais": "救急車",
+    "Kana": "きゅうきゅうしゃ",
+    "Romaji": "kyûkyûsha",
+    "Categorie": "santé"
+  },
+  {
+    "No": 217,
+    "Francais": "blessure",
+    "Japonais": "怪我",
+    "Kana": "けが",
+    "Romaji": "kega",
+    "Categorie": "santé"
+  },
+  {
+    "No": 218,
+    "Francais": "brûlure",
+    "Japonais": "火傷",
+    "Kana": "やけど",
+    "Romaji": "yakedo",
+    "Categorie": "santé"
+  },
+  {
+    "No": 219,
+    "Francais": "foulure",
+    "Japonais": "捻挫",
+    "Kana": "ねんざ",
+    "Romaji": "nenza",
+    "Categorie": "santé"
+  },
+  {
+    "No": 220,
+    "Francais": "fracture",
+    "Japonais": "骨折",
+    "Kana": "こっせつ",
+    "Romaji": "kossetsu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 221,
+    "Francais": "groupe sanguin",
+    "Japonais": "血液 型",
+    "Kana": "けつえき がた",
+    "Romaji": "ketsueki gata",
+    "Categorie": "santé"
+  },
+  {
+    "No": 222,
+    "Francais": "hémorragie",
+    "Japonais": "出血",
+    "Kana": "しゅっけつ",
+    "Romaji": "shukketsu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 223,
+    "Francais": "hôpital, clinique",
+    "Japonais": "病院",
+    "Kana": "びょういん",
+    "Romaji": "byôin",
+    "Categorie": "santé"
+  },
+  {
+    "No": 224,
+    "Francais": "petite blessure",
+    "Japonais": "傷",
+    "Kana": "きず",
+    "Romaji": "kizu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 225,
+    "Francais": "C’est enflé.",
+    "Japonais": "腫れて います。",
+    "Kana": "はれて います",
+    "Romaji": "harete imas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 226,
+    "Francais": "Ça me démange.",
+    "Japonais": "かゆい です。",
+    "Kana": "かゆい です",
+    "Romaji": "kayui des(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 227,
+    "Francais": "J’ai des bourdonnements d’oreilles.",
+    "Japonais": "耳鳴り が します。",
+    "Kana": "みみなり が します",
+    "Romaji": "miminari ga shimas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 228,
+    "Francais": "J’ai des palpitations.",
+    "Japonais": "心臓 が どきどきします。",
+    "Kana": "しんぞう が どきどき します",
+    "Romaji": "shinzô ga dokidoki shimas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 229,
+    "Francais": "J’ai des vertiges.",
+    "Japonais": "めまい が します。",
+    "Kana": "めまい が します",
+    "Romaji": "memai ga shimas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 230,
+    "Francais": "J’ai du mal à respirer.",
+    "Japonais": "呼吸 が 苦しいです。",
+    "Kana": "こうきゅう が くるしい です",
+    "Romaji": "kôkyû ga kurushii des(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 231,
+    "Francais": "J’ai la diarrhée.",
+    "Japonais": "下痢 を しました。",
+    "Kana": "げり お しました",
+    "Romaji": "geri o shimash(i)ta",
+    "Categorie": "santé"
+  },
+  {
+    "No": 232,
+    "Francais": "J’ai vomi.",
+    "Japonais": "吐きました 。",
+    "Kana": "はきました",
+    "Romaji": "hakimash(i)ta",
+    "Categorie": "santé"
+  },
+  {
+    "No": 233,
+    "Francais": "Je me sens nauséeux/se.",
+    "Japonais": "吐き気 が します。",
+    "Kana": "はきけ が します",
+    "Romaji": "hakike ga shimas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 234,
+    "Francais": "Je saigne du nez.",
+    "Japonais": "鼻血 が 出ます。",
+    "Kana": "はなじ が でます",
+    "Romaji": "hanaji ga demas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 235,
+    "Francais": "Je suis constipé(e).",
+    "Japonais": "便秘 です。",
+    "Kana": "べmぴ です",
+    "Romaji": "bempi des(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 236,
+    "Francais": "Je suis fiévreux/se.",
+    "Japonais": "熱っぽい です。",
+    "Kana": "ねつっぽい です",
+    "Romaji": "netsuppoï des(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 237,
+    "Francais": "Je suis tout le temps fatigué(e).",
+    "Japonais": "疲れやすい です。",
+    "Kana": "つかれやすい です",
+    "Romaji": "tsukareyasui des(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 238,
+    "Francais": "Je tousse.",
+    "Japonais": "咳 が でます。",
+    "Kana": "せき が でます",
+    "Romaji": "seki ga demas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 239,
+    "Francais": "Ma tension est trop élevée/trop basse.",
+    "Japonais": "血圧 が 高い/低い です。",
+    "Kana": "けつあつ が たかい/ひくい です",
+    "Romaji": "ketsuatsu ga takaï/hikui des(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 240,
+    "Francais": "cheville",
+    "Japonais": "足首",
+    "Kana": "あしくび",
+    "Romaji": "ashikubi",
+    "Categorie": "santé"
+  },
+  {
+    "No": 241,
+    "Francais": "cœur",
+    "Japonais": "心臓",
+    "Kana": "しんぞう",
+    "Romaji": "shinzô",
+    "Categorie": "santé"
+  },
+  {
+    "No": 242,
+    "Francais": "dos",
+    "Japonais": "背中",
+    "Kana": "せなか",
+    "Romaji": "senaka",
+    "Categorie": "santé"
+  },
+  {
+    "No": 243,
+    "Francais": "épaule",
+    "Japonais": "肩",
+    "Kana": "かた",
+    "Romaji": "kata",
+    "Categorie": "santé"
+  },
+  {
+    "No": 244,
+    "Francais": "estomac",
+    "Japonais": "胃",
+    "Kana": "い",
+    "Romaji": "i",
+    "Categorie": "santé"
+  },
+  {
+    "No": 245,
+    "Francais": "foie",
+    "Japonais": "肝臓",
+    "Kana": "かんぞう",
+    "Romaji": "kanzô",
+    "Categorie": "santé"
+  },
+  {
+    "No": 246,
+    "Francais": "genou",
+    "Japonais": "膝",
+    "Kana": "ひざ",
+    "Romaji": "hiza",
+    "Categorie": "santé"
+  },
+  {
+    "No": 247,
+    "Francais": "hanche",
+    "Japonais": "腰",
+    "Kana": "こし",
+    "Romaji": "koshi",
+    "Categorie": "santé"
+  },
+  {
+    "No": 248,
+    "Francais": "intestin",
+    "Japonais": "腸",
+    "Kana": "ちょう",
+    "Romaji": "chô",
+    "Categorie": "santé"
+  },
+  {
+    "No": 249,
+    "Francais": "main, bras",
+    "Japonais": "手",
+    "Kana": "て",
+    "Romaji": "te",
+    "Categorie": "santé"
+  },
+  {
+    "No": 250,
+    "Francais": "nez",
+    "Japonais": "鼻",
+    "Kana": "はな",
+    "Romaji": "hana",
+    "Categorie": "santé"
+  },
+  {
+    "No": 251,
+    "Francais": "oreille",
+    "Japonais": "耳",
+    "Kana": "みみ",
+    "Romaji": "mimi",
+    "Categorie": "santé"
+  },
+  {
+    "No": 252,
+    "Francais": "pénis",
+    "Japonais": "陰茎",
+    "Kana": "いんけい",
+    "Romaji": "inkeï",
+    "Categorie": "santé"
+  },
+  {
+    "No": 253,
+    "Francais": "pied, jambe",
+    "Japonais": "足",
+    "Kana": "あし",
+    "Romaji": "ashi",
+    "Categorie": "santé"
+  },
+  {
+    "No": 254,
+    "Francais": "reins",
+    "Japonais": "腎臓",
+    "Kana": "じんぞう",
+    "Romaji": "jinzô",
+    "Categorie": "santé"
+  },
+  {
+    "No": 255,
+    "Francais": "testicules",
+    "Japonais": "睾丸",
+    "Kana": "こうがん",
+    "Romaji": "kôgan",
+    "Categorie": "santé"
+  },
+  {
+    "No": 256,
+    "Francais": "vessie",
+    "Japonais": "膀胱",
+    "Kana": "ぼうこう",
+    "Romaji": "bôkô",
+    "Categorie": "santé"
+  },
+  {
+    "No": 257,
+    "Francais": "yeux",
+    "Japonais": "目",
+    "Kana": "め",
+    "Romaji": "me",
+    "Categorie": "santé"
+  },
+  {
+    "No": 258,
+    "Francais": "gynécologue",
+    "Japonais": "産婦人科",
+    "Kana": "さんふじんか",
+    "Romaji": "sanfujinka",
+    "Categorie": "santé"
+  },
+  {
+    "No": 259,
+    "Francais": "mammographie",
+    "Japonais": "マンモグラフィー",
+    "Kana": "マッモグラフィイ",
+    "Romaji": "mammogurafî",
+    "Categorie": "santé"
+  },
+  {
+    "No": 260,
+    "Francais": "ovaire",
+    "Japonais": "卵巣",
+    "Kana": "らんそう",
+    "Romaji": "ransô",
+    "Categorie": "santé"
+  },
+  {
+    "No": 261,
+    "Francais": "préservatif",
+    "Japonais": "コンド―ム",
+    "Kana": "コンドウム",
+    "Romaji": "kondômu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 262,
+    "Francais": "utérus",
+    "Japonais": "子宮",
+    "Kana": "しきゅう",
+    "Romaji": "shikyû",
+    "Categorie": "santé"
+  },
+  {
+    "No": 263,
+    "Francais": "auscultation",
+    "Japonais": "聴診",
+    "Kana": "ちょうしん",
+    "Romaji": "chôshin",
+    "Categorie": "santé"
+  },
+  {
+    "No": 264,
+    "Francais": "échographie",
+    "Japonais": "エコグラフィー",
+    "Kana": "エコグラフィイ",
+    "Romaji": "ekogurafî",
+    "Categorie": "santé"
+  },
+  {
+    "No": 265,
+    "Francais": "électrocardiogramme",
+    "Japonais": "心電図",
+    "Kana": "しんでんず",
+    "Romaji": "shindenzu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 266,
+    "Francais": "faire un pansement",
+    "Japonais": "包帯 を します",
+    "Kana": "ほうたい お します",
+    "Romaji": "hôtaï o shimas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 267,
+    "Francais": "IRM MRI (",
+    "Japonais": "エム アール アイ)",
+    "Kana": "エム アアル アイ",
+    "Romaji": "emu âru aï",
+    "Categorie": "santé"
+  },
+  {
+    "No": 268,
+    "Francais": "piqûre",
+    "Japonais": "注射",
+    "Kana": "ちゅうしゃ",
+    "Romaji": "chûsha",
+    "Categorie": "santé"
+  },
+  {
+    "No": 269,
+    "Francais": "pratiquer une anesthésie",
+    "Japonais": "麻酔 します",
+    "Kana": "ますい します",
+    "Romaji": "masui shimas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 270,
+    "Francais": "prendre le pouls/la tension/la température",
+    "Japonais": "脈拍/血圧/体温 を 計ります",
+    "Kana": "みゃくはく/けつあつ/たいおん お はかります",
+    "Romaji": "myakuhaku/ketsuatsu/taïon o hakarimas(u)",
+    "Categorie": "santé"
+  },
+  {
+    "No": 271,
+    "Francais": "radiographie",
+    "Japonais": "レントゲン",
+    "Kana": "レントゲン",
+    "Romaji": "rentogen",
+    "Categorie": "santé"
+  },
+  {
+    "No": 272,
+    "Francais": "dentiste",
+    "Japonais": "歯医者",
+    "Kana": "はいしゃ",
+    "Romaji": "haisha",
+    "Categorie": "santé"
+  },
+  {
+    "No": 273,
+    "Francais": "carie",
+    "Japonais": "虫歯",
+    "Kana": "むしば",
+    "Romaji": "mushiba",
+    "Categorie": "santé"
+  },
+  {
+    "No": 274,
+    "Francais": "lentilles de contact",
+    "Japonais": "コンタクト レンズ",
+    "Kana": "コンタクト レンズ",
+    "Romaji": "kontakuto renzu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 275,
+    "Francais": "lentillesjetables",
+    "Japonais": "使い捨てコンタクト",
+    "Kana": "ツカイステコンタクト",
+    "Romaji": "tsukaisutekontakuto",
+    "Categorie": "santé"
+  },
+  {
+    "No": 276,
+    "Francais": "monture",
+    "Japonais": "フレーム",
+    "Kana": "フレイム",
+    "Romaji": "furêmu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 277,
+    "Francais": "opticien",
+    "Japonais": "眼鏡 屋",
+    "Kana": "めがね や",
+    "Romaji": "megane ya",
+    "Categorie": "santé"
+  },
+  {
+    "No": 278,
+    "Francais": "verre",
+    "Japonais": "レンズ",
+    "Kana": "レンズ",
+    "Romaji": "renzu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 279,
+    "Francais": "analgésique",
+    "Japonais": "痛み止め",
+    "Kana": "いたみどめ",
+    "Romaji": "itamidome",
+    "Categorie": "santé"
+  },
+  {
+    "No": 280,
+    "Francais": "antidiaréique",
+    "Japonais": "下痢止め",
+    "Kana": "げりどめ",
+    "Romaji": "geridome",
+    "Categorie": "santé"
+  },
+  {
+    "No": 281,
+    "Francais": "collyre",
+    "Japonais": "目薬",
+    "Kana": "めぐすり",
+    "Romaji": "megusuri",
+    "Categorie": "santé"
+  },
+  {
+    "No": 282,
+    "Francais": "désinfectant",
+    "Japonais": "消毒液",
+    "Kana": "しょうどくえき",
+    "Romaji": "shôdokueki",
+    "Categorie": "santé"
+  },
+  {
+    "No": 283,
+    "Francais": "laxatif",
+    "Japonais": "便秘薬",
+    "Kana": "べmぴやく",
+    "Romaji": "bempiyaku",
+    "Categorie": "santé"
+  },
+  {
+    "No": 284,
+    "Francais": "médicament",
+    "Japonais": "薬",
+    "Kana": "くすり",
+    "Romaji": "kusuri",
+    "Categorie": "santé"
+  },
+  {
+    "No": 285,
+    "Francais": "médicamentcontre le rhume",
+    "Japonais": "風邪薬",
+    "Kana": "かぜぐすり",
+    "Romaji": "kazegusuri",
+    "Categorie": "santé"
+  },
+  {
+    "No": 286,
+    "Francais": "pansement tout prêt",
+    "Japonais": "バンド エイド",
+    "Kana": "バンド エイド",
+    "Romaji": "bando eïdo",
+    "Categorie": "santé"
+  },
+  {
+    "No": 287,
+    "Francais": "pastilles pour la gorge",
+    "Japonais": "のど(",
+    "Kana": "cいd:7634 のどあめ",
+    "Romaji": "cid:7634) nodoame",
+    "Categorie": "santé"
+  },
+  {
+    "No": 288,
+    "Francais": "patch chauffant",
+    "Japonais": "湿布",
+    "Kana": "しっぷ",
+    "Romaji": "shippu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 289,
+    "Francais": "pommade",
+    "Japonais": "クリーム",
+    "Kana": "クリイム",
+    "Romaji": "kurîmu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 290,
+    "Francais": "pommade anti-moustiques",
+    "Japonais": "かゆみ止め",
+    "Kana": "かゆみどめ",
+    "Romaji": "kayumidome",
+    "Categorie": "santé"
+  },
+  {
+    "No": 291,
+    "Francais": "sirop pour la toux",
+    "Japonais": "シロップ",
+    "Kana": "シロップ",
+    "Romaji": "shiroppu",
+    "Categorie": "santé"
+  },
+  {
+    "No": 292,
+    "Francais": "vitamine",
+    "Japonais": "ビタミン剤",
+    "Kana": "ビタミンザイ",
+    "Romaji": "bitaminzaï",
+    "Categorie": "santé"
+  },
+  {
+    "No": 293,
+    "Francais": "auberge traditionnelle (avec sources chaudes) (",
+    "Japonais": "温泉) 旅館 (",
+    "Kana": "おんせん りょかん",
+    "Romaji": "onsen) ryokan",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 294,
+    "Francais": "auberge de jeunesse",
+    "Japonais": "ユース ホステル",
+    "Kana": "ユウス ホステル",
+    "Romaji": "yûsu hosuteru",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 295,
+    "Francais": "business-hôtel",
+    "Japonais": "ビジネス ホテル",
+    "Kana": "ビジネス ホテル",
+    "Romaji": "bijinesu hoteru",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 296,
+    "Francais": "chambre d’hôte",
+    "Japonais": "民宿",
+    "Kana": "みんしゅく",
+    "Romaji": "minshuku",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 297,
+    "Francais": "hôtel (classique)",
+    "Japonais": "ホテル",
+    "Kana": "ホテル",
+    "Romaji": "hoteru",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 298,
+    "Francais": "chambre pour une personne",
+    "Japonais": "シングル",
+    "Kana": "シングル",
+    "Romaji": "shinguru",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 299,
+    "Francais": "chambre pour deux avec lits jumeaux",
+    "Japonais": "ツイン",
+    "Kana": "ツイン",
+    "Romaji": "tsuin",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 300,
+    "Francais": "chambre pour deux avec un lit double",
+    "Japonais": "ダブル",
+    "Kana": "ダブル",
+    "Romaji": "daburu",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 301,
+    "Francais": "accès à la chambre",
+    "Japonais": "チェック イン",
+    "Kana": "cヘック イン",
+    "Romaji": "chekku in",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 302,
+    "Francais": "frais d’annulation",
+    "Japonais": "キャンセル 料",
+    "Kana": "キャンセル リョウ",
+    "Romaji": "kyanseru ryô",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 303,
+    "Francais": "petit-déjeuner occidental",
+    "Japonais": "洋食",
+    "Kana": "ようしょく",
+    "Romaji": "yôshoku",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 304,
+    "Francais": "café",
+    "Japonais": "コーヒー",
+    "Kana": "コウヒイ",
+    "Romaji": "kôhî",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 305,
+    "Francais": "thé (anglais)",
+    "Japonais": "紅茶",
+    "Kana": "こうちゃ",
+    "Romaji": "kôcha",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 306,
+    "Francais": "gel-douche",
+    "Japonais": "ボディー ソープ",
+    "Kana": "ボヂイ ソウプ",
+    "Romaji": "bodî sôpu",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 307,
+    "Francais": "nécessités(5)",
+    "Japonais": "アメニティ",
+    "Kana": "アメニtイ",
+    "Romaji": "ameniti",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 308,
+    "Francais": "rinçage",
+    "Japonais": "リンス",
+    "Kana": "リンス",
+    "Romaji": "rinsu",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 309,
+    "Francais": "shampoing",
+    "Japonais": "シャンプー",
+    "Kana": "シャmプウ",
+    "Romaji": "shampû",
+    "Categorie": "hébergement"
+  },
+  {
+    "No": 310,
+    "Francais": "Oui, c’est ainsi.",
+    "Japonais": "はい、そう です",
+    "Kana": "はい そう です",
+    "Romaji": "haï sô des(u)",
+    "Categorie": "expressions"
+  },
+  {
+    "No": 311,
+    "Francais": "Non, ce n’est pas ainsi.",
+    "Japonais": "いいえ、そう で は ありません",
+    "Kana": "いいえ そう で わ / ありません",
+    "Romaji": "iie sô de wa / arimasen",
+    "Categorie": "expressions"
+  },
+  {
+    "No": 312,
+    "Francais": "Ah bon !",
+    "Japonais": "あ、そう です か",
+    "Kana": "あ そう です か",
+    "Romaji": "a sô de(su) ka",
+    "Categorie": "expressions"
+  },
+  {
+    "No": 313,
+    "Francais": "Assurément !",
+    "Japonais": "なるほど",
+    "Kana": "なるほど",
+    "Romaji": "naruhodo",
+    "Categorie": "expressions"
+  },
+  {
+    "No": 314,
+    "Francais": "Vraiment !",
+    "Japonais": "本当 に",
+    "Kana": "ほんとう に",
+    "Romaji": "hontô ni",
+    "Categorie": "expressions"
+  },
+  {
+    "No": 315,
+    "Francais": "l’anglais",
+    "Japonais": "英語",
+    "Kana": "えいご",
+    "Romaji": "eïgo",
+    "Categorie": "div"
+  },
+  {
+    "No": 316,
+    "Francais": "le chinois",
+    "Japonais": "中国語",
+    "Kana": "ちゅうごくご",
+    "Romaji": "chûgokugo",
+    "Categorie": "div"
+  },
+  {
+    "No": 317,
+    "Francais": "le coréen",
+    "Japonais": "韓国語",
+    "Kana": "かんこくご",
+    "Romaji": "kankokugo",
+    "Categorie": "div"
+  },
+  {
+    "No": 318,
+    "Francais": "le japonais",
+    "Japonais": "日本語",
+    "Kana": "にほんご",
+    "Romaji": "nihongo",
+    "Categorie": "div"
+  },
+  {
+    "No": 319,
+    "Francais": "cinéma",
+    "Japonais": "映画",
+    "Kana": "えいが",
+    "Romaji": "eïga",
+    "Categorie": "loisirs"
+  },
+  {
+    "No": 320,
+    "Francais": "pot (aller boire un ~)",
+    "Japonais": "飲み",
+    "Kana": "のみ",
+    "Romaji": "nomi",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 321,
+    "Francais": "promenade",
+    "Japonais": "散歩",
+    "Kana": "さmぽ",
+    "Romaji": "sampo",
+    "Categorie": "loisirs"
+  },
+  {
+    "No": 322,
+    "Francais": "droite / côté droit",
+    "Japonais": "右 / 右側",
+    "Kana": "みぎ / みぎがわ",
+    "Romaji": "migi / migigawa",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 323,
+    "Francais": "gauche / côté gauche",
+    "Japonais": "左 / 左側",
+    "Kana": "ひだり / ひだりがわ",
+    "Romaji": "hidari / hidarigawa",
+    "Categorie": "lieu"
+  },
+  {
+    "No": 324,
+    "Francais": "Bonjour ! (de bonne heure) (dans la journée) (en fin de journée)",
+    "Japonais": "おはよう ございます。/ こんにち は。/ こんばん は。",
+    "Kana": "おはよう ございます。/ こんにちは。/ こんばんは。",
+    "Romaji": "ohayô gozaimas(u) / konnichi wa / konban wa",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 325,
+    "Francais": "—",
+    "Japonais": "（ligne fusionnée au 324 dans le PDF d’origine）",
+    "Kana": "（voir 324）",
+    "Romaji": "—",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 326,
+    "Francais": "Au revoir !(familier)(formel)",
+    "Japonais": "では また。/じゃ また。じゃ どうも。",
+    "Kana": "で わ また/じゃ またじゃ どうも",
+    "Romaji": "de wa mata/ja mataja dômo",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 327,
+    "Francais": "Merci.",
+    "Japonais": "ありがとうございます。",
+    "Kana": "ありがとうございます",
+    "Romaji": "arigatôgozaimas(u)",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 328,
+    "Francais": "Merci beaucoup.",
+    "Japonais": "どうもありがとうございます。",
+    "Kana": "どうもありがとうございます",
+    "Romaji": "dômoarigatôgozaimas(u)",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 329,
+    "Francais": "S’il vous plaît.",
+    "Japonais": "お願い します。",
+    "Kana": "おねがい します",
+    "Romaji": "onegai shimas(u)",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 330,
+    "Francais": "Excusez-moi.",
+    "Japonais": "すみません。",
+    "Kana": "すみません",
+    "Romaji": "sumimasen",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 331,
+    "Francais": "Indiquez-moi… ᐧᐧᐧ",
+    "Japonais": "を 教えてください。",
+    "Kana": "お おしえてください",
+    "Romaji": "o oshietekudasaï",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 332,
+    "Francais": "Je voudrais(+ nom) ᐧᐧᐧ",
+    "Japonais": "を ください。(ᐧᐧᐧを) お願いします。",
+    "Kana": "お くださいお おねがいします",
+    "Romaji": "o kudasaï(o) onegaishimas(u)",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 333,
+    "Francais": "Je voudrais(+ verbe) ᐧᐧᐧ",
+    "Japonais": "たい ん です がᐧᐧᐧ",
+    "Kana": "たい ん です が",
+    "Romaji": "taï n des(u) ga",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 334,
+    "Francais": "Je cherche… ᐧᐧᐧ",
+    "Japonais": "を 探しています。",
+    "Kana": "お さがしています",
+    "Romaji": "o sagashiteimas(u)",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 335,
+    "Francais": "Ah bon !",
+    "Japonais": "あ そう です か。",
+    "Kana": "あ そう です か",
+    "Romaji": "a sô des(u) ka",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 336,
+    "Francais": "grand magasin",
+    "Japonais": "デパート",
+    "Kana": "デパアト",
+    "Romaji": "depâto",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 337,
+    "Francais": "magasin, commerce",
+    "Japonais": "店",
+    "Kana": "みせ",
+    "Romaji": "mise",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 338,
+    "Francais": "supermarché",
+    "Japonais": "スーパー マーケット",
+    "Kana": "スウパア マアケット",
+    "Romaji": "sûpâ mâketto",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 339,
+    "Francais": "acheter",
+    "Japonais": "買います",
+    "Kana": "かいます",
+    "Romaji": "kaimas(u)",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 340,
+    "Francais": "ascenseur",
+    "Japonais": "エレベーター",
+    "Kana": "エレベイタア",
+    "Romaji": "erebêtâ",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 341,
+    "Francais": "bureau de renseignements",
+    "Japonais": "案内所",
+    "Kana": "あんないじょ",
+    "Romaji": "annaïjo",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 342,
+    "Francais": "cher ≠ bon marché",
+    "Japonais": "高い ≠ 安い",
+    "Kana": "たかいい ≠ やすい",
+    "Romaji": "takaî ≠ yasui",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 343,
+    "Francais": "escalier mécanique",
+    "Japonais": "エスカレーター",
+    "Kana": "エスカレエタア",
+    "Romaji": "esukareetâ",
+    "Categorie": "argent"
+  },
+  {
+    "No": 344,
+    "Francais": "payer",
+    "Japonais": "払います",
+    "Kana": "はらいます",
+    "Romaji": "haraimas(u)",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 345,
+    "Francais": "produit hors-taxe",
+    "Japonais": "免税 品",
+    "Kana": "めんぜい ひん",
+    "Romaji": "menzeï hin",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 346,
+    "Francais": "service de livraison à domicile",
+    "Japonais": "宅配 サービス",
+    "Kana": "タクハイ サアビス",
+    "Romaji": "takuhaï sâbisu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 347,
+    "Francais": "soldes",
+    "Japonais": "バーゲン / セール",
+    "Kana": "バアゲン / セエル",
+    "Romaji": "bâgen / seeru",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 348,
+    "Francais": "carte",
+    "Japonais": "地図",
+    "Kana": "ちず",
+    "Romaji": "chizu",
+    "Categorie": "voyage"
+  },
+  {
+    "No": 349,
+    "Francais": "guide touristique",
+    "Japonais": "ガイド",
+    "Kana": "ガイド",
+    "Romaji": "gaïdo",
+    "Categorie": "voyage"
+  },
+  {
+    "No": 350,
+    "Francais": "rayon des livres étrangers",
+    "Japonais": "洋書 売り場 / >洋書 コーナー",
+    "Kana": "ヨウショ ウリバ / ヨウショ コウナア",
+    "Romaji": "yôsho uriba / yôsho kônâ",
+    "Categorie": "voyage"
+  },
+  {
+    "No": 351,
+    "Francais": "revue",
+    "Japonais": "雑誌",
+    "Kana": "ざっし",
+    "Romaji": "zasshi",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 352,
+    "Francais": "CD",
+    "Japonais": "CD",
+    "Kana": "しいぢい",
+    "Romaji": "shîdî",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 353,
+    "Francais": "chanson",
+    "Japonais": "歌",
+    "Kana": "うた",
+    "Romaji": "uta",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 354,
+    "Francais": "chanson japonaise traditionnelle",
+    "Japonais": "民謡",
+    "Kana": "みにょう",
+    "Romaji": "minyô",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 355,
+    "Francais": "DVD",
+    "Japonais": "DVD",
+    "Kana": "ぢいぶいぢい",
+    "Romaji": "dîbuidî",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 356,
+    "Francais": "jazz",
+    "Japonais": "ジャズ",
+    "Kana": "ジャズ",
+    "Romaji": "jazu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 357,
+    "Francais": "musique classique",
+    "Japonais": "クラシック 音楽",
+    "Kana": "クラシック オンガク",
+    "Romaji": "kurashikku ongaku",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 358,
+    "Francais": "partition",
+    "Japonais": "曲",
+    "Kana": "きょく",
+    "Romaji": "kyoku",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 359,
+    "Francais": "pop japonaise",
+    "Japonais": "J.POP",
+    "Kana": "jえぽっぷ",
+    "Romaji": "jepoppu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 360,
+    "Francais": "rock",
+    "Japonais": "ロック",
+    "Kana": "ロック",
+    "Romaji": "rokku",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 361,
+    "Francais": "blanc",
+    "Japonais": "白い",
+    "Kana": "しろい",
+    "Romaji": "shiroï",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 362,
+    "Francais": "bleu",
+    "Japonais": "ブルー",
+    "Kana": "ブルウ",
+    "Romaji": "burû",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 363,
+    "Francais": "gris",
+    "Japonais": "グレー",
+    "Kana": "グレイ",
+    "Romaji": "gurê",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 364,
+    "Francais": "jaune",
+    "Japonais": "黄色い",
+    "Kana": "きいろい",
+    "Romaji": "kiiroï",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 365,
+    "Francais": "marron",
+    "Japonais": "茶色",
+    "Kana": "ちゃいろ",
+    "Romaji": "chairo",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 366,
+    "Francais": "orange",
+    "Japonais": "オレンジ色",
+    "Kana": "オレンジイロ",
+    "Romaji": "orenjiiro",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 367,
+    "Francais": "noir",
+    "Japonais": "黒い",
+    "Kana": "くろい",
+    "Romaji": "kuroï",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 368,
+    "Francais": "rose",
+    "Japonais": "ピンク",
+    "Kana": "ピンク",
+    "Romaji": "pinku",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 369,
+    "Francais": "rouge",
+    "Japonais": "赤い",
+    "Kana": "あかい",
+    "Romaji": "akaï",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 370,
+    "Francais": "vert",
+    "Japonais": "緑色",
+    "Kana": "みどりいろ",
+    "Romaji": "midoriiro",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 371,
+    "Francais": "violet",
+    "Japonais": "紫",
+    "Kana": "むらさき",
+    "Romaji": "murasaki",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 372,
+    "Francais": "coton",
+    "Japonais": "木綿",
+    "Kana": "もめん",
+    "Romaji": "momen",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 373,
+    "Francais": "cuir",
+    "Japonais": "皮",
+    "Kana": "かわ",
+    "Romaji": "kawa",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 374,
+    "Francais": "laine",
+    "Japonais": "ウール û",
+    "Kana": "ル",
+    "Romaji": "ru",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 375,
+    "Francais": "lin",
+    "Japonais": "麻",
+    "Kana": "あさ",
+    "Romaji": "asa",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 376,
+    "Francais": "polyester",
+    "Japonais": "ポリエステル",
+    "Kana": "ポリエステル",
+    "Romaji": "poriesuteru",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 377,
+    "Francais": "soie",
+    "Japonais": "絹",
+    "Kana": "きぬ",
+    "Romaji": "kinu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 378,
+    "Francais": "chapeau",
+    "Japonais": "帽子",
+    "Kana": "ぼうし",
+    "Romaji": "bôshi",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 379,
+    "Francais": "chaussette",
+    "Japonais": "靴下",
+    "Kana": "くつした",
+    "Romaji": "kutsushita",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 380,
+    "Francais": "chaussure",
+    "Japonais": "靴",
+    "Kana": "くつ",
+    "Romaji": "kutsu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 381,
+    "Francais": "chemise d’homme",
+    "Japonais": "ワイシャツ",
+    "Kana": "ワイシャツ",
+    "Romaji": "waïshatsu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 382,
+    "Francais": "chemisier",
+    "Japonais": "ブラウス",
+    "Kana": "ブラウス",
+    "Romaji": "burausu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 383,
+    "Francais": "collants",
+    "Japonais": "タイツ",
+    "Kana": "タイツ",
+    "Romaji": "taïtsu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 384,
+    "Francais": "jupe",
+    "Japonais": "スカート",
+    "Kana": "スカアト",
+    "Romaji": "sukâto",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 385,
+    "Francais": "manteau",
+    "Japonais": "コート",
+    "Kana": "コウト",
+    "Romaji": "kôto",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 386,
+    "Francais": "pantalon",
+    "Japonais": "ズボン",
+    "Kana": "ズボン",
+    "Romaji": "zubon",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 387,
+    "Francais": "pyjama/chemise de nuit",
+    "Japonais": "パジャマ",
+    "Kana": "パジャマ",
+    "Romaji": "pajama",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 388,
+    "Francais": "robe",
+    "Japonais": "ワン ピース",
+    "Kana": "ワン ピイス",
+    "Romaji": "wan pîsu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 389,
+    "Francais": "sous-vêtement",
+    "Japonais": "下着",
+    "Kana": "したぎ",
+    "Romaji": "shitagi",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 390,
+    "Francais": "appareil photo",
+    "Japonais": "カメラ",
+    "Kana": "カメラ",
+    "Romaji": "kamera",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 391,
+    "Francais": "appareil photo numérique",
+    "Japonais": "デジ カメ",
+    "Kana": "デジ カメ",
+    "Romaji": "deji kame",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 392,
+    "Francais": "carte mémoire",
+    "Japonais": "メモリー カード",
+    "Kana": "メモリイ カアド",
+    "Romaji": "memorî kâdo",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 393,
+    "Francais": "développement",
+    "Japonais": "現像",
+    "Kana": "げんぞう",
+    "Romaji": "genzô",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 394,
+    "Francais": "pellicule",
+    "Japonais": "フィルム",
+    "Kana": "フィルム",
+    "Romaji": "firumu",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 395,
+    "Francais": "photo",
+    "Japonais": "写真",
+    "Kana": "しゃしん",
+    "Romaji": "shashin",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 396,
+    "Francais": "carte postale",
+    "Japonais": "絵葉書",
+    "Kana": "えはがき",
+    "Romaji": "ehagaki",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 397,
+    "Francais": "gâteau japonais",
+    "Japonais": "和菓子",
+    "Kana": "わがし",
+    "Romaji": "wagashi",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 398,
+    "Francais": "magnet",
+    "Japonais": "マグネット",
+    "Kana": "マグネット",
+    "Romaji": "magunetto",
+    "Categorie": "div"
+  },
+  {
+    "No": 399,
+    "Francais": "marque-page",
+    "Japonais": "しおり",
+    "Kana": "しおり",
+    "Romaji": "shiori",
+    "Categorie": "div"
+  },
+  {
+    "No": 400,
+    "Francais": "mouchoir",
+    "Japonais": "ハンカチ",
+    "Kana": "ハンカチ",
+    "Romaji": "hankachi",
+    "Categorie": "div"
+  },
+  {
+    "No": 401,
+    "Francais": "porte-clé",
+    "Japonais": "キー ホルダー",
+    "Kana": "キイ ホルダア",
+    "Romaji": "kî horudâ",
+    "Categorie": "div"
+  },
+  {
+    "No": 402,
+    "Francais": "saké local",
+    "Japonais": "地酒",
+    "Kana": "じざけ",
+    "Romaji": "jizake",
+    "Categorie": "div"
+  },
+  {
+    "No": 403,
+    "Francais": "danger",
+    "Japonais": "危険",
+    "Kana": "きけん",
+    "Romaji": "kiken",
+    "Categorie": "div"
+  },
+  {
+    "No": 404,
+    "Francais": "flash interdit",
+    "Japonais": "フラッシュ 禁止",
+    "Kana": "フラッシュ キンシ",
+    "Romaji": "furasshu kinshi",
+    "Categorie": "div"
+  },
+  {
+    "No": 405,
+    "Francais": "interdit de boire ou de manger",
+    "Japonais": "飲食 禁止",
+    "Kana": "いんしょく きんし",
+    "Romaji": "inshoku kinshi",
+    "Categorie": "div"
+  },
+  {
+    "No": 406,
+    "Francais": "interdit de fumer",
+    "Japonais": "禁煙",
+    "Kana": "きねん",
+    "Romaji": "kinen",
+    "Categorie": "div"
+  },
+  {
+    "No": 407,
+    "Francais": "interdit d’entrer",
+    "Japonais": "立ち入り 禁止",
+    "Kana": "たちいり きんし",
+    "Romaji": "tachiiri kinshi",
+    "Categorie": "div"
+  },
+  {
+    "No": 408,
+    "Francais": "ne pas toucher",
+    "Japonais": "触らないで ください",
+    "Kana": "さわらないで ください",
+    "Romaji": "sawaranaïde kudasaï",
+    "Categorie": "div"
+  },
+  {
+    "No": 409,
+    "Francais": "photos interdites",
+    "Japonais": "撮影 禁止",
+    "Kana": "さつえい きんし",
+    "Romaji": "satsueï kinshi",
+    "Categorie": "div"
+  },
+  {
+    "No": 410,
+    "Francais": "sortie de secours",
+    "Japonais": "非常口",
+    "Kana": "ひじょうぐち",
+    "Romaji": "hijôguchi",
+    "Categorie": "shopping"
+  },
+  {
+    "No": 411,
+    "Francais": "",
+    "Japonais": "こ",
+    "Kana": "こ そそ ああ",
+    "Romaji": "ko そso あa",
+    "Categorie": "div"
+  },
+  {
+    "No": 412,
+    "Francais": "avenue",
+    "Japonais": "大通り",
+    "Kana": "おおどおり",
+    "Romaji": "oodoori",
+    "Categorie": "ville"
+  },
+  {
+    "No": 413,
+    "Francais": "bâtiment",
+    "Japonais": "ビル",
+    "Kana": "ビル",
+    "Romaji": "biru",
+    "Categorie": "ville"
+  },
+  {
+    "No": 414,
+    "Francais": "chemin",
+    "Japonais": "道",
+    "Kana": "みち",
+    "Romaji": "michi",
+    "Categorie": "ville"
+  },
+  {
+    "No": 415,
+    "Francais": "coin",
+    "Japonais": "角",
+    "Kana": "かど",
+    "Romaji": "kado",
+    "Categorie": "ville"
+  },
+  {
+    "No": 416,
+    "Francais": "droite",
+    "Japonais": "右",
+    "Kana": "みぎ",
+    "Romaji": "migi",
+    "Categorie": "ville"
+  },
+  {
+    "No": 417,
+    "Francais": "gauche",
+    "Japonais": "左",
+    "Kana": "ひだり",
+    "Romaji": "hidari",
+    "Categorie": "ville"
+  },
+  {
+    "No": 418,
+    "Francais": "passage pour piétons",
+    "Japonais": "横断歩道 ô",
+    "Kana": "だんほどう",
+    "Romaji": "danhodô",
+    "Categorie": "ville"
+  },
+  {
+    "No": 419,
+    "Francais": "plan",
+    "Japonais": "地図",
+    "Kana": "ちず",
+    "Romaji": "chizu",
+    "Categorie": "ville"
+  },
+  {
+    "No": 420,
+    "Francais": "rue",
+    "Japonais": "通り",
+    "Kana": "とおり",
+    "Romaji": "toori",
+    "Categorie": "ville"
+  },
+  {
+    "No": 421,
+    "Francais": "tourner",
+    "Japonais": "曲がります",
+    "Kana": "まがります",
+    "Romaji": "magarimas(u)",
+    "Categorie": "ville"
+  },
+  {
+    "No": 422,
+    "Francais": "tout droit",
+    "Japonais": "まっすぐ",
+    "Kana": "まっすぐ",
+    "Romaji": "massugu",
+    "Categorie": "ville"
+  },
+  {
+    "No": 423,
+    "Francais": "trottoir",
+    "Japonais": "歩道",
+    "Kana": "ほどう",
+    "Romaji": "hodô",
+    "Categorie": "ville"
+  },
+  {
+    "No": 424,
+    "Francais": "arrêt de bus",
+    "Japonais": "バス停",
+    "Kana": "バス テイ",
+    "Romaji": "basu teï",
+    "Categorie": "ville"
+  },
+  {
+    "No": 425,
+    "Francais": "billet",
+    "Japonais": "切符",
+    "Kana": "きっぷ",
+    "Romaji": "kippu",
+    "Categorie": "ville"
+  },
+  {
+    "No": 426,
+    "Francais": "bus",
+    "Japonais": "バス",
+    "Kana": "バス",
+    "Romaji": "basu",
+    "Categorie": "ville"
+  },
+  {
+    "No": 427,
+    "Francais": "gare",
+    "Japonais": "駅",
+    "Kana": "えき",
+    "Romaji": "eki",
+    "Categorie": "ville"
+  },
+  {
+    "No": 428,
+    "Francais": "métro",
+    "Japonais": "地下鉄",
+    "Kana": "ちかてつ",
+    "Romaji": "chikatetsu",
+    "Categorie": "ville"
+  },
+  {
+    "No": 429,
+    "Francais": "monorail",
+    "Japonais": "モノレール",
+    "Kana": "モノレイル",
+    "Romaji": "monorêru",
+    "Categorie": "ville"
+  },
+  {
+    "No": 430,
+    "Francais": "plan de métro",
+    "Japonais": "地下鉄 の マップ",
+    "Kana": "チカテツ ノ マップ",
+    "Romaji": "chikatetsu no mappu",
+    "Categorie": "ville"
+  },
+  {
+    "No": 431,
+    "Francais": "quai",
+    "Japonais": "ホーム",
+    "Kana": "ホウム",
+    "Romaji": "hômu",
+    "Categorie": "ville"
+  },
+  {
+    "No": 432,
+    "Francais": "salle des distributeurs de billets",
+    "Japonais": "切符 売り場",
+    "Kana": "きっぷ うりば",
+    "Romaji": "kippu uriba",
+    "Categorie": "ville"
+  },
+  {
+    "No": 433,
+    "Francais": "terminus du bus",
+    "Japonais": "バス ターミナル",
+    "Kana": "バス タアミナル",
+    "Romaji": "basu tâminaru",
+    "Categorie": "ville"
+  },
+  {
+    "No": 434,
+    "Francais": "train urbain",
+    "Japonais": "電車",
+    "Kana": "でんしゃ",
+    "Romaji": "densha",
+    "Categorie": "ville"
+  },
+  {
+    "No": 435,
+    "Francais": "trajet du bus",
+    "Japonais": "路線図",
+    "Kana": "ろせんず",
+    "Romaji": "rosenzu",
+    "Categorie": "ville"
+  },
+  {
+    "No": 436,
+    "Francais": "calligraphie",
+    "Japonais": "書道",
+    "Kana": "しょどう",
+    "Romaji": "shodô",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 437,
+    "Francais": "céramique",
+    "Japonais": "瀬戸物",
+    "Kana": "せともの",
+    "Romaji": "setomono",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 438,
+    "Francais": "contemporain",
+    "Japonais": "現代",
+    "Kana": "げんだい",
+    "Romaji": "gendaï",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 439,
+    "Francais": "exposition",
+    "Japonais": "展覧会",
+    "Kana": "てんらんかい",
+    "Romaji": "tenrankaï",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 440,
+    "Francais": "galerie",
+    "Japonais": "画廊",
+    "Kana": "がろう",
+    "Romaji": "garô",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 441,
+    "Francais": "laque",
+    "Japonais": "漆器",
+    "Kana": "しっき",
+    "Romaji": "shikki",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 442,
+    "Francais": "musée(sauf musées d’art)",
+    "Japonais": "博物館",
+    "Kana": "はくぶつかん",
+    "Romaji": "hakubutsukan",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 443,
+    "Francais": "musée d’art",
+    "Japonais": "美術館",
+    "Kana": "びじゅつかん",
+    "Romaji": "bijutsukan",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 444,
+    "Francais": "peinture, dessin",
+    "Japonais": "絵",
+    "Kana": "え",
+    "Romaji": "e",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 445,
+    "Francais": "poterie",
+    "Japonais": "楽焼き",
+    "Kana": "らくやき",
+    "Romaji": "rakuyaki",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 446,
+    "Francais": "sculpture",
+    "Japonais": "彫刻",
+    "Kana": "ちょうこく",
+    "Romaji": "chôkoku",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 447,
+    "Francais": "traditionnel",
+    "Japonais": "伝統的",
+    "Kana": "でんとうてき",
+    "Romaji": "dentôteki",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 448,
+    "Francais": "château fort",
+    "Japonais": "城",
+    "Kana": "しろ",
+    "Romaji": "shiro",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 449,
+    "Francais": "jardin",
+    "Japonais": "公園",
+    "Kana": "こうえん",
+    "Romaji": "kôen",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 450,
+    "Francais": "Palais Impérial de Kyôto",
+    "Japonais": "京都 御所",
+    "Kana": "きょうと ごしょ",
+    "Romaji": "kyôto gosho",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 451,
+    "Francais": "Palais Impérial de Tôkyô",
+    "Japonais": "皇居",
+    "Kana": "こうきょ",
+    "Romaji": "kôkyo",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 452,
+    "Francais": "comédie musicale",
+    "Japonais": "ミュージカル 映画",
+    "Kana": "ミュウジカル エイガ",
+    "Romaji": "myûjikaru eïga",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 453,
+    "Francais": "concert",
+    "Japonais": "音楽会 / コンサート",
+    "Kana": "オンガクカイ / コンサアト",
+    "Romaji": "ongak(u)kai / konsâto",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 454,
+    "Francais": "danse classique",
+    "Japonais": "バレエ",
+    "Kana": "バレイ",
+    "Romaji": "barê",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 455,
+    "Francais": "danse traditionnelle",
+    "Japonais": "踊り",
+    "Kana": "おどり",
+    "Romaji": "odori",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 456,
+    "Francais": "film de samouraïs",
+    "Japonais": "時代劇",
+    "Kana": "じだいげき",
+    "Romaji": "jidaïgeki",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 457,
+    "Francais": "salle de cinéma",
+    "Japonais": "映画館",
+    "Kana": "えいがかん",
+    "Romaji": "eïgakan",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 458,
+    "Francais": "salle de concert",
+    "Japonais": "コンサート ホール",
+    "Kana": "コンサアト ホウル",
+    "Romaji": "konsâto hôru",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 459,
+    "Francais": "théâtre (art / lieu)",
+    "Japonais": "芝居 / 劇場",
+    "Kana": "しばい / げきじょう",
+    "Romaji": "shibaï / gekijô",
+    "Categorie": "art culture"
+  },
+  {
+    "No": 460,
+    "Francais": "bureau de poste",
+    "Japonais": "郵便局",
+    "Kana": "ゆうびんきょく",
+    "Romaji": "yûbinkyoku",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 461,
+    "Francais": "carte postale",
+    "Japonais": "葉書",
+    "Kana": "はがき",
+    "Romaji": "hagaki",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 462,
+    "Francais": "colis",
+    "Japonais": "小包",
+    "Kana": "こずつみ",
+    "Romaji": "kozutsumi",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 463,
+    "Francais": "courrier international",
+    "Japonais": "国際郵便",
+    "Kana": "こくさいゆうびん",
+    "Romaji": "kokusaïyûbin",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 464,
+    "Francais": "exprès",
+    "Japonais": "速達",
+    "Kana": "そくたつ",
+    "Romaji": "sokutatsu",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 465,
+    "Francais": "lettre",
+    "Japonais": "手紙",
+    "Kana": "てがみ",
+    "Romaji": "tegami",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 466,
+    "Francais": "par avion",
+    "Japonais": "航空便",
+    "Kana": "こうくうびん",
+    "Romaji": "kôkûbin",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 467,
+    "Francais": "par avion tarif réduit",
+    "Japonais": "SAL",
+    "Kana": "さる",
+    "Romaji": "saru",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 468,
+    "Francais": "par bateau",
+    "Japonais": "船便",
+    "Kana": "ふなびん",
+    "Romaji": "funabin",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 469,
+    "Francais": "recommandé",
+    "Japonais": "書留",
+    "Kana": "かきとめ",
+    "Romaji": "kakitome",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 470,
+    "Francais": "tarif",
+    "Japonais": "料金",
+    "Kana": "りょうきん",
+    "Romaji": "ryôkin",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 471,
+    "Francais": "timbre",
+    "Japonais": "切手",
+    "Kana": "きって",
+    "Romaji": "kitte",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 472,
+    "Francais": "numéro de téléphone",
+    "Japonais": "電話 番号",
+    "Kana": "でんわ ばんごう",
+    "Romaji": "denwa bangô",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 473,
+    "Francais": "téléphone",
+    "Japonais": "電話",
+    "Kana": "でんわ",
+    "Romaji": "denwa",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 474,
+    "Francais": "connexion",
+    "Japonais": "ログ イン",
+    "Kana": "ログ イン",
+    "Romaji": "rogu in",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 475,
+    "Francais": "mot de passe",
+    "Japonais": "パス ワード",
+    "Kana": "パス ワアド",
+    "Romaji": "pasu wâdo",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 476,
+    "Francais": "site",
+    "Japonais": "サイト",
+    "Kana": "サイト",
+    "Romaji": "saïto",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 477,
+    "Francais": "wifi WiFi",
+    "Japonais": "ワイファイ",
+    "Kana": "ワイファイ",
+    "Romaji": "waïfaï",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 478,
+    "Francais": "consulat",
+    "Japonais": "領事館",
+    "Kana": "りょうじかん",
+    "Romaji": "ryôjikan",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 479,
+    "Francais": "pièce d’identité",
+    "Japonais": "身分 証明書",
+    "Kana": "みぶん しょうめいしょ",
+    "Romaji": "mibun shômeïsho",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 480,
+    "Francais": "permis de séjour",
+    "Japonais": "滞在 許可証",
+    "Kana": "たいざい きょかしょう",
+    "Romaji": "taïzaï kyokashô",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 481,
+    "Francais": "signature",
+    "Japonais": "署名 / サイン",
+    "Kana": "ショメイ / サイン",
+    "Romaji": "shomeï / saïn",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 482,
+    "Francais": "visa",
+    "Japonais": "ビザ / 入国許可書",
+    "Kana": "ビザ / ニュウコクキョカショウ",
+    "Romaji": "biza / nyûkokukyokashô",
+    "Categorie": "administratif"
+  },
+  {
+    "No": 483,
+    "Francais": "banque",
+    "Japonais": "銀行",
+    "Kana": "ぎんこう",
+    "Romaji": "ginkô",
+    "Categorie": "argent"
+  },
+  {
+    "No": 484,
+    "Francais": "billet",
+    "Japonais": "札",
+    "Kana": "さつ",
+    "Romaji": "satsu",
+    "Categorie": "argent"
+  },
+  {
+    "No": 485,
+    "Francais": "monnaie (petite ~)",
+    "Japonais": "細かい お 金",
+    "Kana": "こまかい お かね",
+    "Romaji": "komakaï o kane",
+    "Categorie": "argent"
+  },
+  {
+    "No": 486,
+    "Francais": "pièce",
+    "Japonais": "コイン",
+    "Kana": "コイン",
+    "Romaji": "koïn",
+    "Categorie": "argent"
+  },
+  {
+    "No": 487,
+    "Francais": "travellerchèque",
+    "Japonais": "トラベラーズチェック",
+    "Kana": "トラベラアズcヘック",
+    "Romaji": "toraberâzuchekku",
+    "Categorie": "argent"
+  },
+  {
+    "No": 488,
+    "Francais": "barbe",
+    "Japonais": "ひげ",
+    "Kana": "ひげ",
+    "Romaji": "hige",
+    "Categorie": "mode"
+  },
+  {
+    "No": 489,
+    "Francais": "coiffeur (hommes)",
+    "Japonais": "床屋",
+    "Kana": "とこや",
+    "Romaji": "tokoya",
+    "Categorie": "mode"
+  },
+  {
+    "No": 490,
+    "Francais": "salon de coiffure",
+    "Japonais": "美容院",
+    "Kana": "びよういん",
+    "Romaji": "biyôin",
+    "Categorie": "mode"
+  },
+  {
+    "No": 491,
+    "Francais": "alpinisme",
+    "Japonais": "登山",
+    "Kana": "とざん",
+    "Romaji": "tozan",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 492,
+    "Francais": "escalade",
+    "Japonais": "ロック クライミング",
+    "Kana": "ロック クライミング",
+    "Romaji": "rokku kuraïmingu",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 493,
+    "Francais": "jogging",
+    "Japonais": "ジョギング",
+    "Kana": "ジョギング",
+    "Romaji": "jogingu",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 494,
+    "Francais": "ping-pong",
+    "Japonais": "卓球",
+    "Kana": "たっきゅう",
+    "Romaji": "takkyû",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 495,
+    "Francais": "taï-chi",
+    "Japonais": "太極拳",
+    "Kana": "たいきょくけん",
+    "Romaji": "taïkyokuken",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 496,
+    "Francais": "lunettes de plongée",
+    "Japonais": "水中眼鏡 / ゴーグル",
+    "Kana": "スイチュウメガネ / ゴウグル",
+    "Romaji": "suichûmegane / gôguru",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 497,
+    "Francais": "maillot de bain",
+    "Japonais": "水着",
+    "Kana": "みずぎ",
+    "Romaji": "mizugi",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 498,
+    "Francais": "nager",
+    "Japonais": "泳ぎます",
+    "Kana": "およぎます",
+    "Romaji": "oyogimas(u)",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 499,
+    "Francais": "natation",
+    "Japonais": "水泳",
+    "Kana": "すいえい",
+    "Romaji": "suieï",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 500,
+    "Francais": "bonnet",
+    "Japonais": "水泳帽",
+    "Kana": "すいえいぼう",
+    "Romaji": "suieïbô",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 501,
+    "Francais": "piscine",
+    "Japonais": "プール",
+    "Kana": "プウル",
+    "Romaji": "pûru",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 502,
+    "Francais": "vestiaire",
+    "Japonais": "着替え室",
+    "Kana": "きがえしつ",
+    "Romaji": "kigaeshitsu",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 503,
+    "Francais": "ATTENTION AUX VAGUES",
+    "Japonais": "高波 に 注意",
+    "Kana": "たかなみ に ちゅうい",
+    "Romaji": "takanami ni chûi",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 504,
+    "Francais": "crème à utiliser en cas de coups de soleil",
+    "Japonais": "日焼け 止め クリーム",
+    "Kana": "ヒヤケ ドメクリイム",
+    "Romaji": "hiyake domekurîmu",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 505,
+    "Francais": "crème solaire",
+    "Japonais": "サン オイル",
+    "Kana": "サン オイル",
+    "Romaji": "san oiru",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 506,
+    "Francais": "hydrocution",
+    "Japonais": "冷水ショック",
+    "Kana": "レイスイショック",
+    "Romaji": "reïsuishokku",
+    "Categorie": "urgence"
+  },
+  {
+    "No": 507,
+    "Francais": "insolation",
+    "Japonais": "熱中症",
+    "Kana": "ねtちゅうしょう",
+    "Romaji": "netchûshô",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 508,
+    "Francais": "mer du Japon",
+    "Japonais": "日本海",
+    "Kana": "にほんかい",
+    "Romaji": "nihonkaï",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 509,
+    "Francais": "mer Intérieure",
+    "Japonais": "瀬戸内海",
+    "Kana": "せとないかい",
+    "Romaji": "setonaïkaï",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 510,
+    "Francais": "océan Pacifique",
+    "Japonais": "太平洋",
+    "Kana": "たいへいよう",
+    "Romaji": "taïheïyô",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 511,
+    "Francais": "plongée sous-marine",
+    "Japonais": "ダイビング",
+    "Kana": "ダイビング",
+    "Romaji": "daïbingu",
+    "Categorie": "sport vacances"
+  },
+  {
+    "No": 512,
+    "Francais": "sauveteurs",
+    "Japonais": "レスキュー隊",
+    "Kana": "レスキュウタイ",
+    "Romaji": "resukyûtaï",
+    "Categorie": "urgence"
+  },
+  {
+    "No": 513,
+    "Francais": "camélia",
+    "Japonais": "椿",
+    "Kana": "つばき",
+    "Romaji": "tsubaki",
+    "Categorie": "nature"
+  },
+  {
+    "No": 514,
+    "Francais": "glycine",
+    "Japonais": "藤",
+    "Kana": "ふじ",
+    "Romaji": "fuji",
+    "Categorie": "nature"
+  },
+  {
+    "No": 515,
+    "Francais": "jardin botanique",
+    "Japonais": "植物園",
+    "Kana": "しょくぶつえん",
+    "Romaji": "shokubutsuen",
+    "Categorie": "nature"
+  },
+  {
+    "No": 516,
+    "Francais": "lotus",
+    "Japonais": "蓮 の 花",
+    "Kana": "はす の はな",
+    "Romaji": "hasu no hana",
+    "Categorie": "nature"
+  },
+  {
+    "No": 517,
+    "Francais": "magnolia",
+    "Japonais": "モクレン",
+    "Kana": "モクレン",
+    "Romaji": "mokuren",
+    "Categorie": "nature"
+  },
+  {
+    "No": 518,
+    "Francais": "bambou",
+    "Japonais": "竹",
+    "Kana": "たけ",
+    "Romaji": "take",
+    "Categorie": "nature"
+  },
+  {
+    "No": 519,
+    "Francais": "cèdre du Japon",
+    "Japonais": "杉",
+    "Kana": "すぎ",
+    "Romaji": "sugi",
+    "Categorie": "nature"
+  },
+  {
+    "No": 520,
+    "Francais": "érable",
+    "Japonais": "樅",
+    "Kana": "かえで",
+    "Romaji": "kaede",
+    "Categorie": "nature"
+  },
+  {
+    "No": 521,
+    "Francais": "feuillages d’automne",
+    "Japonais": "紅葉",
+    "Kana": "もみじ",
+    "Romaji": "momiji",
+    "Categorie": "nature"
+  },
+  {
+    "No": 522,
+    "Francais": "ginko",
+    "Japonais": "イチョウ",
+    "Kana": "イチョウ",
+    "Romaji": "ichô",
+    "Categorie": "nature"
+  },
+  {
+    "No": 523,
+    "Francais": "pin",
+    "Japonais": "松",
+    "Kana": "まつ",
+    "Romaji": "matsu",
+    "Categorie": "nature"
+  },
+  {
+    "No": 524,
+    "Francais": "pêche",
+    "Japonais": "釣り",
+    "Kana": "つり",
+    "Romaji": "tsuri",
+    "Categorie": "travail"
+  },
+  {
+    "No": 525,
+    "Francais": "poisson",
+    "Japonais": "魚",
+    "Kana": "さかな",
+    "Romaji": "sakana",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 526,
+    "Francais": "saumon",
+    "Japonais": "さけ / しゃけ",
+    "Kana": "さけ / しゃけ",
+    "Romaji": "sake / shake",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 527,
+    "Francais": "truite",
+    "Japonais": "ます",
+    "Kana": "ます",
+    "Romaji": "masu",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 528,
+    "Francais": "anguille de mer",
+    "Japonais": "あなご",
+    "Kana": "あなご",
+    "Romaji": "anago",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 529,
+    "Francais": "chinchard",
+    "Japonais": "あじ",
+    "Kana": "あじ",
+    "Romaji": "aji",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 530,
+    "Francais": "coquille Saint-Jacques",
+    "Japonais": "ホタテ貝",
+    "Kana": "ホタテガイ",
+    "Romaji": "hotategaï",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 531,
+    "Francais": "crabe",
+    "Japonais": "かに",
+    "Kana": "かに",
+    "Romaji": "kani",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 532,
+    "Francais": "crevette / langoustine",
+    "Japonais": "エビ",
+    "Kana": "エビ",
+    "Romaji": "ebi",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 533,
+    "Francais": "dorade",
+    "Japonais": "たい",
+    "Kana": "たい",
+    "Romaji": "taï",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 534,
+    "Francais": "maquereau",
+    "Japonais": "さば",
+    "Kana": "さば",
+    "Romaji": "saba",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 535,
+    "Francais": "ormeau",
+    "Japonais": "アワビ",
+    "Kana": "アワビ",
+    "Romaji": "awabi",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 536,
+    "Francais": "oursin",
+    "Japonais": "ウニ",
+    "Kana": "ウニ",
+    "Romaji": "uni",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 537,
+    "Francais": "pieuvre",
+    "Japonais": "いか",
+    "Kana": "いか",
+    "Romaji": "ika",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 538,
+    "Francais": "thon",
+    "Japonais": "マグロ",
+    "Kana": "マグロ",
+    "Romaji": "maguro",
+    "Categorie": "poisson"
+  },
+  {
+    "No": 539,
+    "Francais": "abeille",
+    "Japonais": "ミツバチ",
+    "Kana": "ミツバチ",
+    "Romaji": "mitsubachi",
+    "Categorie": "animaux"
+  },
+  {
+    "No": 540,
+    "Francais": "insecte",
+    "Japonais": "虫",
+    "Kana": "むし",
+    "Romaji": "mushi",
+    "Categorie": "animaux"
+  },
+  {
+    "No": 541,
+    "Francais": "libellule",
+    "Japonais": "トンボ",
+    "Kana": "トmボ",
+    "Romaji": "tombo",
+    "Categorie": "animaux"
+  },
+  {
+    "No": 542,
+    "Francais": "luciole",
+    "Japonais": "蛍",
+    "Kana": "ほたる",
+    "Romaji": "hotaru",
+    "Categorie": "animaux"
+  },
+  {
+    "No": 543,
+    "Francais": "papillon",
+    "Japonais": "蝶々",
+    "Kana": "ちょうちょう",
+    "Romaji": "chôchô",
+    "Categorie": "animaux"
+  },
+  {
+    "No": 544,
+    "Francais": "guêpe",
+    "Japonais": "蜂",
+    "Kana": "はち",
+    "Romaji": "hachi",
+    "Categorie": "animaux"
+  },
+  {
+    "No": 545,
+    "Francais": "moustique",
+    "Japonais": "蚊",
+    "Kana": "か",
+    "Romaji": "ka",
+    "Categorie": "animaux"
+  },
+  {
+    "No": 546,
+    "Francais": "produit anti-moustique",
+    "Japonais": "虫よけ",
+    "Kana": "むしよけ",
+    "Romaji": "mushiyoke",
+    "Categorie": "santé"
+  },
+  {
+    "No": 547,
+    "Francais": "insecticide",
+    "Japonais": "殺虫剤",
+    "Kana": "さtちゅうざい",
+    "Romaji": "satchûzaï",
+    "Categorie": "santé"
+  },
+  {
+    "No": 548,
+    "Francais": "restaurant chinois",
+    "Japonais": "中華 料理",
+    "Kana": "ちゅうか りょうり",
+    "Romaji": "chûka ryôri",
+    "Categorie": "resto"
+  },
+  {
+    "No": 549,
+    "Francais": "restaurant français",
+    "Japonais": "フランス 料理",
+    "Kana": "フランス リョウリ",
+    "Romaji": "furansu ryôri",
+    "Categorie": "resto"
+  },
+  {
+    "No": 550,
+    "Francais": "restaurant indien",
+    "Japonais": "インド 料理",
+    "Kana": "インド リョウリ",
+    "Romaji": "indo ryôri",
+    "Categorie": "resto"
+  },
+  {
+    "No": 551,
+    "Francais": "restaurant italien",
+    "Japonais": "イタリア 料理",
+    "Kana": "イタリア リョウリ",
+    "Romaji": "itaria ryôri",
+    "Categorie": "resto"
+  },
+  {
+    "No": 552,
+    "Francais": "restaurant vietnamien",
+    "Japonais": "ベトナム 料理",
+    "Kana": "ベトナム リョウリ",
+    "Romaji": "betonamu ryôri",
+    "Categorie": "resto"
+  },
+  {
+    "No": 553,
+    "Francais": "bar",
+    "Japonais": "バー",
+    "Kana": "バア",
+    "Romaji": "bâ",
+    "Categorie": "resto"
+  },
+  {
+    "No": 554,
+    "Francais": "bar à saké",
+    "Japonais": "居酒 屋",
+    "Kana": "いざか や",
+    "Romaji": "izaka ya",
+    "Categorie": "resto"
+  },
+  {
+    "No": 555,
+    "Francais": "restaurant de cuisine japonaise",
+    "Japonais": "食堂",
+    "Kana": "しょくどう",
+    "Romaji": "shokudô",
+    "Categorie": "resto"
+  },
+  {
+    "No": 556,
+    "Francais": "restaurant familial(6)",
+    "Japonais": "ファミレス",
+    "Kana": "ファミレス",
+    "Romaji": "famiresu",
+    "Categorie": "resto"
+  },
+  {
+    "No": 557,
+    "Francais": "fermé",
+    "Japonais": "準備中",
+    "Kana": "じゅmびちゅう",
+    "Romaji": "jumbichû",
+    "Categorie": "resto"
+  },
+  {
+    "No": 558,
+    "Francais": "ouvert",
+    "Japonais": "営業中",
+    "Kana": "えいぎょうちゅう",
+    "Romaji": "eïgyôchû",
+    "Categorie": "resto"
+  },
+  {
+    "No": 559,
+    "Francais": "carte",
+    "Japonais": "メニュー",
+    "Kana": "メニュウ",
+    "Romaji": "menyû",
+    "Categorie": "resto"
+  },
+  {
+    "No": 560,
+    "Francais": "couteau",
+    "Japonais": "ナイフ",
+    "Kana": "ナイフ",
+    "Romaji": "naïfu",
+    "Categorie": "resto"
+  },
+  {
+    "No": 561,
+    "Francais": "cuillère",
+    "Japonais": "スプーン",
+    "Kana": "スプウン",
+    "Romaji": "s(u)pûn",
+    "Categorie": "resto"
+  },
+  {
+    "No": 562,
+    "Francais": "beignets d’huîtres",
+    "Japonais": "カキ フライ",
+    "Kana": "カキ フライ",
+    "Romaji": "kaki furaï",
+    "Categorie": "resto"
+  },
+  {
+    "No": 563,
+    "Francais": "beignets de grosses crevettes",
+    "Japonais": "海老 フライ",
+    "Kana": "エビ フライ",
+    "Romaji": "ebi furaï",
+    "Categorie": "resto"
+  },
+  {
+    "No": 564,
+    "Francais": "beignets de légumes et de poissons",
+    "Japonais": "てんぷら",
+    "Kana": "てmぷら",
+    "Romaji": "tempura",
+    "Categorie": "resto"
+  },
+  {
+    "No": 565,
+    "Francais": "brochettes de poulet",
+    "Japonais": "焼き鳥",
+    "Kana": "やきとり",
+    "Romaji": "yakitori",
+    "Categorie": "resto"
+  },
+  {
+    "No": 566,
+    "Francais": "flan salé",
+    "Japonais": "茶碗蒸し",
+    "Kana": "ちゃわんむし",
+    "Romaji": "chawanmushi",
+    "Categorie": "resto"
+  },
+  {
+    "No": 567,
+    "Francais": "fondue japonaise, viande et légumes",
+    "Japonais": "すき焼き",
+    "Kana": "すきやき",
+    "Romaji": "sukiyaki",
+    "Categorie": "resto"
+  },
+  {
+    "No": 568,
+    "Francais": "nouilles de blé",
+    "Japonais": "うどん",
+    "Kana": "うどん",
+    "Romaji": "udon",
+    "Categorie": "resto"
+  },
+  {
+    "No": 569,
+    "Francais": "nouilles de sarrasin",
+    "Japonais": "蕎麦",
+    "Kana": "そば",
+    "Romaji": "soba",
+    "Categorie": "resto"
+  },
+  {
+    "No": 570,
+    "Francais": "omelette fourrée",
+    "Japonais": "お 好み 焼き",
+    "Kana": "お このみ やき",
+    "Romaji": "o konomi yaki",
+    "Categorie": "resto"
+  },
+  {
+    "No": 571,
+    "Francais": "omelette fourrée de riz",
+    "Japonais": "オム ライス",
+    "Kana": "オム ライス",
+    "Romaji": "omu raïsu",
+    "Categorie": "resto"
+  },
+  {
+    "No": 572,
+    "Francais": "poisson cru",
+    "Japonais": "さしみ",
+    "Kana": "さしみ",
+    "Romaji": "sashimi",
+    "Categorie": "resto"
+  },
+  {
+    "No": 573,
+    "Francais": "porc grillé pané",
+    "Japonais": "トンカツ",
+    "Kana": "トンカツ",
+    "Romaji": "tonkatsu",
+    "Categorie": "resto"
+  },
+  {
+    "No": 574,
+    "Francais": "porc grillé pané sur bol de riz",
+    "Japonais": "カツ丼",
+    "Kana": "カツドン",
+    "Romaji": "katsudon",
+    "Categorie": "resto"
+  },
+  {
+    "No": 575,
+    "Francais": "raviolis chinois",
+    "Japonais": "餃子",
+    "Kana": "ぎょうざ",
+    "Romaji": "gyôza",
+    "Categorie": "resto"
+  },
+  {
+    "No": 576,
+    "Francais": "riz au curry",
+    "Japonais": "カレー ライス",
+    "Kana": "カレイ ライス",
+    "Romaji": "karê raïsu",
+    "Categorie": "resto"
+  },
+  {
+    "No": 577,
+    "Francais": "riz sauté",
+    "Japonais": "炒飯",
+    "Kana": "ちゃあはん",
+    "Romaji": "châhan",
+    "Categorie": "resto"
+  },
+  {
+    "No": 578,
+    "Francais": "soupe de nouilles",
+    "Japonais": "ラーメン",
+    "Kana": "ラアメン",
+    "Romaji": "râmen",
+    "Categorie": "resto"
+  },
+  {
+    "No": 579,
+    "Francais": "tôfu avec accompagnement",
+    "Japonais": "湯豆腐",
+    "Kana": "ゆどうふ",
+    "Romaji": "yudôfu",
+    "Categorie": "resto"
+  },
+  {
+    "No": 580,
+    "Francais": "viande bouillie mangée avec des sauces",
+    "Japonais": "しゃぶしゃぶ",
+    "Kana": "しゃぶしゃぶ",
+    "Romaji": "shabushabu",
+    "Categorie": "resto"
+  },
+  {
+    "No": 581,
+    "Francais": "viande de bœuf grillée sur bol de riz",
+    "Japonais": "牛丼",
+    "Kana": "ぎゅうどん",
+    "Romaji": "gyûdon",
+    "Categorie": "resto"
+  },
+  {
+    "No": 582,
+    "Francais": "algues",
+    "Japonais": "海苔",
+    "Kana": "のり",
+    "Romaji": "nori",
+    "Categorie": "resto"
+  },
+  {
+    "No": 583,
+    "Francais": "haricots fermentés",
+    "Japonais": "なっとう(",
+    "Kana": "7 なっとう",
+    "Romaji": "7) nattô",
+    "Categorie": "resto"
+  },
+  {
+    "No": 584,
+    "Francais": "légumes salés",
+    "Japonais": "漬け物",
+    "Kana": "つけもの",
+    "Romaji": "tsukemono",
+    "Categorie": "resto"
+  },
+  {
+    "No": 585,
+    "Francais": "pâte de poisson",
+    "Japonais": "かまぼこ",
+    "Kana": "かまぼこ",
+    "Romaji": "kamaboko",
+    "Categorie": "resto"
+  },
+  {
+    "No": 586,
+    "Francais": "pâte de soja",
+    "Japonais": "みそ",
+    "Kana": "みそ8",
+    "Romaji": "miso(8)",
+    "Categorie": "resto"
+  },
+  {
+    "No": 587,
+    "Francais": "prune salée",
+    "Japonais": "梅干し",
+    "Kana": "うめぼし",
+    "Romaji": "umeboshi",
+    "Categorie": "resto"
+  },
+  {
+    "No": 588,
+    "Francais": "radis blanc confit",
+    "Japonais": "たくあん",
+    "Kana": "たくあん",
+    "Romaji": "takuan",
+    "Categorie": "resto"
+  },
+  {
+    "No": 589,
+    "Francais": "riz",
+    "Japonais": "ご飯",
+    "Kana": "ごはん",
+    "Romaji": "gohan",
+    "Categorie": "resto"
+  },
+  {
+    "No": 590,
+    "Francais": "soupe à la pâte de soja",
+    "Japonais": "みそ汁",
+    "Kana": "みそしる",
+    "Romaji": "misoshiru",
+    "Categorie": "resto"
+  },
+  {
+    "No": 591,
+    "Francais": "tôfu (pâté de soja)",
+    "Japonais": "豆腐",
+    "Kana": "とうふ",
+    "Romaji": "tôfu",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 592,
+    "Francais": "mandarine",
+    "Japonais": "みかん",
+    "Kana": "みかん",
+    "Romaji": "mikan",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 593,
+    "Francais": "melon",
+    "Japonais": "メロン",
+    "Kana": "メロン",
+    "Romaji": "meron",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 594,
+    "Francais": "pastèque",
+    "Japonais": "スイカ",
+    "Kana": "スイカ",
+    "Romaji": "suika",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 595,
+    "Francais": "pêche",
+    "Japonais": "桃",
+    "Kana": "もも",
+    "Romaji": "momo",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 596,
+    "Francais": "poire",
+    "Japonais": "なし",
+    "Kana": "なし",
+    "Romaji": "nashi",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 597,
+    "Francais": "pomme",
+    "Japonais": "リンゴ",
+    "Kana": "リンゴ",
+    "Romaji": "ringo",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 598,
+    "Francais": "raisin",
+    "Japonais": "葡萄",
+    "Kana": "ぶどう",
+    "Romaji": "budô",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 599,
+    "Francais": "cuire",
+    "Japonais": "煮ます",
+    "Kana": "にます",
+    "Romaji": "nimas(u)",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 600,
+    "Francais": "cuire à l’eau",
+    "Japonais": "茹でます",
+    "Kana": "ゆでます",
+    "Romaji": "yudemas(u)",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 601,
+    "Francais": "griller",
+    "Japonais": "焼きます",
+    "Kana": "やきます",
+    "Romaji": "yakimas(u)",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 602,
+    "Francais": "huile",
+    "Japonais": "油",
+    "Kana": "あぶら",
+    "Romaji": "abura",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 603,
+    "Francais": "moutarde de raifort",
+    "Japonais": "わさび",
+    "Kana": "わさび9",
+    "Romaji": "wasabi(9)",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 604,
+    "Francais": "poivre",
+    "Japonais": "こしょう",
+    "Kana": "こしょう",
+    "Romaji": "koshô",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 605,
+    "Francais": "sauce pour tempura",
+    "Japonais": "つゆ",
+    "Kana": "つゆ",
+    "Romaji": "tsuyu",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 606,
+    "Francais": "sel",
+    "Japonais": "塩",
+    "Kana": "しお",
+    "Romaji": "shio",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 607,
+    "Francais": "sésame",
+    "Japonais": "胡麻",
+    "Kana": "ごま",
+    "Romaji": "goma",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 608,
+    "Francais": "sucre",
+    "Japonais": "砂糖",
+    "Kana": "さとう",
+    "Romaji": "satô",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 609,
+    "Francais": "vinaigre",
+    "Japonais": "酢",
+    "Kana": "す",
+    "Romaji": "su",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 610,
+    "Francais": "agréablement léger",
+    "Japonais": "さっぱり した",
+    "Kana": "さっぱり した",
+    "Romaji": "sappari shita",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 611,
+    "Francais": "amer",
+    "Japonais": "苦い",
+    "Kana": "にがい",
+    "Romaji": "nigaï",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 612,
+    "Francais": "bon",
+    "Japonais": "おいしい",
+    "Kana": "おいしい",
+    "Romaji": "oishii",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 613,
+    "Francais": "délicieux",
+    "Japonais": "うまい",
+    "Kana": "うまい",
+    "Romaji": "umaï",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 614,
+    "Francais": "épicé",
+    "Japonais": "辛い",
+    "Kana": "からい",
+    "Romaji": "karaï",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 615,
+    "Francais": "rafraîchissant",
+    "Japonais": "あっさり した",
+    "Kana": "あっさり した",
+    "Romaji": "assari shita",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 616,
+    "Francais": "sucré",
+    "Japonais": "あまい",
+    "Kana": "あまい",
+    "Romaji": "amaï",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 617,
+    "Francais": "vinaigré",
+    "Japonais": "酸っぱい",
+    "Kana": "すっぱい",
+    "Romaji": "suppaï",
+    "Categorie": "bouffe"
+  },
+  {
+    "No": 618,
+    "Francais": "verbe normal",
+    "Japonais": "vous",
+    "Kana": "jえ",
+    "Romaji": "je",
+    "Categorie": "temps"
+  },
+  {
+    "No": 619,
+    "Francais": "… et quart ᐧᐧᐧ",
+    "Japonais": "十 五 分",
+    "Kana": "じゅう ご ふん",
+    "Romaji": "jû go fun",
+    "Categorie": "temps"
+  },
+  {
+    "No": 620,
+    "Francais": "… et demie ᐧᐧᐧ",
+    "Japonais": "半",
+    "Kana": "はん",
+    "Romaji": "han",
+    "Categorie": "temps"
+  },
+  {
+    "No": 621,
+    "Francais": "… moins le quart ᐧᐧᐧ",
+    "Japonais": "十 五 分 前",
+    "Kana": "じゅう ご ふん まえ",
+    "Romaji": "jû go fun mae",
+    "Categorie": "temps"
+  },
+  {
+    "No": 622,
+    "Francais": "matin",
+    "Japonais": "午前",
+    "Kana": "ごぜん",
+    "Romaji": "gozen",
+    "Categorie": "temps"
+  },
+  {
+    "No": 623,
+    "Francais": "1 minute",
+    "Japonais": "一 分",
+    "Kana": "いっぷん",
+    "Romaji": "ippun",
+    "Categorie": "temps"
+  },
+  {
+    "No": 624,
+    "Francais": "3 minutes",
+    "Japonais": "三 分",
+    "Kana": "さmぷん",
+    "Romaji": "sampun",
+    "Categorie": "temps"
+  },
+  {
+    "No": 625,
+    "Francais": "6 minutes",
+    "Japonais": "六 分",
+    "Kana": "ろっぷん",
+    "Romaji": "roppun",
+    "Categorie": "temps"
+  },
+  {
+    "No": 626,
+    "Francais": "8 minutes",
+    "Japonais": "八 分",
+    "Kana": "はっぷん",
+    "Romaji": "happun",
+    "Categorie": "temps"
+  },
+  {
+    "No": 627,
+    "Francais": "10 minutes",
+    "Japonais": "十 分",
+    "Kana": "じゅっぷん / じっぷん",
+    "Romaji": "juppun / jippun",
+    "Categorie": "temps"
+  },
+  {
+    "No": 628,
+    "Francais": "lundi",
+    "Japonais": "月曜日",
+    "Kana": "げつようび",
+    "Romaji": "getsuyôbi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 629,
+    "Francais": "mardi",
+    "Japonais": "火曜日",
+    "Kana": "かようび",
+    "Romaji": "kayôbi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 630,
+    "Francais": "mercredi",
+    "Japonais": "水曜日",
+    "Kana": "すいようび",
+    "Romaji": "suiyôbi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 631,
+    "Francais": "jeudi",
+    "Japonais": "木曜日",
+    "Kana": "もくようび",
+    "Romaji": "mokuyôbi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 632,
+    "Francais": "vendredi",
+    "Japonais": "金曜日",
+    "Kana": "きにょうび",
+    "Romaji": "kinyôbi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 633,
+    "Francais": "samedi",
+    "Japonais": "土曜日",
+    "Kana": "どようび",
+    "Romaji": "doyôbi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 634,
+    "Francais": "dimanche",
+    "Japonais": "日曜日",
+    "Kana": "にちようび",
+    "Romaji": "nichiyôbi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 635,
+    "Francais": "janvier",
+    "Japonais": "一月",
+    "Kana": "いちがつ",
+    "Romaji": "ichigatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 636,
+    "Francais": "février",
+    "Japonais": "二月",
+    "Kana": "にがつ",
+    "Romaji": "nigatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 637,
+    "Francais": "mars",
+    "Japonais": "三月",
+    "Kana": "さんがつ",
+    "Romaji": "sangatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 638,
+    "Francais": "avril",
+    "Japonais": "四月",
+    "Kana": "しがつ",
+    "Romaji": "shigatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 639,
+    "Francais": "mai",
+    "Japonais": "五月",
+    "Kana": "ごがつ",
+    "Romaji": "gogatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 640,
+    "Francais": "juin",
+    "Japonais": "六月",
+    "Kana": "ろくがつ",
+    "Romaji": "rokugatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 641,
+    "Francais": "juillet",
+    "Japonais": "七月",
+    "Kana": "しちがつ",
+    "Romaji": "shichigatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 642,
+    "Francais": "août",
+    "Japonais": "八月",
+    "Kana": "はちがつ",
+    "Romaji": "hachigatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 643,
+    "Francais": "septembre",
+    "Japonais": "九月",
+    "Kana": "くがつ",
+    "Romaji": "kugatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 644,
+    "Francais": "octobre",
+    "Japonais": "十月",
+    "Kana": "じゅうがつ",
+    "Romaji": "jûgatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 645,
+    "Francais": "novembre",
+    "Japonais": "十一月",
+    "Kana": "じゅういちがつ",
+    "Romaji": "jûichigatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 646,
+    "Francais": "décembre",
+    "Japonais": "十二月",
+    "Kana": "じゅうにがつ",
+    "Romaji": "jûnigatsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 647,
+    "Francais": "le 1er",
+    "Japonais": "一日",
+    "Kana": "ついたち",
+    "Romaji": "tsuitachi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 648,
+    "Francais": "le 2",
+    "Japonais": "二日",
+    "Kana": "ふつか",
+    "Romaji": "futsuka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 649,
+    "Francais": "le 3",
+    "Japonais": "三日",
+    "Kana": "みっか",
+    "Romaji": "mikka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 650,
+    "Francais": "le 4",
+    "Japonais": "四日",
+    "Kana": "よっか",
+    "Romaji": "yokka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 651,
+    "Francais": "le 5",
+    "Japonais": "五日",
+    "Kana": "いつか",
+    "Romaji": "itsuka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 652,
+    "Francais": "le 6",
+    "Japonais": "六日",
+    "Kana": "むいか",
+    "Romaji": "muika",
+    "Categorie": "temps"
+  },
+  {
+    "No": 653,
+    "Francais": "le 7",
+    "Japonais": "七日",
+    "Kana": "なのか",
+    "Romaji": "nanoka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 654,
+    "Francais": "le 8",
+    "Japonais": "八日",
+    "Kana": "ようか",
+    "Romaji": "yôka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 655,
+    "Francais": "le 9",
+    "Japonais": "九日",
+    "Kana": "ここのか",
+    "Romaji": "kokonoka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 656,
+    "Francais": "le 10",
+    "Japonais": "十日",
+    "Kana": "とうか",
+    "Romaji": "tôka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 657,
+    "Francais": "le 14",
+    "Japonais": "十四日",
+    "Kana": "じゅうよっか",
+    "Romaji": "jûyokka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 658,
+    "Francais": "le 20",
+    "Japonais": "二十日",
+    "Kana": "はつか",
+    "Romaji": "hatsuka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 659,
+    "Francais": "le 24",
+    "Japonais": "二十四日",
+    "Kana": "にじゅうよっか",
+    "Romaji": "nijûyokka",
+    "Categorie": "temps"
+  },
+  {
+    "No": 660,
+    "Francais": "matin",
+    "Japonais": "朝",
+    "Kana": "あさ",
+    "Romaji": "asa",
+    "Categorie": "temps"
+  },
+  {
+    "No": 661,
+    "Francais": "soir",
+    "Japonais": "晩",
+    "Kana": "ばん",
+    "Romaji": "ban",
+    "Categorie": "temps"
+  },
+  {
+    "No": 662,
+    "Francais": "nuit",
+    "Japonais": "夜",
+    "Kana": "よる",
+    "Romaji": "yoru",
+    "Categorie": "temps"
+  },
+  {
+    "No": 663,
+    "Francais": "hiver",
+    "Japonais": "冬",
+    "Kana": "ふゆ",
+    "Romaji": "fuyu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 664,
+    "Francais": "printemps",
+    "Japonais": "春",
+    "Kana": "はる",
+    "Romaji": "haru",
+    "Categorie": "temps"
+  },
+  {
+    "No": 665,
+    "Francais": "été",
+    "Japonais": "夏",
+    "Kana": "なつ",
+    "Romaji": "natsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 666,
+    "Francais": "automne",
+    "Japonais": "秋",
+    "Kana": "あき",
+    "Romaji": "aki",
+    "Categorie": "temps"
+  },
+  {
+    "No": 667,
+    "Francais": "hier",
+    "Japonais": "昨日",
+    "Kana": "きのう",
+    "Romaji": "kinô",
+    "Categorie": "temps"
+  },
+  {
+    "No": 668,
+    "Francais": "demain",
+    "Japonais": "明日",
+    "Kana": "あした",
+    "Romaji": "ash(i)ta",
+    "Categorie": "temps"
+  },
+  {
+    "No": 669,
+    "Francais": "après-demain",
+    "Japonais": "あさって",
+    "Kana": "あさって",
+    "Romaji": "asatte",
+    "Categorie": "temps"
+  },
+  {
+    "No": 670,
+    "Francais": "chiffre +an(durée) chiffre +",
+    "Japonais": "年",
+    "Kana": "ちっfれ +ねん",
+    "Romaji": "chiffre +nen",
+    "Categorie": "temps"
+  },
+  {
+    "No": 671,
+    "Francais": "chiffre +heure(durée) chiffre +",
+    "Japonais": "時間",
+    "Kana": "ちっfれ +じかん",
+    "Romaji": "chiffre +jikan",
+    "Categorie": "temps"
+  },
+  {
+    "No": 672,
+    "Francais": "chiffre +mois(durée) chiffre +",
+    "Japonais": "か月",
+    "Kana": "ちっfれ +か げつ",
+    "Romaji": "chiffre +ka getsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 673,
+    "Francais": "chiffre +semaine(durée) chiffre +",
+    "Japonais": "週間",
+    "Kana": "ちっfれ +しゅうかん",
+    "Romaji": "chiffre +shûkan",
+    "Categorie": "temps"
+  },
+  {
+    "No": 674,
+    "Francais": "année (cette ~)",
+    "Japonais": "今年",
+    "Kana": "ことし",
+    "Romaji": "kotoshi",
+    "Categorie": "temps"
+  },
+  {
+    "No": 675,
+    "Francais": "année dernière (l’~)",
+    "Japonais": "去年",
+    "Kana": "きょねん",
+    "Romaji": "kyonen",
+    "Categorie": "temps"
+  },
+  {
+    "No": 676,
+    "Francais": "année prochaine (l’~)",
+    "Japonais": "来年",
+    "Kana": "らいねん",
+    "Romaji": "raïnen",
+    "Categorie": "temps"
+  },
+  {
+    "No": 677,
+    "Francais": "mois-ci (ce ~)",
+    "Japonais": "今月",
+    "Kana": "こんげつ",
+    "Romaji": "kongetsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 678,
+    "Francais": "mois dernier (le ~)",
+    "Japonais": "先月",
+    "Kana": "せんげつ",
+    "Romaji": "sengetsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 679,
+    "Francais": "mois prochain (le ~)",
+    "Japonais": "来月",
+    "Kana": "らいげつ",
+    "Romaji": "raïgetsu",
+    "Categorie": "temps"
+  },
+  {
+    "No": 680,
+    "Francais": "semaine (cette ~)",
+    "Japonais": "今週",
+    "Kana": "こんしゅう",
+    "Romaji": "konshû",
+    "Categorie": "temps"
+  },
+  {
+    "No": 681,
+    "Francais": "semaine dernière (la ~)",
+    "Japonais": "先週",
+    "Kana": "せんしゅう",
+    "Romaji": "senshû",
+    "Categorie": "temps"
+  },
+  {
+    "No": 682,
+    "Francais": "semaine prochaine (la ~)",
+    "Japonais": "来週",
+    "Kana": "らいしゅう",
+    "Romaji": "raïshû",
+    "Categorie": "temps"
+  },
+  {
+    "No": 683,
+    "Francais": "soir (ce ~)",
+    "Japonais": "今晩",
+    "Kana": "こmばん",
+    "Romaji": "komban",
+    "Categorie": "temps"
+  },
+  {
+    "No": 684,
+    "Francais": "jour férié",
+    "Japonais": "祝日",
+    "Kana": "しゅくじつ",
+    "Romaji": "shukujitsu",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 685,
+    "Francais": "fêtes du Nouvel An(semaine du 1erjanvier)",
+    "Japonais": "お 正月",
+    "Kana": "お しょうがつ",
+    "Romaji": "o shôgatsu",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 686,
+    "Francais": "journée d’entrée dans l’âge adulte(2elundi de janvier)",
+    "Japonais": "成人 の 日",
+    "Kana": "せいじん の ひ",
+    "Romaji": "seïjin no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 687,
+    "Francais": "commémoration de la fondation du pays(11 février)",
+    "Japonais": "建国 記念日",
+    "Kana": "けんこく きねmび",
+    "Romaji": "kenkoku kinembi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 688,
+    "Francais": "entrée dans le printemps(20 ou 21 mars)",
+    "Japonais": "春分 の 日",
+    "Kana": "しゅmぶん の ひ",
+    "Romaji": "shumbun no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 689,
+    "Francais": "fête de l’ère Shôwa(29 avril)",
+    "Japonais": "昭和 の 日",
+    "Kana": "しょうわ の ひ",
+    "Romaji": "shôwa no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 690,
+    "Francais": "golden week(du 3 au 5 mai + ponts)",
+    "Japonais": "ゴールデンウィーク",
+    "Kana": "ゴウルデンウィイク",
+    "Romaji": "gôrudenwîku",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 691,
+    "Francais": "commémoration de la Constitution (3 mai)",
+    "Japonais": "憲法 記念日",
+    "Kana": "けmぽう きねmび",
+    "Romaji": "kempô kinembi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 692,
+    "Francais": "journée de la nature(4 mai)",
+    "Japonais": "みどり の 日",
+    "Kana": "みどり の ひ",
+    "Romaji": "midori no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 693,
+    "Francais": "journée des enfants(5 mai)",
+    "Japonais": "こども の 日",
+    "Kana": "こども の ひ",
+    "Romaji": "kodomo no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 694,
+    "Francais": "journée de la mer(3elundi de juillet)",
+    "Japonais": "海 の 日",
+    "Kana": "うみ の ひ",
+    "Romaji": "umi no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 695,
+    "Francais": "journée des personnes âgées (15 septembre)",
+    "Japonais": "敬老 の 日",
+    "Kana": "けいろう の ひ",
+    "Romaji": "keïrô no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 696,
+    "Francais": "entrée dans l’automne(22 ou 23 septembre)",
+    "Japonais": "秋分 の 日",
+    "Kana": "しゅうぶん の ひ",
+    "Romaji": "shûbun no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 697,
+    "Francais": "journée du sport(2elundi d’octobre)",
+    "Japonais": "体育 の 日",
+    "Kana": "たいいく の ひ",
+    "Romaji": "taïiku no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 698,
+    "Francais": "journée de la culture(3 novembre)",
+    "Japonais": "文化 の 日",
+    "Kana": "ぶんか の ひ",
+    "Romaji": "bunka no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 699,
+    "Francais": "journée de remerciement aux travailleurs(23 novembre)",
+    "Japonais": "勤労 感謝 の 日",
+    "Kana": "きんろう かんしゃ の ひ",
+    "Romaji": "kinrô kansha no hi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 700,
+    "Francais": "anniversaire de l’Empereur(23 décembre)",
+    "Japonais": "天皇 誕生日",
+    "Kana": "てんのう たんじょうび",
+    "Romaji": "tennô tanjôbi",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 701,
+    "Francais": "fête shintô(3)",
+    "Japonais": "お 祭り",
+    "Kana": "お まつり",
+    "Romaji": "o matsuri",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 702,
+    "Francais": "fête des morts (mi-août)(4)",
+    "Japonais": "お 盆",
+    "Kana": "お ぼん",
+    "Romaji": "o bon",
+    "Categorie": "fêtes"
+  },
+  {
+    "No": 703,
+    "Francais": "où ?",
+    "Japonais": "どこ",
+    "Kana": "どこ",
+    "Romaji": "doko",
+    "Categorie": "questions"
+  },
+  {
+    "No": 704,
+    "Francais": "quand ?",
+    "Japonais": "いつ",
+    "Kana": "いつ",
+    "Romaji": "itsu",
+    "Categorie": "questions"
+  },
+  {
+    "No": 705,
+    "Francais": "quoi ? / que ?",
+    "Japonais": "何",
+    "Kana": "なん/なに",
+    "Romaji": "nan/nani",
+    "Categorie": "questions"
+  },
+  {
+    "No": 706,
+    "Francais": "comment ?",
+    "Japonais": "どう",
+    "Kana": "どう",
+    "Romaji": "dô",
+    "Categorie": "questions"
+  },
+  {
+    "No": 707,
+    "Francais": "combien ? (prix)",
+    "Japonais": "いくら",
+    "Kana": "いくら",
+    "Romaji": "ikura",
+    "Categorie": "questions"
+  },
+  {
+    "No": 708,
+    "Francais": "combien ? (nombre)",
+    "Japonais": "いくつ",
+    "Kana": "いくつ",
+    "Romaji": "ikutsu",
+    "Categorie": "questions"
+  },
+  {
+    "No": 709,
+    "Francais": "combien de (kilomètres) ?",
+    "Japonais": "何(キロ)",
+    "Kana": "ナン キロ",
+    "Romaji": "nan (kiro)",
+    "Categorie": "questions"
+  },
+  {
+    "No": 710,
+    "Francais": "combien à peu près?",
+    "Japonais": "どのぐらい",
+    "Kana": "どのぐらい",
+    "Romaji": "donoguraï",
+    "Categorie": "questions"
+  },
+  {
+    "No": 711,
+    "Francais": "Est-ce qu’il y a (+ nom) ? (nom +)",
+    "Japonais": "があります か。",
+    "Kana": "があります か",
+    "Romaji": "gaarimas(u) ka",
+    "Categorie": "questions"
+  },
+  {
+    "No": 712,
+    "Francais": "Où se trouve(nt)(+ nom) ? (nom +)",
+    "Japonais": "は どこに あります か。",
+    "Kana": "わ どこに あります か",
+    "Romaji": "wa dokoni arimas(u) ka",
+    "Categorie": "questions"
+  },
+  {
+    "No": 713,
+    "Francais": "Est-ce que c’est (+ nom) ? (nom +)",
+    "Japonais": "です か。",
+    "Kana": "です か",
+    "Romaji": "des(u) ka",
+    "Categorie": "questions"
+  },
+  {
+    "No": 714,
+    "Francais": "Qu’est-ce que c’est, ça ?",
+    "Japonais": "これ は 何です か。",
+    "Kana": "これ わ なんです か",
+    "Romaji": "kore wa nandes(u) ka",
+    "Categorie": "questions"
+  },
+  {
+    "No": 715,
+    "Francais": "Comment ça s’appelle?",
+    "Japonais": "これ は 何 と言います か。",
+    "Kana": "これ わ なん と いいます か",
+    "Romaji": "kore wa nan to iimas(u) ka",
+    "Categorie": "questions"
+  },
+  {
+    "No": 716,
+    "Francais": "Est-ce que je peux(+ verbe) ? (verbe +)",
+    "Japonais": "て もいい です か。",
+    "Kana": "て もいい です か",
+    "Romaji": "te moii des(u) ka",
+    "Categorie": "questions"
+  },
+  {
+    "No": 717,
+    "Francais": "Ça prend combien de temps ?",
+    "Japonais": "どのぐらいかかります か。",
+    "Kana": "どのぐらい かかります か",
+    "Romaji": "donoguraï kakarimas(u) ka",
+    "Categorie": "questions"
+  },
+  {
+    "No": 718,
+    "Francais": "Comment faire ?",
+    "Japonais": "どう したら いいです か。",
+    "Kana": "どう したら いいです か",
+    "Romaji": "dô shitara iides(u) ka",
+    "Categorie": "questions"
+  },
+  {
+    "No": 719,
+    "Francais": "cadre",
+    "Japonais": "幹部",
+    "Kana": "かmぶ",
+    "Romaji": "kambu",
+    "Categorie": "travail"
+  },
+  {
+    "No": 720,
+    "Francais": "chiffre d’affaires",
+    "Japonais": "売上高 / 取引高",
+    "Kana": "うりあげだか / とりひきだか",
+    "Romaji": "uriagedaka / torihikidaka",
+    "Categorie": "travail"
+  },
+  {
+    "No": 721,
+    "Francais": "chômage",
+    "Japonais": "失業",
+    "Kana": "しつぎょう",
+    "Romaji": "shitsugyô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 722,
+    "Francais": "directeur",
+    "Japonais": "部長",
+    "Kana": "ぶちょう",
+    "Romaji": "buchô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 723,
+    "Francais": "employés",
+    "Japonais": "従業員",
+    "Kana": "じゅうぎょういん",
+    "Romaji": "jûgyôin",
+    "Categorie": "travail"
+  },
+  {
+    "No": 724,
+    "Francais": "PME",
+    "Japonais": "中小 企業",
+    "Kana": "ちゅうしょう きぎょう",
+    "Romaji": "chûshô kigyô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 725,
+    "Francais": "grande entreprise",
+    "Japonais": "大 企業",
+    "Kana": "だい きぎょう",
+    "Romaji": "daï kigyô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 726,
+    "Francais": "industrie",
+    "Japonais": "産業 / 工業",
+    "Kana": "さんぎょう / こうぎょう",
+    "Romaji": "sangyô / kôgyô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 727,
+    "Francais": "limite d’âge",
+    "Japonais": "定年",
+    "Kana": "ていねん",
+    "Romaji": "teïnen",
+    "Categorie": "travail"
+  },
+  {
+    "No": 728,
+    "Francais": "multinationale",
+    "Japonais": "多国籍 企業",
+    "Kana": "たこくせき きぎょう",
+    "Romaji": "takokuseki kigyô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 729,
+    "Francais": "PDG",
+    "Japonais": "社長",
+    "Kana": "しゃちょう",
+    "Romaji": "shachô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 730,
+    "Francais": "pension de retraite",
+    "Japonais": "年金",
+    "Kana": "ねんきん",
+    "Romaji": "nenkin",
+    "Categorie": "travail"
+  },
+  {
+    "No": 731,
+    "Francais": "profit",
+    "Japonais": "利益",
+    "Kana": "りえき",
+    "Romaji": "rieki",
+    "Categorie": "travail"
+  },
+  {
+    "No": 732,
+    "Francais": "résultats d’exploitation",
+    "Japonais": "営業成績",
+    "Kana": "えいぎょう せいせき",
+    "Romaji": "eïgyô seïseki",
+    "Categorie": "travail"
+  },
+  {
+    "No": 733,
+    "Francais": "salaire",
+    "Japonais": "給料",
+    "Kana": "きゅうりょう",
+    "Romaji": "kyûryô",
+    "Categorie": "travail"
+  },
+  {
+    "No": 734,
+    "Francais": "salarié",
+    "Japonais": "サラリーマン",
+    "Kana": "サラリイマン",
+    "Romaji": "sararîman",
+    "Categorie": "travail"
+  },
+  {
+    "No": 735,
+    "Francais": "société anonyme",
+    "Japonais": "株式 会社",
+    "Kana": "かぶしき がいしゃ",
+    "Romaji": "kabushiki gaïsha",
+    "Categorie": "travail"
+  },
+  {
+    "No": 736,
+    "Francais": "sous-traitant",
+    "Japonais": "下請け 業者",
+    "Kana": "したうけ ぎょうしゃ",
+    "Romaji": "shitauke gyôsha",
+    "Categorie": "travail"
+  },
+  {
+    "No": 737,
+    "Francais": "technologie de pointe",
+    "Japonais": "ハイ テク",
+    "Kana": "ハイ テク",
+    "Romaji": "haï teku",
+    "Categorie": "travail"
+  },
+  {
+    "No": 738,
+    "Francais": "usine",
+    "Japonais": "工場",
+    "Kana": "こうじょう/こうば",
+    "Romaji": "kôjô/kôba",
+    "Categorie": "travail"
+  },
+  {
+    "No": 739,
+    "Francais": "1",
+    "Japonais": "一",
+    "Kana": "いち 一つ ひとつ",
+    "Romaji": "ichi 一つ h(i)totsu",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 740,
+    "Francais": "2",
+    "Japonais": "二",
+    "Kana": "に 二つ ふたつ",
+    "Romaji": "ni 二つ f(u)tatsu",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 741,
+    "Francais": "3",
+    "Japonais": "三",
+    "Kana": "さん' 三つ みっつ",
+    "Romaji": "san’ 三つ mittsu",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 742,
+    "Francais": "4",
+    "Japonais": "四",
+    "Kana": "よん' / し 四つ よっつ",
+    "Romaji": "yon’ / shi 四つ yottsu",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 743,
+    "Francais": "5",
+    "Japonais": "五",
+    "Kana": "ご 五つ いつつ",
+    "Romaji": "go 五つ itsutsu",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 744,
+    "Francais": "6",
+    "Japonais": "六",
+    "Kana": "ろく 六つ むっつ",
+    "Romaji": "roku 六つ muttsu",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 745,
+    "Francais": "7",
+    "Japonais": "七",
+    "Kana": "なな /しち 七つ ななつ",
+    "Romaji": "nana /shichi 七つ nanatsu",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 746,
+    "Francais": "8",
+    "Japonais": "八",
+    "Kana": "はち 八つ やっつ",
+    "Romaji": "hachi 八つ yattsu",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 747,
+    "Francais": "9",
+    "Japonais": "九",
+    "Kana": "きゅう / く 九つ ここのつ",
+    "Romaji": "kyû / ku 九つ kokonotsu",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 748,
+    "Francais": "10",
+    "Japonais": "十",
+    "Kana": "じゅう 十 とう",
+    "Romaji": "jû 十 tô",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 749,
+    "Francais": "100",
+    "Japonais": "百",
+    "Kana": "ひゃく /",
+    "Romaji": "hyaku /",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 750,
+    "Francais": "1 000",
+    "Japonais": "千",
+    "Kana": "せん' /",
+    "Romaji": "sèn’ /",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 751,
+    "Francais": "10 000",
+    "Japonais": "一万",
+    "Kana": "いち まん' /",
+    "Romaji": "ichi man’ /",
+    "Categorie": "nombres"
+  },
+  {
+    "No": 752,
+    "Francais": "alcool de riz",
+    "Japonais": "焼酎",
+    "Kana": "しょうちゅう",
+    "Romaji": "shôchû",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 753,
+    "Francais": "bière",
+    "Japonais": "ビール",
+    "Kana": "ビイル",
+    "Romaji": "bîru",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 754,
+    "Francais": "vin blanc",
+    "Japonais": "白ワイン",
+    "Kana": "シロワイン",
+    "Romaji": "shirowaïn",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 755,
+    "Francais": "vin rosé",
+    "Japonais": "ロゼワイン",
+    "Kana": "ロゼワイン",
+    "Romaji": "rozewaïn",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 756,
+    "Francais": "vin rouge",
+    "Japonais": "赤ワイン",
+    "Kana": "アカワイン",
+    "Romaji": "akawaïn",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 757,
+    "Francais": "café allongé",
+    "Japonais": "アメリカン コーヒー",
+    "Kana": "アメリカン コウヒイ",
+    "Romaji": "amerikan kôhî",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 758,
+    "Francais": "chocolat",
+    "Japonais": "ココア",
+    "Kana": "ココア",
+    "Romaji": "kokoa",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 759,
+    "Francais": "eau froide",
+    "Japonais": "水",
+    "Kana": "みず",
+    "Romaji": "mizu",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 760,
+    "Francais": "expresso",
+    "Japonais": "エスプレッソ コーヒー",
+    "Kana": "エスプレッソコウヒイ",
+    "Romaji": "esupuressokôhî",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 761,
+    "Francais": "jus (d’orange) (",
+    "Japonais": "オレンジ) ジュース (",
+    "Kana": "オレンジ ジュウス",
+    "Romaji": "orenji) jûsu",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 762,
+    "Francais": "lait",
+    "Japonais": "牛乳",
+    "Kana": "ぎゅうにゅう",
+    "Romaji": "gyûnyû",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 763,
+    "Francais": "limonade",
+    "Japonais": "サイダー",
+    "Kana": "サイダア",
+    "Romaji": "saïdâ",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 764,
+    "Francais": "thé anglais",
+    "Japonais": "紅茶",
+    "Kana": "こうちゃ",
+    "Romaji": "kôcha",
+    "Categorie": "boissons"
+  },
+  {
+    "No": 765,
+    "Francais": "thé au lait",
+    "Japonais": "ミルク ティ",
+    "Kana": "ミルク tイ",
+    "Romaji": "miruku ti",
+    "Categorie": "boissons"
+  }
+]
