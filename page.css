@@ -1,0 +1,239 @@
+
+/* ===== Page.css (styles extraits de index.html) ===== */
+body { font-family: sans-serif; background: #f2f2f2; padding: 20px; text-align: center; }
+#titleBar { position: relative; text-align: center; margin-bottom: 10px; min-height: 56px; }
+.title-main { font-size: 2em; font-weight: bold; margin: 0; display: inline-block; }
+#audioButton { position: absolute; left: 50%; transform: translateX(90px); top: -0.18em;
+  font-size:1.6em; padding:2px 8px; background:none; border:none; outline:none; box-shadow:none; cursor:pointer; }
+#voiceToggle { position: absolute; left: 50%; transform: translateX(140px); top: -0.18em;
+  font-size:1.6em; padding:2px 4px; background:none; border:none; outline:none; box-shadow:none; cursor:pointer; }
+.menu-wrap { position: relative; display: inline-block; }
+.menu-wrap > button { font-size: 1.2em; }
+#tableauxMenu, #aideMenu {
+  display: none; position: absolute; background-color: white; min-width: 140px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; border: 1px solid #ccc; border-radius: 6px;
+}
+#tableauxMenu button, #aideMenu button { width:100%; font-size:1em; padding: 8px; padding-left: 12px; text-align: left; }
+.grid-container { width:100%; max-width:100%; margin-left:auto; margin-right:auto; }
+.action-button { font-size: 1.2em; padding: 0.4em 1em; margin: 0.2em; border-radius: 8px; border: 2px solid #888;
+  background-color: #f0f0f0; transition: background-color 0.2s ease; }
+.action-button:hover { background-color: #e0e0e0 !important; }
+.help-button { background-color: #d5f5d5 !important; }
+.help-button:disabled { background-color: #cccccc !important; cursor: not-allowed; opacity: 0.6; }
+#macronInfo, #usagePopup {
+  display:none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%);
+  background-color: #fff; border: 2px solid #666; padding: 1em; border-radius: 10px;
+  max-width: 90%; max-height: 80%; overflow-y: auto; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 9999;
+}
+#usagePopup h2 { margin-top:0; text-align:center; }
+#usagePopup .close { margin-top:10px; padding:6px 12px; }
+#clickHint { font-size: 0.9em; color: #555; margin-top: 6px; opacity: 0; transition: opacity .4s ease;
+  display: inline-flex; align-items: center; gap: 8px; }
+#clickHint.show { opacity: .9; }
+#clickHint.fade { opacity: 0; }
+#clickHint button { font-size: 0.8em; padding: 2px 8px; border: 1px solid #bbb; border-radius: 12px; background: #f5f5f5; cursor: pointer; }
+#clickHint button:hover { background: #eee; }
+
+/* ===== Styles issus de <style> dans le HTML ===== */
+body { font-family: sans-serif; background: #f2f2f2; padding: 20px; text-align: center; }
+    .instruction { font-size: 1.2em; margin-bottom: 10px; }
+    /*
+      The container that holds the romaji and hiragana boxes was previously defined
+      as a grid with a fixed number of columns. On narrower screens (and even on
+      desktop when the answer contains many characters) this caused the row of
+      boxes to overflow off the right side of the page. To allow the boxes to
+      wrap naturally when there isn’t enough horizontal space, switch this
+      container to use flexbox with wrapping enabled. Each box still has a
+      fixed width (40px), so flexbox will automatically break to a new line
+      whenever a row is full. The container width is set to 100% to ensure it
+      doesn't grow beyond the viewport, preventing overflow, and centering is
+      maintained with auto margins.
+    */
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      margin-bottom: 5px;
+      width: 100%;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .romaji-box { height: 20px; font-size: 14px; line-height: 20px; text-align: center; width: 40px; }
+    .box { width: 40px; height: 40px; border: 2px solid #333; font-size: 24px; line-height: 40px; background-color: white; text-align: center; }
+    .box.correct { background-color: #c8f7c5; }
+    .box.incorrect { background-color: #f9c0c0; }
+    #buttons { margin-top: 10px; }
+    #buttons button { margin: 5px; font-size: 20px; padding: 5px 10px; }
+    #buttons button:disabled { background-color: #d0e6ff; color: #555; }
+    .buttons { margin-top: 30px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .buttons button { font-size: 24px; padding: 12px 24px; border-radius: 10px; background-color: #eeeeee; border: 2px solid #aaa; }
+    .buttons button:hover { background-color: #d8eaff; cursor: pointer; }
+    .feedback { font-weight: bold; font-size: 1.2em; margin-top: 15px; }
+    /* Style pour le titre principal de la page */
+    h1#appTitle {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    #appTitle {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .title-main {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .title-signature {
+      font-size: 0.9em;
+      color: #666;
+      font-family: serif;
+      opacity: 0.8;
+      margin-top: 4px; 
+    }
+
+    /* Indicateur discret de position de la phrase */
+    .phrase-counter {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+    }
+    /* Styling for the instruction lines: romaji (normal), Japanese (red) and hidden by default, and French (dark blue) */
+    .romaji-line {
+      font-style: normal;
+      font-weight: normal;
+    }
+    .jp-line {
+      color: red;
+      font-weight: normal;
+      display: none; /* hidden until the user provides a correct answer */
+    }
+    .fr-line {
+      color: #00008B;
+      font-weight: normal;
+    }
+  
+    .highlight-preview {
+      background-color: #fff5c2 !important;
+      box-shadow: 0 0 8px #f0c040;
+      transform: scale(1.05);
+      transition: transform 0.1s ease;
+    }
+    
+    .action-button {
+      font-size: 1.2em;
+      padding: 0.4em 1em;
+      margin: 0.2em;
+      border-radius: 8px;
+      border: 2px solid #888;
+      background-color: #f0f0f0;
+      transition: background-color 0.2s ease;
+    }
+    .action-button:hover {
+      background-color: #e0e0e0 !important;
+    }
+    .help-button {
+      background-color: #d5f5d5 !important;
+    }
+    .help-button:disabled {
+      background-color: #cccccc !important;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .buttons-row {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    @media (min-width: 600px) {
+      .buttons-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+@media (max-width: 768px) {
+  #appTitle {
+    gap: 8px !important;
+  }
+  #appTitle .title-main {
+    font-size: 1.5em !important;
+  }
+  .grid-container {
+    transform: scale(0.95);
+  }
+  .buttons-row {
+    flex-direction: column !important;
+  }
+  .button-group {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  button {
+    font-size: 1em !important;
+  }
+}
+
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  #usagePopup, #macronInfo {
+    width: 95vw !important;
+    left: 2.5vw !important;
+    right: auto !important;
+    transform: none !important;
+    max-width: none !important;
+    border-radius: 12px !important;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  #statsPopup, .popup {
+    min-width: 92vw !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    border-radius: 14px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #audioButton {
+    top: 0.32em !important;
+  }
+}
+
+
+
+/* Cliquable uniquement après validation correcte */
+.box.clickable { cursor: pointer; }
+
+
+/* Indice discret récurrent après chaque validation correcte (jusqu'au clic sur OK) */
+#clickHint { 
+  font-size: 0.9em; color: #555; margin-top: 6px; 
+  opacity: 0; transition: opacity .4s ease; display: inline-flex; align-items: center; gap: 8px;
+}
+#clickHint.show { opacity: .9; }
+#clickHint.fade { opacity: 0; }
+#clickHint button { font-size: 0.8em; padding: 2px 8px; border: 1px solid #bbb; border-radius: 12px; background: #f5f5f5; cursor: pointer; }
+#clickHint button:hover { background: #eee; }
