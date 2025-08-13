@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<link rel="stylesheet" href="vocabulaire.css">
+<link rel="stylesheet" href="page.css">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta charset="utf-8"/>
+<!-- Mise à jour du titre de la page pour refléter l'exercice avec un drapeau japonais -->
+<title>Hiragana </title>
+
+
+</head>
+<body>
+<!-- Titre principal affiché en haut de la page -->
+<div id="titleBar">
+<span class="title-main" style="font-size:2em; font-weight:bold; margin:0; display:inline-block;">Hiragana</span>
+<button id="audioButton">🎧</button>
+<!-- Bouton de bascule voix homme/femme : très compact (icônes 👩/👨) -->
+<button id="voiceToggle">👩</button>
+</div>
+<div style="text-align:center; margin-bottom:20px;"><div class="menu-wrap">
+<button style="font-size:1.2em;" title="Tableaux de caractères japonais">🖋️  あ ア 文 ▼</button>
+<div id="tableauxMenu">
+<button onclick="window.open('nhk_hiragana.png', '_blank');" style="width:100%;  font-size:1em;  padding: 8px; padding-left: 12px; text-align: left" title="Afficher le tableau des hiragana">あ Hiragana</button>
+<button onclick="window.open('nhk_katakana.png', '_blank');" style="width:100%;  font-size:1em;  padding: 8px; padding-left: 12px; text-align: left" title="Afficher le tableau des katakana">ア Katakana</button>
+<button onclick="window.open('hiragana_dessins.png', '_blank');" style="width:100%; font-size:1em; padding: 8px; padding-left: 12px; text-align: left" title="Afficher les dessins Hiragana écoliers">あ écoliers</button>
+<button onclick="window.open('katakana_dessins.png', '_blank');" style="width:100%; font-size:1em; padding: 8px; padding-left: 12px; text-align: left" title="Afficher les dessins Katakana écoliers">ア écoliers</button>
+<button onclick="window.open('100_kanji.pdf', '_blank');" style="width:100%; font-size:1em; padding: 8px; padding-left: 12px; text-align: left" title="Ouvrir la liste des 100 kanji les plus fréquents"><span class="kanji-red">文 Kanji</span></button>
+</div>
+</div>     <div class="menu-wrap">
+<button style="font-size:1.2em;" title="Aide, infos, statistiques">📖  Infos ▼</button>
+<div id="aideMenu">
+<!-- Première option : ouvrir la fiche d'utilisation (ancienne icône 📋) -->
+<button onclick="document.getElementById('usagePopup').style.display='block';" style="width:100%;  font-size:1em;  padding: 8px; ;  text-align: left; padding-left: 12px; text-align: left" title="Afficher la fiche d'utilisation de l'exercice">🗒️ Mode op.</button>
+<button id="openVocabBtn" style="width:100%; font-size:1em; padding:8px; padding-left:12px; text-align:left" title="Vocabulaire / Quiz">📘 Vocabulaire</button>
+<!-- Autre option d'aide : lien vers le PDF NHK -->
+<button onclick="window.open('nhk_le_japonais.pdf', '_blank');" style="width:100%;  font-size:1em;  padding: 8px; ;  text-align: left; padding-left: 12px; text-align: left" title="Ouvrir le PDF NHK やさしい日本語">📕 NHK PDF </button>
+<!-- Ajout d'une option menant au site NHK en ligne -->
+<button onclick="window.open('https://www3.nhk.or.jp/nhkworld/lesson/french/', '_blank');" style="width:100%; font-size:1em; padding: 8px; padding-left: 12px; text-align: left" title="Visiter le site NHK web">🌐 NHK web</button>
+<!-- Option pour afficher la fenêtre des statistiques -->
+<button onclick="if (typeof updateStatsDisplay === 'function') updateStatsDisplay(); document.getElementById('statsPopup').style.display='block';" style="width:100%; font-size:1em; padding: 8px; padding-left: 12px; text-align: left" title="Afficher les statistiques">📈 Stats</button>
+</div>
+</div></div>
+<div class="instruction" id="instruction"><p>Erreur de chargement des données.</p></div>
+<!-- Removed the standalone jpPhrase element because the Japanese text will now be
+       displayed inside the instruction block itself when appropriate. -->
+<!-- <div class="feedback" id="jpPhrase" style="color: red;"></div> -->
+<div class="grid-container" id="romaji-container"></div>
+<div class="grid-container" id="phrase-container"></div>
+<div id="buttons"></div>
+<div class="buttons-row">
+<div class="button-group">
+<!--
+        Bouton « reprendre » : n'est affiché que lorsqu'une réponse erronée
+        est détectée lors de la vérification. Il se place juste à gauche
+        du bouton Vérifier et affiche uniquement une icône « 😩 ». Au clic,
+        il efface toutes les cases incorrectes et restaure les boutons de
+        kana correspondants, mimant l'action d'annuler ces entrées.
+      -->
+<button class="action-button help-button" id="resumeButton" onclick="resumeIncorrect()" style="display: none;" title="Réinitialiser uniquement les erreurs">😩</button>
+<button class="action-button help-button" disabled="disabled" id="checkButton" onclick="checkAnswer()">Vérifier</button>
+<button class="action-button" id="resetButton" onclick="clearBoxes()" title="Réinitialiser la saisie"><span style="color:red">RAZ</span></button>
+<button class="action-button" id="backspaceButton" onclick="undoLast()" title="Annuler la dernière lettre">←</button>
+<button class="action-button help-button" id="hintButton" title="Afficher un indice temporaire">💡</button>
+<button class="action-button help-button" id="solutionButton" title="Afficher temporairement la solution">👁️</button>
+</div>
+<div class="button-group">
+<button class="action-button" id="prevButton" onclick="prevPhrase()" title="Phrase précédente">⬅️</button>
+<button class="action-button" id="nextButton" onclick="nextPhrase()" title="Phrase suivante">➡️</button>
+<button class="action-button" id="randomButton" onclick="randomPhrase()" title="Phrase aléatoire">🎲</button>
+</div>
+</div>
+<div class="feedback" id="feedback"></div>
+<!-- Indicateur discret affichant la position actuelle de la phrase -->
+<div class="phrase-counter" id="phraseCounter"></div>
+<div class="phrase-counter">Indices utilisés sur cette page : <span id="hintCount">0</span><br/>
+    Total solutions consultées : <span id="solutionCount">0</span><br/>
+    dont sur cette page : <span id="localSolutionCount">0</span></div>
+<script>
+    let phrases = [], currentIndex = 0, boxes = [], romajiBoxes = [], clickHistory = [], hintCount = 0;
+    // Début de la page pour calculer la durée écoulée
+    let pageStartTime = Date.now();
+    // Compteurs de statistiques : succès sans aide et nombre total de vérifications
+    let successWithoutHelpCount = 0;
+    let totalCheckCount = 0;
+    let hintActive = false, lastHintedBox = null;
+
+    // Statistiques supplémentaires pour l'exercice
+    // Nombre total d'indices utilisés sur l'ensemble de la session
+    let globalHintTotal = 0;
+    // Nombre total d'erreurs cumulées (lettres incorrectes) sur l'ensemble de la session
+    let totalErrorCount = 0;
+    // Longueur maximale d'une phrase réussie sans aide et index de cette phrase
+    let bestLongestLength = 0;
+    let bestLongestPhraseIndex = -1;
+
+    const phraseContainer = document.getElementById('phrase-container');
+    const romajiContainer = document.getElementById('romaji-container');
+    const buttonsContainer = document.getElementById('buttons');
+    const instruction = document.getElementById('instruction');
+    const feedback = document.getElementById('feedback');
+    const hintCountSpan = document.getElementById('hintCount');
+    const checkButton = document.getElementById('checkButton');
+    const clickAudio = new Audio("data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAD//f39/f39");
+const victoryAudio = new Audio("victory.mp3");
+    // Élément d'indicateur de numéro de phrase
+    const phraseCounter = document.getElementById('phraseCounter');
+
+    const charToRomaji = {
+      'あ':'a','い':'i','う':'u','え':'e','お':'o','か':'ka','き':'ki','く':'ku','け':'ke','こ':'ko',
+      'が':'ga','ぎ':'gi','ぐ':'gu','げ':'ge','ご':'go','さ':'sa','し':'shi','す':'su','せ':'se','そ':'so',
+      'ざ':'za','じ':'ji','ず':'zu','ぜ':'ze','ぞ':'zo','た':'ta','ち':'chi','つ':'tsu','て':'te','と':'to',
+      'だ':'da','で':'de','ど':'do','な':'na','に':'ni','ぬ':'nu','ね':'ne','の':'no','は':'ha','ひ':'hi',
+      'ふ':'fu','へ':'he','ほ':'ho','ば':'ba','び':'bi','ぶ':'bu','べ':'be','ぼ':'bo','ま':'ma','み':'mi',
+      'む':'mu','め':'me','も':'mo','や':'ya','ゆ':'yu','よ':'yo','ら':'ra','り':'ri','る':'ru','れ':'re',
+      'ろ':'ro','わ':'wa','を':'o','ん':'n','っ':'','ゃ':'ya','ゅ':'yu','ょ':'yo','ー':'', '〜':'',
+      'フ':'fu','ラ':'ra','ン':'n','ス':'su','ジ':'ji','ョ':'yo','ト':'to','カ':'ka','ド':'do'
+    };
+
+    function hiraganaToRomajiCluster(cluster) {
+      return cluster.split('').map(c => charToRomaji[c] || '').join('');
+    }
+
+    function loadPhrase(index) {
+  
+  if (typeof window.setTraitClick === "function") window.setTraitClick(false);
+const backBtn = document.getElementById("backspaceButton");
+  if (backBtn) backBtn.disabled = false;
+  const hintBtn = document.getElementById("hintButton");
+  const solBtn = document.getElementById("solutionButton");
+  if (hintBtn) hintBtn.disabled = false;
+  if (solBtn) solBtn.disabled = false;
+  document.getElementById("hintButton").disabled = false;
+  document.getElementById("solutionButton").disabled = false;
+      const localSpan = document.getElementById('localSolutionCount');
+      if (localSpan) localSpan.textContent = '0';
+      const phrase = phrases[index];
+      const rawChars = phrase.kana.trim().split(' ');
+      const romajiList = rawChars.map(hiraganaToRomajiCluster);
+      boxes = []; romajiBoxes = []; clickHistory = [];
+      hintCount = 0;
+      hintCountSpan.textContent = hintCount;
+      feedback.textContent = '';
+      // Hide any previously displayed Japanese phrase at the start of a new phrase.
+      const jpReset = document.getElementById('jpPhrase');
+      if (jpReset) {
+        jpReset.textContent = '';
+        jpReset.style.display = 'none';
+      }
+      checkButton.disabled = true;
+      // Cacher le bouton "reprendre" au chargement d'une nouvelle phrase
+      const resumeBtnInit = document.getElementById('resumeButton');
+      if (resumeBtnInit) {
+        resumeBtnInit.style.display = 'none';
+      }
+      // Construct the instruction block with romaji, a placeholder for the Japanese phrase,
+      // and the French translation. The Japanese line remains hidden until the answer
+      // is validated as correct.
+      instruction.innerHTML =
+        `<p class="romaji-line">${phrase.romaji}</p>` +
+        `<p id="jpPhrase" class="jp-line"></p>` +
+        `<p class="fr-line">${phrase.fr}</p>`;
+
+      // Mettre à jour l'indicateur de position de la phrase
+      if (phraseCounter) {
+        phraseCounter.textContent = `Phrase ${index + 1} / ${phrases.length}`;
+      }
+
+      phraseContainer.style.gridTemplateColumns = `repeat(${rawChars.length}, 40px)`;
+      romajiContainer.style.gridTemplateColumns = `repeat(${rawChars.length}, 40px)`;
+      phraseContainer.innerHTML = ''; romajiContainer.innerHTML = ''; buttonsContainer.innerHTML = '';
+
+      rawChars.forEach((_, i) => {
+        const rBox = document.createElement('div');
+        rBox.className = 'romaji-box';
+        romajiContainer.appendChild(rBox);
+        romajiBoxes.push(rBox);
+        const box = document.createElement('div');
+        box.className = 'box';
+        phraseContainer.appendChild(box);
+        boxes.push(box);
+      });
+
+      const shuffled = rawChars.slice().sort(() => Math.random() - 0.5);
+      shuffled.forEach(char => {
+        const btn = document.createElement('button');
+        btn.textContent = char;
+        btn.onclick = () => { clickAudio.play(); insertCharacter(char, btn); };
+        buttonsContainer.appendChild(btn);
+      });
+
+      boxes.correct = rawChars;
+      boxes.romajiList = romajiList;
+      // Lire automatiquement la phrase japonaise après chargement
+      if (typeof window.playJapaneseAudio === 'function' && !window.popupActive) {
+        window.playJapaneseAudio();
+      }
+    }
+
+    function insertCharacter(char, button) {
+      const emptyBox = boxes.find(b => b.textContent === '');
+      if (emptyBox) {
+        emptyBox.textContent = char;
+        button.disabled = true;
+        clickHistory.push({box: emptyBox, button});
+        updateCheckButtonState();
+      }
+    }
+
+    function updateCheckButtonState() {
+      checkButton.disabled = !boxes.every(b => b.textContent !== '');
+    }
+
+    function checkAnswer() {
+  const backBtn = document.getElementById("backspaceButton");
+  const hintBtn = document.getElementById("hintButton");
+  const solBtn = document.getElementById("solutionButton");
+      boxes.forEach((box, i) => {
+        box.classList.remove('correct', 'incorrect');
+        if (box.textContent === boxes.correct[i]) {
+          box.classList.add('correct');
+          romajiBoxes[i].textContent = boxes.romajiList[i] || '';
+        } else {
+          box.classList.add('incorrect');
+          romajiBoxes[i].textContent = '';
+        }
+      });
+      const result = boxes.map(b => b.textContent).join('') === boxes.correct.join('');
+      
+      
+      const anyCorrect = boxes.some(b => b.classList.contains("correct"));
+      if (typeof window.setTraitClick === "function") window.setTraitClick(anyCorrect);
+if (result) {
+        const hintUsed = parseInt(document.getElementById('hintCount').textContent || '0');
+        const solUsed = parseInt(document.getElementById('localSolutionCount').textContent || '0');
+        if (hintUsed === 0 && solUsed === 0) {
+          feedback.textContent = '✅ Bravo, sans aide ! 👍';
+          victoryAudio.play();
+        } else {
+          feedback.textContent = 'Mouais, trouvé avec de l\'aide...👎';
+        }
+      } else {
+        feedback.textContent = '❌ Essaie encore';
+      }
+    
+      // Gérer l'affichage du bouton "reprendre" selon le résultat et la présence d'erreurs.
+      const resumeBtn = document.getElementById('resumeButton');
+      if (!result && boxes.some(b => b.classList.contains('incorrect'))) {
+        // Afficher le bouton uniquement si des cases sont incorrectes.
+        if (resumeBtn) {
+          resumeBtn.style.display = 'inline-block';
+        }
+      } else {
+        if (resumeBtn) {
+          resumeBtn.style.display = 'none';
+        }
+      }
+
+      // Afficher la phrase japonaise seulement si tout est correct
+      const jpElement = document.getElementById('jpPhrase');
+      if (result) {
+        jpElement.textContent = phrases[currentIndex].jp;
+        jpElement.style.display = 'block';
+        if (hintBtn) hintBtn.disabled = true;
+        if (solBtn) solBtn.disabled = true;
+        if (backBtn) backBtn.disabled = true;
+      } else {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+        if (hintBtn) hintBtn.disabled = false;
+        if (solBtn) solBtn.disabled = false;
+        if (backBtn) backBtn.disabled = false;
+      }
+
+      // Mettre à jour les statistiques : incrémenter le nombre total de vérifications et les succès sans aide
+      totalCheckCount++;
+      // Nombre d'indices et de solutions utilisés pour cette phrase
+      const hintsUsedNow = parseInt(document.getElementById('hintCount').textContent || '0');
+      const solutionsUsedNow = parseInt(document.getElementById('localSolutionCount').textContent || '0');
+      if (result && hintsUsedNow === 0 && solutionsUsedNow === 0) {
+        successWithoutHelpCount++;
+      }
+      // Compter le nombre d'erreurs (cases incorrectes) pour cette phrase et l'ajouter au total
+      const errorsNow = boxes.filter(b => b.classList.contains('incorrect')).length;
+      totalErrorCount += errorsNow;
+      // Mettre à jour la longueur maximale d'une phrase réussie sans aide
+      if (result && hintsUsedNow === 0 && solutionsUsedNow === 0) {
+        const phraseLength = boxes.correct.length;
+        if (phraseLength > bestLongestLength) {
+          bestLongestLength = phraseLength;
+          bestLongestPhraseIndex = currentIndex;
+        }
+      }
+      // Mettre à jour l'affichage dans la modale de statistiques si elle est présente (ancienne prise en charge)
+      const successEl = document.getElementById('successCount');
+      const totalEl = document.getElementById('totalCheckCount');
+      if (successEl) successEl.textContent = successWithoutHelpCount;
+      if (totalEl) totalEl.textContent = totalCheckCount;
+      // Mettre à jour l'affichage des nouvelles statistiques dynamiques
+      if (typeof updateStatsDisplay === 'function') updateStatsDisplay();
+    }
+
+    function clearBoxes() {
+  
+  if (typeof window.setTraitClick === "function") window.setTraitClick(false);
+const backBtn = document.getElementById("backspaceButton");
+  if (backBtn) backBtn.disabled = false;
+  const hintBtn = document.getElementById("hintButton");
+  const solBtn = document.getElementById("solutionButton");
+  if (hintBtn) hintBtn.disabled = false;
+  if (solBtn) solBtn.disabled = false;
+  document.getElementById("hintButton").disabled = false;
+  document.getElementById("solutionButton").disabled = false;
+      boxes.forEach((box, i) => {
+        box.textContent = '';
+        box.classList.remove('correct', 'incorrect');
+        romajiBoxes[i].textContent = '';
+      });
+      document.querySelectorAll('#buttons button').forEach(b => b.disabled = false);
+      clickHistory = [];
+      feedback.textContent = '';
+      // Hide the Japanese phrase when clearing the boxes.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+      updateCheckButtonState();
+
+      // Masquer le bouton "reprendre" lorsque l'on réinitialise tout
+      const resumeBtn = document.getElementById('resumeButton');
+      if (resumeBtn) {
+        resumeBtn.style.display = 'none';
+      }
+    }
+
+    function undoLast() {
+const last = clickHistory.pop();
+      if (last) {
+        const idx = boxes.indexOf(last.box);
+        last.box.textContent = '';
+        romajiBoxes[idx].textContent = '';
+        last.box.classList.remove('correct', 'incorrect');
+        last.button.disabled = false;
+        updateCheckButtonState();
+      }
+      // Hide the Japanese phrase whenever the user interacts with the undo button.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    
+      // Recalculate trait click authorization based on remaining green boxes
+      const anyCorrectNow = boxes.some(b => b.classList && b.classList.contains("correct"));
+      if (typeof window.setTraitClick === "function") window.setTraitClick(anyCorrectNow);
+}
+
+    /**
+     * Efface toutes les lettres positionnées dans des cases incorrectes et
+     * réactive les boutons correspondants. Cette fonction est appelée
+     * lorsqu'on clique sur le bouton "reprendre" (😩). Elle parcourt
+     * l'historique des clics pour identifier les entrées qui se trouvent
+     * dans des cases marquées comme incorrectes (classe CSS « incorrect »),
+     * puis rétablit l'état initial de ces cases et des boutons de kana.
+     */
+    function resumeIncorrect() {
+// Parcourir l'historique en sens inverse pour supprimer les entrées
+      // sans perturber les indices restants.
+      for (let i = clickHistory.length - 1; i >= 0; i--) {
+        const entry = clickHistory[i];
+        const box = entry.box;
+        if (box.classList.contains('incorrect')) {
+          // Réinitialiser la case et le romaji correspondant
+          const idx = boxes.indexOf(box);
+          box.textContent = '';
+          if (idx !== -1) {
+            romajiBoxes[idx].textContent = '';
+          }
+          // Retirer les classes d'état
+          box.classList.remove('correct', 'incorrect');
+          // Réactiver le bouton de kana
+          if (entry.button) {
+            entry.button.disabled = false;
+          }
+          // Retirer cette entrée de l'historique
+          clickHistory.splice(i, 1);
+        }
+      }
+      // Cacher la phrase japonaise et le bouton "reprendre"
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+      // Mettre à jour l'état du bouton Vérifier
+      updateCheckButtonState();
+      // Masquer le bouton reprendre après utilisation
+      const resumeBtn = document.getElementById('resumeButton');
+      if (resumeBtn) {
+        resumeBtn.style.display = 'none';
+      }
+    
+      // Recalculate trait click authorization based on remaining green boxes
+      const anyCorrectNow = boxes.some(b => b.classList && b.classList.contains("correct"));
+      if (typeof window.setTraitClick === "function") window.setTraitClick(anyCorrectNow);
+}
+
+    function showHint() {
+      // Hide the Japanese phrase when requesting a hint.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+      const i = boxes.findIndex(b => b.textContent === '');
+      if (i !== -1) {
+        lastHintedBox = boxes[i];
+        lastHintedBox.textContent = boxes.correct[i];
+        lastHintedBox.style.opacity = '0.5';
+        hintCount++;
+        hintCountSpan.textContent = hintCount;
+        hintActive = true;
+        // Incrémenter le nombre total d'indices utilisés et mettre à jour les statistiques
+        globalHintTotal++;
+        if (typeof updateStatsDisplay === 'function') updateStatsDisplay();
+      }
+    }
+
+    function hideHint() {
+      if (hintActive && lastHintedBox) {
+        lastHintedBox.textContent = '';
+        lastHintedBox.style.opacity = '1';
+        lastHintedBox = null;
+        hintActive = false;
+      }
+      // Hide the Japanese phrase when the hint is released.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    function nextPhrase() {
+      currentIndex = (currentIndex + 1) % phrases.length;
+      loadPhrase(currentIndex);
+      // Hide the Japanese phrase when moving to the next phrase.
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    // Naviguer vers la phrase précédente
+    function prevPhrase() {
+      currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
+      loadPhrase(currentIndex);
+      // Cacher la phrase japonaise lors du passage à la phrase précédente
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    // Choisir une phrase aléatoire
+    function randomPhrase() {
+      if (!phrases || phrases.length === 0) return;
+      let randIndex = Math.floor(Math.random() * phrases.length);
+      // éviter de répéter la même phrase immédiatement si possible
+      if (phrases.length > 1 && randIndex === currentIndex) {
+        randIndex = (randIndex + 1) % phrases.length;
+      }
+      currentIndex = randIndex;
+      loadPhrase(currentIndex);
+      // Cacher la phrase japonaise puisqu'une nouvelle phrase est tirée
+      const jpElement = document.getElementById('jpPhrase');
+      if (jpElement) {
+        jpElement.textContent = '';
+        jpElement.style.display = 'none';
+      }
+    }
+
+    fetch("phrases_100.json")
+      .then(res => res.json())
+      .then(json => { phrases = json; loadPhrase(currentIndex); })
+      .catch(e => { instruction.innerHTML = "<p>Erreur de chargement des données.</p>"; console.error(e); });
+  
+    let savedState = [];
+    let totalSolutionCount = 0;
+
+    function showSolutionPreview() {
+      const totalSpan = document.getElementById('solutionCount');
+      const localSpan = document.getElementById('localSolutionCount');
+
+      totalSolutionCount++;
+      if (totalSpan) totalSpan.textContent = totalSolutionCount;
+      if (localSpan) localSpan.textContent = parseInt(localSpan.textContent || '0') + 1;
+      // Mettre à jour les statistiques dynamiques lorsque l'utilisateur consulte une solution
+      if (typeof updateStatsDisplay === 'function') updateStatsDisplay();
+
+      if (totalSolutionCount === 5) {
+        alert("👁️ Tu aimes un peu trop tricher, non ? 😄");
+      }
+
+      savedState = boxes.map((box, i) => ({
+        text: box.textContent,
+        classList: [...box.classList],
+        romaji: romajiBoxes[i].textContent
+      }));
+
+      /*
+       * Lors de l’aperçu de la solution nous ne voulons pas colorer les
+       * cases en vert comme si elles étaient validées. Le vert est
+       * réservé à la vérification finale quand l’utilisateur trouve
+       * lui‑même la bonne réponse. Au lieu d’ajouter la classe
+       * « correct » ici, on retire toutes les classes d’état et on
+       * applique uniquement la classe « highlight-preview » qui colore
+       * en jaune clair. Cela évite la confusion signalée par l’utilisateur
+       * (toutes les cases devenaient vertes) et permet de distinguer
+       * clairement un simple aperçu de la vraie validation.
+       */
+      boxes.forEach((box, i) => {
+        // placer le caractère correct dans chaque case
+        box.textContent = boxes.correct[i];
+        // supprimer les classes d’état existantes pour un affichage neutre
+        box.classList.remove('correct', 'incorrect');
+        // appliquer uniquement la classe de surlignage provisoire
+        box.classList.add('highlight-preview');
+        // afficher aussi le romaji associé
+        romajiBoxes[i].textContent = boxes.romajiList[i];
+      });
+    }
+
+    function restorePreviousState() {
+      savedState.forEach((state, i) => {
+        boxes[i].textContent = state.text;
+        boxes[i].className = 'box';
+        state.classList.forEach(cls => boxes[i].classList.add(cls));
+        boxes[i].classList.remove('highlight-preview');
+        romajiBoxes[i].textContent = state.romaji;
+      });
+    }
+
+</script>
+<div id="macronInfo">
+<p style="font-size: 1em; text-align:left;">
+    Dans certains mots (comme ici) contenant "ou", comme <strong>gakkou</strong>, la transcription correcte selon le système Hepburn est <strong>gakkō</strong> (avec un ō long).
+    <br/><br/>Mais ici, nous utilisons <strong>gakkou</strong> car cela correspond mieux à la structure en hiragana :<br/> が (ga) + っ (petit tsu) + こ (ko) + う (u).
+    <br/><br/>Cela facilite l’apprentissage de l’écriture en japonais - et c'est incontournable pour cet exercice ;-)
+  </p>
+<!-- Bouton pour fermer la fenêtre d'information sur les macrons -->
+<button onclick="document.getElementById('macronInfo').style.display='none';" style="margin-top:10px; padding:6px 12px;">Fermer</button>
+</div>
+<script>
+function maybeAddInfoButton() {
+  const romajiEl = document.querySelector('.romaji-line');
+  if (!romajiEl) return;
+  const existingBtn = document.getElementById('infoButton');
+  if (existingBtn) existingBtn.remove();
+
+  if (romajiEl.textContent.includes("ou")) {
+    const infoBtn = document.createElement("button");
+    infoBtn.textContent = "ℹ️";
+    infoBtn.title = "Pourquoi 'gakkou' et pas 'gakkō' ?";
+    infoBtn.id = "infoButton";
+    infoBtn.style.marginLeft = "10px";
+    infoBtn.style.fontSize = "0.9em";
+    infoBtn.style.cursor = "pointer";
+    infoBtn.onclick = () => {
+      document.getElementById("macronInfo").style.display = "block";
+    };
+    romajiEl.appendChild(infoBtn);
+  }
+}
+
+// Intercepter loadPhrase pour y insérer l’appel à maybeAddInfoButton
+const originalLoadPhrase = loadPhrase;
+loadPhrase = function(index) {
+  originalLoadPhrase(index);
+  setTimeout(maybeAddInfoButton, 30);
+}
+
+// La fiche d'utilisation est désormais accessible via le menu Aide.
+// On ne crée plus de bouton séparé dans le titre.
+
+// Ajouter la boîte popup à la fin du body
+const usageDiv = document.createElement('div');
+usageDiv.id = 'usagePopup';
+usageDiv.style.display = 'none';
+usageDiv.style.position = 'fixed';
+usageDiv.style.top = '10%';
+usageDiv.style.left = '50%';
+usageDiv.style.transform = 'translateX(-50%)';
+usageDiv.style.backgroundColor = '#fff';
+usageDiv.style.border = '2px solid #666';
+usageDiv.style.padding = '1em';
+usageDiv.style.borderRadius = '10px';
+usageDiv.style.maxWidth = '90%';
+usageDiv.style.maxHeight = '80%';
+usageDiv.style.overflowY = 'auto';
+usageDiv.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)';
+usageDiv.style.zIndex = '9999';
+usageDiv.innerHTML = `<div style="text-align:center;">
+  <h2 style="margin-top:0; text-align:center;">Fiche d'utilisation</h2>
+  <p style="font-style:italic; font-size:1em; text-align:center;">par CilMac – juillet 2025</p>
+  <div style="text-align:left;">
+    <h3>🎯 Objectif</h3>
+    <p>S'entraîner à reconstituer des phrases japonaises simples en <strong>hiragana</strong> (version katakana à l'étude 😉), à partir de leur <em>romaji</em> et de leur traduction française. Version multisupports (ordi, tablette, smartphone).</p>
+
+    <h3>🧩 Fonctionnement de base</h3>
+    <ol>
+      <li>Une phrase en <strong>romaji</strong> + traduction française est affichée.</li>
+      <li>Des boutons mélangés proposent les <strong>hiragana</strong> à cliquer dans l'ordre.</li>
+      <li>Quand toutes les cases sont remplies, le bouton <strong>Vérifier</strong> s’active.</li>
+      <li>Si c'est juste → tout passe en vert. Sinon → erreurs en rouge.</li>
+    </ol>
+
+    <h3>✨ Fonctions utiles</h3>
+    <ul>
+      <li><strong>😩 Reprendre</strong> : efface uniquement les cases incorrectes.</li>
+      <li><strong>💡 Indice</strong> : propose un caractère correct temporaire.</li>
+      <li><strong>👁️ Solution</strong> : affiche temporairement la réponse complète.</li>
+      <li><strong>← Annuler</strong> : retire la dernière lettre saisie.</li>
+      <li><strong>RAZ</strong> : recommence la phrase en cours.</li>
+	<li><strong>⬅️ Précédente</strong> : phrase précédente.</li>
+	<li><strong>➡️ Suivante</strong> : phrase suivante.</li>
+	<li><strong>🎲 Aléatoire</strong> : phrase tirée au sort.</li>
+	<li><strong>Rafraîchir</strong> la page Web : nouvelle session, repart à zéro.</li>
+	<li><strong>Menu gauche</strong> : tableaux des caractères japonais.</li>
+	<li><strong>Menu droit</strong> : ressources diverses, dont un lien vers le site de la NHK, une mine d'or sur le Japon (langue, actualités, recettes...).</li>
+    </ul>
+
+    <h3>🙏 Remerciements...</h3>
+ 	<ul>
+	<li>Un poil de ☕️</li>
+	<li>Plume, bêta testeuse 😘</li>
+	<li>Chazouf 🐈‍⬛ 😉</li>
+    <h3></li>
+    </ul>
+  </div>
+</div>
+<button onclick="document.getElementById('usagePopup').style.display='none';" style="margin-top: 10px; padding: 6px 12px;">Fermer</button>`;
+document.body.appendChild(usageDiv);
+</script><div id="usagePopup"><div style="text-align:center;">
+<h2 style="margin-top:0; text-align:center;">Fiche d'utilisation</h2>
+<p style="font-style:italic; font-size:1em; text-align:center;">par CilMac – juillet 2025</p>
+<div style="text-align:left;">
+<h3>🎯 Objectif</h3>
+<p>S'entraîner à reconstituer des phrases japonaises simples en <strong>hiragana</strong> (version katakana à l'étude 😉), à partir de leur <em>romaji</em> et de leur traduction française. Version multisupports (ordi, tablette, smartphone).</p>
+<h3>🧩 Fonctionnement de base</h3>
+<ol>
+<li>Une phrase en <strong>romaji</strong> + traduction française est affichée.</li>
+<li>Des boutons mélangés proposent les <strong>hiragana</strong> à cliquer dans l'ordre.</li>
+<li>Quand toutes les cases sont remplies, le bouton <strong>Vérifier</strong> s’active.</li>
+<li>Si c'est juste → tout passe en vert. Sinon → erreurs en rouge.</li>
+</ol>
+<h3>✨ Fonctions utiles</h3>
+<ul>
+<li><strong>😩 Reprendre</strong> : efface uniquement les cases incorrectes.</li>
+<li><strong>💡 Indice</strong> : propose un caractère correct temporaire.</li>
+<li><strong>👁️ Solution</strong> : affiche temporairement la réponse complète.</li>
+<li><strong>← Annuler</strong> : retire la dernière lettre saisie.</li>
+<li><strong>RAZ</strong> : recommence la phrase en cours.</li>
+<li><strong>⬅️ Précédente</strong> : phrase précédente.</li>
+<li><strong>➡️ Suivante</strong> : phrase suivante.</li>
+<li><strong>🎲 Aléatoire</strong> : phrase tirée au sort.</li>
+<li><strong>Rafraîchir</strong> la page Web : nouvelle session, repart à zéro.</li>
+<li><strong>Menu gauche</strong> : tableaux des caractères japonais.</li>
+<li><strong>Menu droit</strong> : ressources diverses, dont un lien vers le site de la NHK, une mine d'or sur le Japon (langue, actualités, recettes...).</li>
+</ul>
+<h3>🙏 Remerciements...</h3>
+<ul>
+<li>Un poil de ☕️</li>
+<li>Plume, bêta testeuse 😘</li>
+<li>Chazouf 🐈‍⬛ 😉</li>
+<h3>
+</h3></ul>
+</div>
+</div>
+<button onclick="document.getElementById('usagePopup').style.display='none';" style="margin-top: 10px; padding: 6px 12px;">Fermer</button></div><div id="usagePopup"><div style="text-align:center;">
+<h2 style="margin-top:0; text-align:center;">Fiche d'utilisation</h2>
+<p style="font-style:italic; font-size:1em; text-align:center;">par CilMac – juillet 2025</p>
+<div style="text-align:left;">
+<h3>🎯 Objectif</h3>
+<p>S'entraîner à reconstituer des phrases japonaises simples en <strong>hiragana</strong> (version katakana à l'étude 😉), à partir de leur <em>romaji</em> et de leur traduction française. Version multisupports (ordi, tablette, smartphone).</p>
+<h3>🧩 Fonctionnement de base</h3>
+<ol>
+<li>Une phrase en <strong>romaji</strong> + traduction française est affichée.</li>
+<li>Des boutons mélangés proposent les <strong>hiragana</strong> à cliquer dans l'ordre.</li>
+<li>Quand toutes les cases sont remplies, le bouton <strong>Vérifier</strong> s’active.</li>
+<li>Si c'est juste → tout passe en vert. Sinon → erreurs en rouge.</li>
+</ol>
+<h3>✨ Fonctions utiles</h3>
+<ul>
+<li><strong>😩 Reprendre</strong> : efface uniquement les cases incorrectes.</li>
+<li><strong>💡 Indice</strong> : propose un caractère correct temporaire.</li>
+<li><strong>👁️ Solution</strong> : affiche temporairement la réponse complète.</li>
+<li><strong>← Annuler</strong> : retire la dernière lettre saisie.</li>
+<li><strong>RAZ</strong> : recommence la phrase en cours.</li>
+<li><strong>⬅️ Précédente</strong> : phrase précédente.</li>
+<li><strong>➡️ Suivante</strong> : phrase suivante.</li>
+<li><strong>🎲 Aléatoire</strong> : phrase tirée au sort.</li>
+<li><strong>Rafraîchir</strong> la page Web : nouvelle session, repart à zéro.</li>
+<li><strong>Menu gauche</strong> : tableaux des caractères japonais.</li>
+<li><strong>Menu droit</strong> : ressources diverses, dont un lien vers le site de la NHK, une mine d'or sur le Japon (langue, actualités, recettes...).</li>
+</ul>
+<h3>ℹ️ Pour mémoire</h3>
+<p>Parfois <code>gakkou</code> est affiché au lieu de <code>gakkō</code> : c’est pour mieux coller aux hiragana.</p>
+<h3>
+</h3></div>
+</div>
+<button onclick="document.getElementById('usagePopup').style.display='none';" style="margin-top: 10px; padding: 6px 12px;">Fermer</button></div><div id="usagePopup"><div style="text-align:center;">
+<h2 style="margin-top:0; text-align:center;">Fiche d'utilisation</h2>
+<p style="font-style:italic; font-size:1em; text-align:center;">par CilMac – juillet 2025</p>
+<div style="text-align:left;">
+<h3>🎯 Objectif</h3>
+<p>S'entraîner à reconstituer des phrases japonaises simples en <strong>hiragana</strong>, à partir de leur <em>romaji</em> et de leur traduction française. Multisupports (ordi, tablette, smartphone).</p>
+<h3>🧩 Fonctionnement de base</h3>
+<ol>
+<li>Une phrase en <strong>romaji</strong> + traduction française est affichée.</li>
+<li>Des boutons mélangés proposent les <strong>hiragana</strong> à cliquer dans l'ordre.</li>
+<li>Quand toutes les cases sont remplies, le bouton <strong>Vérifier</strong> s’active.</li>
+<li>Si c'est juste → tout passe en vert. Sinon → erreurs en rouge.</li>
+</ol>
+<h3>✨ Fonctions utiles</h3>
+<ul>
+<li><strong>😩 Reprendre</strong> : efface uniquement les cases incorrectes.</li>
+<li><strong>💡 Indice</strong> : propose un caractère correct temporaire.</li>
+<li><strong>👁️ Solution</strong> : affiche temporairement la réponse complète.</li>
+<li><strong>← Annuler</strong> : retire la dernière lettre saisie.</li>
+<li><strong>RAZ</strong> : recommence la phrase en cours.</li>
+<li><strong>Rafraîchir</strong> la page Web : nouvelle session, repart à zéro.</li>
+<li><strong>Kana</strong> : affiche un tableau des hiragana / katakana.</li>
+<li><strong>Aide</strong> : affiche un mode op / un pdf de la NHK sur le japonais (avec lien vers le site).</li>
+</ul>
+<h3>📂 Données</h3>
+<p>Les phrases viennent du fichier <code>phrases_100.json</code> (hiragana + romaji + français).</p>
+<h3>ℹ️ Astuce</h3>
+<p>Parfois <code>gakkou</code> est affiché au lieu de <code>gakkō</code> : c’est pour mieux coller aux hiragana.</p>
+<h3>
+</h3></div>
+</div>
+<button onclick="document.getElementById('usagePopup').style.display='none';" style="margin-top: 10px; padding: 6px 12px;">Fermer</button></div><div id="usagePopup"><div style="text-align:center;">
+<h2 style="margin-top:0; text-align:center;">Fiche d'utilisation</h2>
+<p style="font-style:italic; font-size:1em; text-align:center;">par CilMac – juillet 2025</p>
+<div style="text-align:left;">
+<h3>🎯 Objectif</h3>
+<p>S'entraîner à reconstituer des phrases japonaises simples en <strong>hiragana</strong>, à partir de leur <em>romaji</em> et de leur traduction française.</p>
+<h3>🧩 Fonctionnement de base</h3>
+<ol>
+<li>Une phrase en <strong>romaji</strong> + traduction française est affichée.</li>
+<li>Des boutons mélangés proposent les <strong>hiragana</strong> à cliquer dans l'ordre.</li>
+<li>Quand toutes les cases sont remplies, le bouton <strong>Vérifier</strong> s’active.</li>
+<li>Si c'est juste → tout passe en vert. Sinon → erreurs en rouge.</li>
+</ol>
+<h3>✨ Fonctions utiles</h3>
+<ul>
+<li><strong>😩 Reprendre</strong> : efface uniquement les cases incorrectes.</li>
+<li><strong>💡 Indice</strong> : propose un caractère correct temporaire.</li>
+<li><strong>👁️ Solution</strong> : affiche temporairement la réponse complète.</li>
+<li><strong>← Annuler</strong> : retire la dernière lettre saisie.</li>
+<li><strong>RAZ</strong> : recommence la phrase en cours.</li>
+<li><strong>Rafraîchir</strong> la page Web : nouvelle session, repart à zéro.</li>
+</ul>
+<h3>📂 Données</h3>
+<p>Les phrases viennent du fichier <code>phrases_100.json</code> (hiragana + romaji + français).</p>
+<h3>ℹ️ Astuce</h3>
+<p>Parfois <code>gakkou</code> est affiché au lieu de <code>gakkō</code> : c’est pour mieux coller aux hiragana.</p>
+<h3>
+</h3></div>
+</div>
+<button onclick="document.getElementById('usagePopup').style.display='none';" style="margin-top: 10px; padding: 6px 12px;">Fermer</button></div><div id="usagePopup"><div style="text-align:center;">
+<h2 style="margin-top:0; text-align:center;">Fiche d'utilisation</h2>
+<p style="font-style:italic; font-size:1em; text-align:center;">par CilMac – juillet 2025</p>
+<div style="text-align:left;">
+<h3>🎯 Objectif</h3>
+<p>S'entraîner à reconstituer des phrases japonaises simples en <strong>hiragana</strong>, à partir de leur <em>romaji</em> et de leur traduction française.</p>
+<h3>🧩 Fonctionnement de base</h3>
+<ol>
+<li>Une phrase en <strong>romaji</strong> + traduction française est affichée.</li>
+<li>Des boutons mélangés proposent les <strong>hiragana</strong> à cliquer dans l'ordre.</li>
+<li>Quand toutes les cases sont remplies, le bouton <strong>Vérifier</strong> s’active.</li>
+<li>Si c'est juste → tout passe en vert. Sinon → erreurs en rouge.</li>
+</ol>
+<h3>✨ Fonctions utiles</h3>
+<ul>
+<li><strong>😩 Reprendre</strong> : efface uniquement les cases incorrectes.</li>
+<li><strong>💡 Indice</strong> : propose un caractère correct temporaire.</li>
+<li><strong>👁️ Solution</strong> : affiche temporairement la réponse complète.</li>
+<li><strong>← Annuler</strong> : retire la dernière lettre saisie.</li>
+<li><strong>RAZ</strong> : recommence la phrase en cours.</li>
+<li><strong>Rafraîchir</strong> la page Web : nouvelle session, repart à zéro.</li>
+</ul>
+<h3>📂 Données</h3>
+<p>Les phrases viennent du fichier <code>phrases_100.json</code> (hiragana + romaji + français).</p>
+<h3>ℹ️ Astuce</h3>
+<p>Parfois <code>gakkou</code> est affiché au lieu de <code>gakkō</code> : c’est pour mieux coller aux hiragana.</p>
+<h3>
+</h3></div>
+</div>
+<button onclick="document.getElementById('usagePopup').style.display='none';" style="margin-top: 10px; padding: 6px 12px;">Fermer</button></div>
+<!-- Fenêtre popup avec l’image Hiragana -->
+<div id="hiraganaPopup" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%);
+    background-color: #fff; border: 2px solid #666; padding: 1em; border-radius: 10px;
+    max-width: 95%; max-height: 80vh; overflow-y: auto; -webkit-overflow-scrolling: touch; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 9999; text-align: center;">
+<h2>Tableau Hiragana</h2>
+<img alt="Tableau Hiragana" src="Hiragana%20stats%20Agent%20V2_fichiers/nhk_hiragana.png" style="max-width: 100%; height: auto; touch-action: pinch-zoom;"/>
+<br/>
+<button onclick="document.getElementById('hiraganaPopup').style.display='none';" style="margin-top:10px; padding:6px 12px;">Fermer</button>
+</div>
+<!-- Fenêtre popup Katakana -->
+<div id="katakanaPopup" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%);
+    background-color: #fff; border: 2px solid #666; padding: 1em; border-radius: 10px;
+    max-width: 95%; max-height: 80vh; overflow-y: auto; -webkit-overflow-scrolling: touch; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 9999; text-align: center;">
+<h2>Tableau Katakana</h2>
+<img alt="Tableau Katakana" src="Hiragana%20stats%20Agent%20V2_fichiers/nhk_katakana.png" style="max-width: 100%; height: auto; touch-action: pinch-zoom;"/>
+<br/>
+<button onclick="document.getElementById('katakanaPopup').style.display='none';" style="margin-top:10px; padding:6px 12px;">Fermer</button>
+</div>
+<!-- Fenêtre popup Statistiques -->
+<div id="statsPopup" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%);
+    background-color: #fff; border: 2px solid #666; padding: 1em; border-radius: 10px;
+    max-width: 90%; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 9999; text-align: center;">
+<h2 style="font-weight: bold;">Statistiques de l’exercice</h2>
+<p>Durée totale : <span id="statTotalDuration">0 min 21 s</span></p>
+<p>Temps moyen par phrase : <span id="statAvgTimePerPhrase">0 s</span></p>
+<p>Phrases vérifiées : <span id="statPhrasesVerified">0</span></p>
+<p>Succès sans aide : <span id="statSuccessNoHelp">0</span> / <span id="statSuccessDenom">0</span> (<span id="statSuccessPercent">0</span> %)</p>
+<p>Indices utilisés : <span id="statHintsUsed">0</span></p>
+<p>Solutions consultées : <span id="statSolutionsUsed">0</span></p>
+<p>Moyenne d’erreurs par phrase : <span id="statAvgErrors">0</span></p>
+<p>Phrase la plus longue réussie sans aide : <span id="statLongestPhrase">Aucune</span></p>
+<button onclick="document.getElementById('statsPopup').style.display='none';" style="margin-top:10px; padding:6px 12px;">Fermer</button>
+</div>
+<script>
+(function(){
+  // KANA
+  var kanaMenu = document.getElementById('tableauxMenu');
+  if (kanaMenu && kanaMenu.parentElement) {
+    var kanaContainer = kanaMenu.parentElement;
+    var kanaButton = kanaContainer.querySelector('button');
+    if (kanaButton) {
+      kanaButton.addEventListener('click', function(ev){
+        ev.stopPropagation();
+        kanaMenu.style.display = (kanaMenu.style.display === 'block') ? 'none' : 'block';
+      });
+    }
+  }
+
+  // AIDE
+  var aideMenu = document.getElementById('aideMenu');
+  if (aideMenu && aideMenu.parentElement) {
+    var aideContainer = aideMenu.parentElement;
+    var aideButton = aideContainer.querySelector('button');
+    if (aideButton) {
+      aideButton.addEventListener('click', function(ev){
+        ev.stopPropagation();
+        aideMenu.style.display = (aideMenu.style.display === 'block') ? 'none' : 'block';
+      });
+    }
+  }
+
+  // Fermer en cliquant à l'extérieur
+  window.addEventListener('click', function(e){
+    if (kanaMenu && !kanaMenu.contains(e.target)) { kanaMenu.style.display = 'none'; }
+    if (aideMenu && !aideMenu.contains(e.target)) { aideMenu.style.display = 'none'; }
+  });
+})();
+</script>
+<!-- Script pour mettre à jour les statistiques dynamiques de l'exercice -->
+<script>
+// Met à jour l'ensemble des statistiques toutes les secondes afin que la durée totale
+// et le temps moyen par phrase restent à jour même si la fenêtre reste ouverte.
+setInterval(function() {
+  if (typeof updateStatsDisplay === 'function') {
+    updateStatsDisplay();
+  }
+}, 1000);
+
+// Fonction de mise à jour des statistiques affichées dans la modale « Stats »
+function updateStatsDisplay() {
+  // Calculer la durée totale écoulée depuis l'ouverture de la page
+  var now = Date.now();
+  var diffMs = now - pageStartTime;
+  var diffSec = Math.floor(diffMs / 1000);
+  var totalMin = Math.floor(diffSec / 60);
+  var totalSec = diffSec % 60;
+  var totalDurationEl = document.getElementById('statTotalDuration');
+  if (totalDurationEl) {
+    totalDurationEl.textContent = totalMin + ' min ' + totalSec + ' s';
+  }
+  // Nombre de phrases vérifiées et succès sans aide
+  var verified = totalCheckCount;
+  var successNoHelp = successWithoutHelpCount;
+  var successDenomEl = document.getElementById('statSuccessDenom');
+  var successNoHelpEl = document.getElementById('statSuccessNoHelp');
+  var successPercentEl = document.getElementById('statSuccessPercent');
+  var verifiedEl = document.getElementById('statPhrasesVerified');
+  if (verifiedEl) verifiedEl.textContent = verified;
+  if (successNoHelpEl) successNoHelpEl.textContent = successNoHelp;
+  if (successDenomEl) successDenomEl.textContent = verified;
+  var percent = (verified > 0) ? Math.round((successNoHelp / verified) * 100) : 0;
+  if (successPercentEl) successPercentEl.textContent = percent;
+  // Temps moyen par phrase
+  var avgTimeEl = document.getElementById('statAvgTimePerPhrase');
+  if (avgTimeEl) {
+    if (verified > 0) {
+      var avgSecTotal = diffMs / 1000 / verified;
+      var avgMin = Math.floor(avgSecTotal / 60);
+      var avgSec = Math.round(avgSecTotal % 60);
+      if (avgMin > 0) {
+        avgTimeEl.textContent = avgMin + ' min ' + avgSec + ' s';
+      } else {
+        avgTimeEl.textContent = avgSec + ' s';
+      }
+    } else {
+      avgTimeEl.textContent = '0 s';
+    }
+  }
+  // Affichage des indices utilisés
+  var hintsEl = document.getElementById('statHintsUsed');
+  if (hintsEl) hintsEl.textContent = globalHintTotal;
+  // Affichage des solutions consultées
+  var solEl = document.getElementById('statSolutionsUsed');
+  if (solEl) solEl.textContent = totalSolutionCount;
+  // Moyenne d'erreurs par phrase
+  var avgErrEl = document.getElementById('statAvgErrors');
+  if (avgErrEl) {
+    if (verified > 0) {
+      var avgErr = totalErrorCount / verified;
+      avgErr = Math.round(avgErr * 10) / 10;
+      // Utiliser une virgule comme séparateur décimal pour le français
+      avgErrEl.textContent = avgErr.toFixed(1).replace('.', ',');
+    } else {
+      avgErrEl.textContent = '0';
+    }
+  }
+  // Phrase la plus longue réussie sans aide
+  var longestEl = document.getElementById('statLongestPhrase');
+  if (longestEl) {
+    if (bestLongestLength > 0 && bestLongestPhraseIndex >= 0) {
+      longestEl.textContent = 'Phrase ' + (bestLongestPhraseIndex + 1) + ' (' + bestLongestLength + ' caractères)';
+    } else {
+      longestEl.textContent = 'Aucune';
+    }
+  }
+}
+</script>
+<script>
+function preventDoubleClickOnMobile(btnId, handlerDown, handlerUp) {
+  let touched = false;
+  const btn = document.getElementById(btnId);
+  if (!btn) return;
+
+  btn.addEventListener('touchstart', function(e) {
+    touched = true;
+    if (handlerDown) handlerDown(e);
+  }, { passive: false });
+
+  btn.addEventListener('touchend', function(e) {
+    touched = false;
+    if (handlerUp) handlerUp(e);
+    e.preventDefault();
+  }, { passive: false });
+
+  btn.addEventListener('mousedown', function(e) {
+    if (!touched && handlerDown) handlerDown(e);
+  });
+
+  btn.addEventListener('mouseup', function(e) {
+    if (!touched && handlerUp) handlerUp(e);
+  });
+
+  btn.addEventListener('click', function(e) {
+    if (touched) {
+      e.preventDefault();
+      return false;
+    }
+  });
+}
+
+// Appliquer sur les boutons Indice (💡) et Solution (👁️)
+document.addEventListener("DOMContentLoaded", function () {
+  preventDoubleClickOnMobile('hintButton', showHint, hideHint);
+  preventDoubleClickOnMobile('solutionButton', showSolutionPreview, restorePreviousState);
+});
+</script>
+<script>
+// Gestion de la synthèse vocale et des voix hommes/femmes
+document.addEventListener("DOMContentLoaded", function () {
+  // Ces variables stockent les noms des voix sélectionnées selon le genre
+  let maleVoiceName = null;
+  let femaleVoiceName = null;
+  let selectedVoiceName = null;
+  let isFemaleVoiceSelected = true;
+
+  // Chargement et classification des voix disponibles (langue japonaise uniquement)
+  function loadVoices() {
+    const allVoices = window.speechSynthesis.getVoices();
+    const jaVoices = allVoices.filter(v => v.lang && v.lang.toLowerCase().startsWith('ja'));
+    maleVoiceName = null;
+    femaleVoiceName = null;
+    // Heuristiques basées sur les noms courants pour différencier les voix masculines et féminines
+    const femalePatterns = /(kyoko|mizuki|nanami|sayaka|haruka|hikari|tsukasa|kana|yui|female|woman)/i;
+    const malePatterns = /(otoya|show|shin|takumi|ren|taichi|ichi|male|man|male voice)/i;
+    jaVoices.forEach(v => {
+      const lowerName = v.name.toLowerCase();
+      if (!femaleVoiceName && femalePatterns.test(lowerName)) {
+        femaleVoiceName = v.name;
+      }
+      if (!maleVoiceName && malePatterns.test(lowerName)) {
+        maleVoiceName = v.name;
+      }
+    });
+    // Par défaut, la première voix est utilisée comme voix féminine si aucune n'est détectée
+    if (!femaleVoiceName) {
+      femaleVoiceName = jaVoices[0] ? jaVoices[0].name : null;
+    }
+    // La deuxième voix (s'il y en a une) est utilisée comme voix masculine si non détectée, sinon identique à la féminine
+    if (!maleVoiceName) {
+      maleVoiceName = jaVoices[1] ? jaVoices[1].name : femaleVoiceName;
+    }
+    // Choisir la voix sélectionnée en fonction du genre actuel
+    selectedVoiceName = isFemaleVoiceSelected ? femaleVoiceName : maleVoiceName;
+    // Mettre à jour l'icône du bouton de bascule
+    const toggleBtn = document.getElementById('voiceToggle');
+    if (toggleBtn) {
+      toggleBtn.textContent = isFemaleVoiceSelected ? '👩' : '👨';
+    }
+  }
+  // Charger immédiatement les voix et recharger lorsqu'elles changent (notamment sur Safari/iOS)
+  loadVoices();
+  if (typeof window.speechSynthesis !== 'undefined' && 'onvoiceschanged' in window.speechSynthesis) {
+    window.speechSynthesis.addEventListener('voiceschanged', loadVoices);
+  }
+
+  // Fonction pour lire la phrase japonaise avec la voix sélectionnée
+  window.playJapaneseAudio = function () {
+    const currentPhrase = typeof phrases !== "undefined" ? phrases[currentIndex] : null;
+    if (!currentPhrase || !currentPhrase.jp) return;
+    const jpText = currentPhrase.jp;
+    const utterance = new window.SpeechSynthesisUtterance(jpText);
+    utterance.lang = 'ja-JP';
+    utterance.rate = 0.85;
+    const voices = window.speechSynthesis.getVoices();
+    if (voices && voices.length) {
+      const voice = voices.find(v => v.name === selectedVoiceName && v.lang && v.lang.toLowerCase().startsWith('ja'));
+      if (voice) {
+        utterance.voice = voice;
+      }
+    }
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
+  };
+  // Gérer le clic sur le bouton audio pour lancer la lecture
+  const btn = document.getElementById("audioButton");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      window.playJapaneseAudio();
+    });
+  }
+  // Gérer le clic sur le bouton de bascule de voix
+  const toggleBtn = document.getElementById('voiceToggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      isFemaleVoiceSelected = !isFemaleVoiceSelected;
+      selectedVoiceName = isFemaleVoiceSelected ? femaleVoiceName : maleVoiceName;
+      toggleBtn.textContent = isFemaleVoiceSelected ? '👩' : '👨';
+    });
+  }
+});
+</script>
+<!-- Message de bienvenue (popup + audio) -->
+<audio id="audioBienvenue" preload="auto" src="bienvenue.mp3"></audio>
+<!-- Overlay pour bloquer les interactions tant que la popup est ouverte -->
+<div id="popupOverlay" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.3); z-index: 9998;"></div>
+<div id="popupBienvenue" style="display:none; position: fixed; top: 20%; left: 50%; transform: translateX(-50%);
+    background-color: white; border: 2px solid #ccc; padding: 1.5em; border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3); z-index: 9999; text-align: center; max-width: 90%;">
+<div style="color: #d9534f; margin-bottom: 0.3em; font-weight: normal; font-size: 1.5em;">いらっしゃいませ</div>
+<button onclick="document.getElementById('audioBienvenue').play()" style="background:none; border:none; font-size: 1.5em; cursor:pointer;" title="Écouter le message de bienvenue">🌸🎶</button>
+<p style="color: #003399; font-style: italic; font-size: 1.1em; margin-top: 0.5em;">– bienvenue –</p>
+<button onclick="
+    document.getElementById('popupBienvenue').style.display='none';
+    document.getElementById('popupOverlay').style.display='none';
+    window.popupActive = false;
+    if (typeof window.playJapaneseAudio === 'function') window.playJapaneseAudio();
+  " style="margin-top: 1em; padding: 6px 12px;">Fermer</button>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    window.popupActive = false;
+    const dejaVu = sessionStorage.getItem("bienvenueJoue");
+    const popup = document.getElementById("popupBienvenue");
+    const overlay = document.getElementById("popupOverlay");
+
+    if (!dejaVu && popup && overlay) {
+      window.popupActive = true;
+      popup.style.display = "block";
+      overlay.style.display = "block";
+      sessionStorage.setItem("bienvenueJoue", "oui");
+    } else {
+      // Pas de popup : on lit directement la phrase
+      if (typeof window.playJapaneseAudio === 'function') {
+        window.playJapaneseAudio();
+      }
+    }
+  });
+</script>
+<script>
+// Chargement du JSON externe contenant les traits des kana
+let kanaTraits = {};
+fetch("kana_traits_OK.json")
+  .then(r => r.json())
+  .then(data => {
+    data.forEach(k => {
+      kanaTraits[k.kana] = k;
+    });
+  });
+
+// Création de la fenêtre popup pour afficher l'image
+const traitPopup = document.createElement("div");
+traitPopup.id = "kanaTraitPopup";
+traitPopup.style = `
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  z-index: 9999;
+  display: none;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+`;
+traitPopup.innerHTML = `
+  <div style="text-align:right">
+    <button onclick="document.getElementById('kanaTraitPopup').style.display='none'">✖</button>
+  </div>
+  <div id="traitImageContent" style="text-align:center"></div>
+`;
+document.body.appendChild(traitPopup);
+
+function showKanaTraitPopup(kana) {
+  const data = kanaTraits[kana];
+  const content = document.getElementById("traitImageContent");
+  if (!data) {
+    content.innerHTML = `<p>Aucune image trouvée pour ${kana}</p>`;
+  } else {
+    
+    content.innerHTML = `
+      <h2 style="margin:0;">${kana} (${data.romaji})</h2>
+      <img src="${data.image}" alt="Ordre des traits pour ${kana}" style="max-width:100%;height:auto;margin-top:10px" />
+      <p style="font-size:0.9em;color:#555;margin-top:6px;">Traits : ${data.strokes}</p>
+    `;
+
+  }
+  traitPopup.style.display = "block";
+}
+
+// Ajout du clic sur les cases de saisie
+const observer = new MutationObserver(() => {
+  document.querySelectorAll(".box").forEach(box => {
+    if (box.dataset.traitified) return;
+    box.dataset.traitified = true;
+    box.addEventListener("click", () => {
+      if (!window.allowTraitClick) return;
+      if (!box.classList.contains('correct')) return;
+      const kana = box.textContent.trim();
+      if (kana && typeof showKanaTraitPopup === "function" && typeof kanaTraits !== "undefined" && kanaTraits[kana]) {
+        showKanaTraitPopup(kana);
+      }
+    });
+  });
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+</script>
+<script>
+// === Contrôle du clic sur les cases blanches (.box) ===
+window.allowTraitClick = false;
+// Persistance de session : ne plus ré-afficher si l'utilisateur a cliqué "OK"
+try { window._dismissedClickHint = (sessionStorage.getItem('clickHintDismissed') === '1'); } catch(e) { window._dismissedClickHint = false; }
+
+function showClickHint() {
+  if (window._dismissedClickHint) return;
+  var existing = document.getElementById('clickHint');
+  if (existing) return;
+  var ph = document.getElementById('phrase-container');
+  if (!ph) return;
+  var hint = document.createElement('div');
+  hint.id = 'clickHint';
+  hint.setAttribute('role', 'status');
+  hint.textContent = "💡 Astuce : clique une case pour voir l’ordre des traits.";
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.textContent = 'OK';
+  btn.addEventListener('click', function(){
+    try { sessionStorage.setItem('clickHintDismissed','1'); } catch(e) {}
+    window._dismissedClickHint = true;
+    if (hint && hint.parentNode) hint.parentNode.removeChild(hint);
+  });
+  hint.appendChild(btn);
+  ph.insertAdjacentElement('afterend', hint);
+  requestAnimationFrame(function(){ hint.classList.add('show'); });
+  // Disparition automatique, mais réapparaîtra à la prochaine validation
+  setTimeout(function(){ if (hint) hint.classList.add('fade'); }, 3500);
+  setTimeout(function(){ if (hint && hint.parentNode) hint.parentNode.removeChild(hint); }, 4200);
+}
+
+window.setTraitClick = function(enabled) {
+  window.allowTraitClick = !!enabled;
+  // curseur "pointer" uniquement sur les cases non vides
+  document.querySelectorAll(".box").forEach(function(b){
+    if (window.allowTraitClick && b.textContent && b.textContent.trim()) {
+      b.classList.add("clickable");
+    } else {
+      b.classList.remove("clickable");
+    }
+  });
+  // Afficher l'indice à chaque validation correcte, jusqu'à clic sur "OK"
+  if (window.allowTraitClick) {
+    showClickHint();
+  }
+};
+</script>
+<div id="vocabPopupRoot"></div>
+<script type="module">
+  const openBtn = document.getElementById('openVocabBtn');
+  if (openBtn) {
+    let vocabLoaded = false;
+    openBtn.addEventListener('click', async () => {
+      try {
+        if (!vocabLoaded) {
+          const { initVocabPopup } = await import('./vocab-popup.js');
+          await initVocabPopup({
+            rootId: 'vocabPopupRoot',
+            jsonUrl: './voc_guide_conv.json'
+          });
+          vocabLoaded = true;
+        }
+        const popup = document.getElementById('vocabPopup');
+        if (popup) popup.style.display = 'flex'; // open as flex to enable scrolling
+      } catch (err) {
+        console.error('Erreur module vocab:', err);
+        alert('Impossible de charger le module de vocabulaire.');
+      }
+    });
+  }
+</script>
+<script>
+// Détecte Hiragana / Katakana par Unicode
+function __typeOfKana(ch) {
+  const c = (ch || '').trim()[0];
+  if (!c) return '';
+  const code = c.codePointAt(0);
+  if (code >= 0x3040 && code <= 0x309F) return 'Hiragana';
+  if (code >= 0x30A0 && code <= 0x30FF) return 'Katakana';
+  return '';
+}
+
+// On NE touche PAS à ta fonction existante : on l’enveloppe
+(function () {
+  if (typeof window.showKanaTraitPopup !== 'function') return;
+  const __orig = window.showKanaTraitPopup;
+
+  window.showKanaTraitPopup = function(kana) {
+    // appel de TA version (ouvre la popup, remplit le contenu, etc.)
+    __orig(kana);
+
+    // Puis on ajoute juste le petit tag discret
+    try {
+      const kind = __typeOfKana(kana);
+      if (!kind) return;
+      const content = document.getElementById('traitImageContent');
+      if (!content) return;
+
+      // cherche un h2 dans le contenu (tel qu’actuellement)
+      const h2 = content.querySelector('h2');
+      if (!h2) return;
+
+      // évite les doublons si on reclique
+      const old = content.querySelector('.kana-kind-tag');
+      if (old) old.remove();
+
+      const tag = document.createElement('div');
+      tag.className = 'kana-kind-tag';
+      tag.textContent = kind;
+      tag.style.cssText = 'font-size:0.9em;color:#666;margin:.2em 0 .6em;';
+      h2.insertAdjacentElement('afterend', tag);
+    } catch(_) {}
+  };
+})();
+</script></body></html>
